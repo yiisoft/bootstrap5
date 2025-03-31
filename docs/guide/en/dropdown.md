@@ -1,6 +1,6 @@
 # Dropdown
 
-The **Dropdown** widget renders a Bootstrap 5 dropdown menu component.
+The **Dropdown** widget renders a [dropdown](https://getbootstrap.com/docs/5.3/components/dropdowns/#single-button) component.
 
 You can use it to create interactive dropdown menus with various item types such as links, buttons, headers, dividers,
 or plain text. This component is highly customizable, supporting directions, alignments, themes, and toggle variations.
@@ -25,7 +25,6 @@ use Yiisoft\Bootstrap5\Dropdown;
 use Yiisoft\Bootstrap5\DropdownItem;
 ?>
 
-// @link https://getbootstrap.com/docs/5.3/components/dropdowns/#examples
 <?= 
     Dropdown::widget()
         ->items(

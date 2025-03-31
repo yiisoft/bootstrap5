@@ -1,6 +1,6 @@
 # Accordion
 
-The Accordion widget renders a Bootstrap 5 accordion component.
+The **Accordion** widget renders a [accordion](https://getbootstrap.com/docs/5.3/components/accordion/#example) component. 
 
 You can use it to create collapsible content sections where clicking a header toggles the visibility of its associated
 body. 
@@ -24,7 +24,6 @@ use Yiisoft\Bootstrap5\Accordion;
 use Yiisoft\Bootstrap5\AccordionItem;
 ?>
 
-// @link https://getbootstrap.com/docs/5.3/components/accordion/#example
 <?= Accordion::widget()
         ->items(
             AccordionItem::to(
@@ -137,31 +136,4 @@ Customize the collapse section (the wrapper around the body):
 
 ```php
 $accordion = Accordion::widget()->collapseAttributes(['data-test' => 'collapse']);
-```
-
-## Item Configuration
-The `AccordionItem` class allows customization of individual items:
-
-**Basic Item:**
-
-```php
-AccordionItem::to('Header', 'Body content')
-```
-
-**Active Item (expanded by default):**
-
-```php
-AccordionItem::to('Header', 'Body content', active: true)
-```
-
-**Custom ID:**
-
-```php
-AccordionItem::to('Header', 'Body content', id: 'custom-id')
-```
-
-**Raw HTML Content (disable encoding):**
-
-```php
-AccordionItem::to('<strong>Header</strong>', '<p>Body content</p>', encodeHeader: false, encodeBody: false)
 ```
