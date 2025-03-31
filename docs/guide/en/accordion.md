@@ -24,49 +24,47 @@ use Yiisoft\Bootstrap5\Accordion;
 use Yiisoft\Bootstrap5\AccordionItem;
 ?>
 
+// @link https://getbootstrap.com/docs/5.3/components/accordion/#example
 <?= Accordion::widget()
-    ->items(
-        AccordionItem::to('Item #1', 'This is the first item\'s content.'),
-        AccordionItem::to('Item #2', 'This is the second item\'s content.'),
-        AccordionItem::to('Item #3', 'This is the third item\'s content.'),
-    )
+        ->items(
+            AccordionItem::to(
+                'Accordion Item #1',
+                "<strong>This is the first item's accordion body.</strong>" .
+                ' It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. ' .
+                ' These classes control the overall appearance, as well as the showing and hiding via CSS transitions. ' .
+                ' You can modify any of this with custom CSS or overriding our default variables. ' .
+                " It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.",
+                'accordion-1',
+                encodeBody: false,
+                active: true
+            ),
+            AccordionItem::to(
+                'Accordion Item #2',
+                "<strong>This is the second item's accordion body.</strong>" .
+                ' It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. ' .
+                ' These classes control the overall appearance, as well as the showing and hiding via CSS transitions. ' .
+                ' You can modify any of this with custom CSS or overriding our default variables. ' .
+                " It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.",
+                'accordion-2',
+                encodeBody: false
+            ),
+            AccordionItem::to(
+                'Accordion Item #3',
+                "<strong>This is the third item's accordion body.</strong>" .
+                ' It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. ' .
+                ' These classes control the overall appearance, as well as the showing and hiding via CSS transitions. ' .
+                ' You can modify any of this with custom CSS or overriding our default variables. ' .
+                " It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.",
+                'accordion-3',
+                encodeBody: false
+            ),
+        )
+        ->id('accordion')
 ?>
 ```
 
 This generates a simple accordion with three collapsible items, each with a clickable header and a body that
 expands/collapses.
-
-## Basic Usage
-
-### Instantiation
-Create a new `Accordion` instance using the `widget()` method:
-
-```php
-$accordion = Accordion::widget();
-```
-
-### Adding Items
-Use the `items()` method to define accordion items. Each item is an instance of `AccordionItem`:
-
-```php
-$accordion = Accordion::widget()
-    ->items(
-        AccordionItem::to('Section 1', 'Content for section 1.'),
-        AccordionItem::to('Section 2', 'Content for section 2.', active: true),
-        AccordionItem::to('Section 3', 'Content for section 3.'),
-    );
-```
-
-### Rendering
-Render the accordion as HTML using `render()` or cast it to a string:
-
-```php
-// Using render()
-$html = $accordion->render();
-
-// Using __toString()
-$html = (string) $accordion;
-```
 
 ## Configuration
 
