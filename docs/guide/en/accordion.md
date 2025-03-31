@@ -167,36 +167,3 @@ AccordionItem::to('Header', 'Body content', id: 'custom-id')
 ```php
 AccordionItem::to('<strong>Header</strong>', '<p>Body content</p>', encodeHeader: false, encodeBody: false)
 ```
-
-## Available Methods
-
-### `Accordion` Methods
-| Method                   | Description                                                                   |
-|--------------------------|-------------------------------------------------------------------------------|
-| `addAttributes()`        | Adds a sets of attribute.                                                     |
-| `addClass()`             | Adds one or more CSS classes to the existing classes.                         |
-| `addCssStyle()`          | Adds a CSS style.                                                             |
-| `attribute()`            | Adds a sets attribute value.                                                  |
-| `attributes()`           | Sets the HTML attributes.                                                     |
-| `alwaysOpen()`           | Sets whether it should always allow multiple items to be open simultaneously. |
-| `bodyAttributes()`       | Sets the HTML attributes for the body section.                                |
-| `class()`                | Replaces all existing CSS classes with the specified one(s).                  |
-| `collapseAttributes()`   | Sets the HTML attributes for the collapse section.                            |
-| `flush()`                | Sets whether should use the flush style.                                      |
-| `headerAttributes()`     | Sets the HTML attributes for the header section.                              |
-| `headerTag()`            | Sets the HTML tag to be used for the header section, (for example, 'h3').     |
-| `id()`                   | Sets the ID, (auto-generated if `true`).                                      |
-| `items()`                | Sets the items. If empty, nothing is rendered.                                |
-| `togglerAttributes()`    | Sets the HTML attributes for the toggler.                                     |
-| `togglerTag()`           | Sets the HTML tag to be used for the toggler.                                 |
-| `render()`               | Run the widget.                                                               |
-
-### `AccordionItem` Methods
-| Method                   | Description                                                                   |
-|--------------------------|-------------------------------------------------------------------------------|
-| `active()`               | Sets the active state.                                                        |
-| `body()`                 | Sets the body content.                                                        |
-| `encodeBody()`           | Sets whether to encode the body content.                                      |
-| `encodeHeader()`         | Sets whether to encode the header content.                                    |
-| `header()`               | Sets the header content.                                                      |
-| `id()`                   | Sets the ID, (auto-generated if `true`).                                      |

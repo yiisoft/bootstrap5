@@ -180,35 +180,3 @@ The **DropdownItem** class supports various item types:
   ```php
   DropdownItem::listContent('<strong>Custom HTML</strong>')
   ```
-
-## Available Methods
-
-| Method                   | Description                                                                   |
-|--------------------------|-------------------------------------------------------------------------------|
-| `addAttributes()`        | Adds a sets of attributes.                                                    |
-| `addClass()`             | Adds one or more CSS classes to the existing classes.                         |
-| `addCssStyle()`          | Adds a CSS style.                                                             |
-| `addTogglerAttributes()` | Adds a set of attributes for the toggler button.                              |
-| `addTogglerClass()`      | Adds one or more CSS classes to the existing classes.                         |
-| `alignment()`            | Sets the alignment. (for example, `DropdownAlignment::END`).                  |
-| `attribute()`            | Adds a sets attribute value.                                                  |
-| `attributes()`           | Sets the HTML attributes.                                                     |
-| `autoClose()`            | Sets the auto-close setting. (for example `DropdownAutoClose::OUTSIDE`).      |
-| `class()`                | Replaces all existing CSS classes with the specified one(s).                  |
-| `container`              | Whether to render in a container `<div>` tag.                                 |
-| `containerClasses()`     | Sets the CSS classes for the container.                                       |
-| `direction()`            | Set the direction. (for example, `DropdownDirection::DOWN`).                  |
-| `items()`                | List of links. If this property is empty, the widget will not render anything.|
-| `theme()`                | Sets the theme. (for example, `dark`).                                        |
-| `toggler()`              | Sets the toggler custom element.                                              |
-| `togglerAsLink()`        | Whether to render the toggler as a link.                                      |
-| `togglerAttributes()`    | Sets the HTML attributes for the toggler.                                     |
-| `togglerClass()`         | Replaces all existing CSS classes with the specified one(s).                  |
-| `togglerContent()`       | Sets the content of the toggler.                                              |
-| `togglerId()`            | Sets the ID for the toggler.                                                  |
-| `togglerSize()`          | Sets the large size for the toggler. (for example, `ButtonSize::SMALL`).      |
-| `togglerSplit()`         | Whether to render the toggler as a split.                                     |
-| `togglerSplitContent()`  | Sets the content of the toggler split.                                        |
-| `togglerUrl()`           | Sets the URL for the toggler link.                                            |
-| `togglerVariant()`       | Sets the variant for the toggler. (for example, `ButtonVariant::PRIMARY`).    |
-| `render()`               | Run the widget.                                                               |
