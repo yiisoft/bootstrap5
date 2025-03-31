@@ -1,6 +1,6 @@
 # User Guide
 
-Welcome to the user guide for the Yii Framework Twitter Bootstrap 5 package.
+Welcome to the user guide for the **Yii Framework Bootstrap 5** package.
 
 This guide helps you get started with the package, understand its components, and use them in your Yii applications.
 
@@ -19,8 +19,10 @@ Once you’re set up, explore the widget-specific guides below to start building
 
 ## Available Guides
 
+- [Accordion](accordion.md): Learn how to create and customize an accordion component with various item types, 
+  toggle options.
 - [Dropdown](dropdown.md): Learn how to create and customize interactive dropdown menus with various item types, toggle
-  options, and Bootstrap 5 features.
+  options.
 
 ## How to Use This Guide
 
