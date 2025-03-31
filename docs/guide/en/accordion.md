@@ -1,6 +1,6 @@
 # Accordion
 
-The **Accordion** widget renders a [accordion](https://getbootstrap.com/docs/5.3/components/accordion/#example) component. 
+The **Accordion** widget renders an [accordion](https://getbootstrap.com/docs/5.3/components/accordion/#example) component. 
 
 You can use it to create collapsible content sections where clicking a header toggles the visibility of its associated
 body. 
