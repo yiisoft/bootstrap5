@@ -1,6 +1,6 @@
 # Dropdown
 
-The **Dropdown** widget renders a Bootstrap 5 dropdown menu component within the **Yii framework**.
+The **Dropdown** widget renders a Bootstrap 5 dropdown menu component.
 
 You can use it to create interactive dropdown menus with various item types such as links, buttons, headers, dividers,
 or plain text. This component is highly customizable, supporting directions, alignments, themes, and toggle variations.
@@ -212,9 +212,3 @@ The **DropdownItem** class supports various item types:
 | `togglerUrl()`           | Sets the URL for the toggler link.                                            |
 | `togglerVariant()`       | Sets the variant for the toggler. (for example, `ButtonVariant::PRIMARY`).    |
 | `render()`               | Run the widget.                                                               |
-
-## Additional Resources
-- [Bootstrap 5 Dropdown Documentation](https://getbootstrap.com/docs/5.3/components/dropdowns/)
-- [GitHub Repository](https://github.com/yiisoft/bootstrap5)
-- [Report an Issue](https://github.com/yiisoft/bootstrap5/issues)
-

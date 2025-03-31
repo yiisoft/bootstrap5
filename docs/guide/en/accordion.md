@@ -1,12 +1,9 @@
 # Accordion
 
-The Accordion widget renders a Bootstrap 5 accordion component within the **Yii framework**.
+The Accordion widget renders a Bootstrap 5 accordion component.
 
 You can use it to create collapsible content sections where clicking a header toggles the visibility of its associated
 body. 
-
-This component is highly customizable, supporting options like always-open behavior, flush styling, custom HTML tags,
-and CSS classes.
 
 ## Key Features
 - Supports multiple collapsible items with headers and bodies.
@@ -203,8 +200,3 @@ AccordionItem::to('<strong>Header</strong>', '<p>Body content</p>', encodeHeader
 | `encodeHeader()`         | Sets whether to encode the header content.                                    |
 | `header()`               | Sets the header content.                                                      |
 | `id()`                   | Sets the ID, (auto-generated if `true`).                                      |
-
-## Additional Resources
-- [Bootstrap 5 Accordion Documentation](https://getbootstrap.com/docs/5.3/components/accordion/)
-- [GitHub Repository](https://github.com/yiisoft/bootstrap5)
-- [Report an Issue](https://github.com/yiisoft/bootstrap5/issues)
