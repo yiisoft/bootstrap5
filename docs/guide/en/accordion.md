@@ -106,8 +106,26 @@ Add custom attributes or classes to the toggler:
 
 ```php
 $accordion = Accordion::widget()
-    ->togglerAttributes(['data-action' => 'toggle'])
-    ->addClass('bg-light');
+    ->addClass('bg-light')
+    ->togglerAttributes(['data-action' => 'toggle']);
+```
+
+Add attribute to the toggler:
+
+```php
+$accordion = Accordion::widget()->addTogglerAttribute(['data-id' => '123']);
+```
+
+Add class to the toggler:
+
+```php
+$accordion = Accordion::widget()->addTogglerClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
+```
+
+Add style to the toggler:
+
+```php
+$accordion = Accordion::widget()->addTogglerCssStyle(['color' => 'red', 'font-weight' => 'bold']);
 ```
 
 ### Always Open Behavior

@@ -193,6 +193,179 @@ final class AccordionTest extends TestCase
         );
     }
 
+    public function testAddTogglerAttribute(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="accordion">
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button type="button" class="accordion-button collapsed" data-id="123" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            Accordion Item #1
+            </button>
+            </h2>
+            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div class="accordion-body">
+            This is the first item's accordion body.
+            </div>
+            </div>
+            </div>
+            </div>
+            HTML,
+            Accordion::widget()
+                ->id('accordion')
+                ->items(
+                    AccordionItem::to('Accordion Item #1', "This is the first item's accordion body.", 'accordion-1'),
+                )
+                ->addTogglerAttribute('data-id', '123')
+                ->render(),
+        );
+    }
+
+    public function testAddTogglerClass(): void
+    {
+        $accordion = Accordion::widget()
+            ->addTogglerClass('test-class', null, BackgroundColor::PRIMARY)
+            ->id('accordion')
+            ->items(AccordionItem::to('Accordion Item #1', "This is the first item's accordion body.", 'accordion-1'));
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="accordion">
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button type="button" class="accordion-button collapsed test-class bg-primary" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            Accordion Item #1
+            </button>
+            </h2>
+            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div class="accordion-body">
+            This is the first item's accordion body.
+            </div>
+            </div>
+            </div>
+            </div>
+            HTML,
+            $accordion->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="accordion">
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button type="button" class="accordion-button collapsed test-class bg-primary test-class-1 test-class-2" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            Accordion Item #1
+            </button>
+            </h2>
+            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div class="accordion-body">
+            This is the first item's accordion body.
+            </div>
+            </div>
+            </div>
+            </div>
+            HTML,
+            $accordion->addTogglerClass('test-class-1', 'test-class-2')->render(),
+        );
+    }
+
+    public function testAddTogglerCssStyle(): void
+    {
+        $accordion = Accordion::widget()
+            ->id('accordion')
+            ->items(AccordionItem::to('Accordion Item #1', "This is the first item's accordion body.", 'accordion-1'))
+            ->addTogglerCssStyle('color: red;');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="accordion">
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button type="button" class="accordion-button collapsed" style="color: red;" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            Accordion Item #1
+            </button>
+            </h2>
+            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div class="accordion-body">
+            This is the first item's accordion body.
+            </div>
+            </div>
+            </div>
+            </div>
+            HTML,
+            $accordion->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="accordion">
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button type="button" class="accordion-button collapsed" style="color: red; font-weight: bold;" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            Accordion Item #1
+            </button>
+            </h2>
+            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div class="accordion-body">
+            This is the first item's accordion body.
+            </div>
+            </div>
+            </div>
+            </div>
+            HTML,
+            $accordion->addTogglerCssStyle('font-weight: bold;')->render(),
+        );
+    }
+
+    public function testAddTogglerCssStyleWithOverwriteFalse(): void
+    {
+        $accordion = Accordion::widget()
+            ->id('accordion')
+            ->items(AccordionItem::to('Accordion Item #1', "This is the first item's accordion body.", 'accordion-1'))
+            ->addTogglerCssStyle('color: red;');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="accordion">
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button type="button" class="accordion-button collapsed" style="color: red;" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            Accordion Item #1
+            </button>
+            </h2>
+            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div class="accordion-body">
+            This is the first item's accordion body.
+            </div>
+            </div>
+            </div>
+            </div>
+            HTML,
+            $accordion->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="accordion">
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button type="button" class="accordion-button collapsed" style="color: red;" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            Accordion Item #1
+            </button>
+            </h2>
+            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div class="accordion-body">
+            This is the first item's accordion body.
+            </div>
+            </div>
+            </div>
+            </div>
+            HTML,
+            $accordion->addTogglerCssStyle('color: blue;', false)->render(),
+        );
+    }
+
     public function testAttribute(): void
     {
         Assert::equalsWithoutLE(
@@ -717,6 +890,9 @@ final class AccordionTest extends TestCase
         $this->assertNotSame($accordion, $accordion->addAttributes([]));
         $this->assertNotSame($accordion, $accordion->addClass(''));
         $this->assertNotSame($accordion, $accordion->addCssStyle(''));
+        $this->assertNotSame($accordion, $accordion->addTogglerAttribute('', ''));
+        $this->assertNotSame($accordion, $accordion->addTogglerClass(''));
+        $this->assertNotSame($accordion, $accordion->addTogglerCssStyle(''));
         $this->assertNotSame($accordion, $accordion->alwaysOpen());
         $this->assertNotSame($accordion, $accordion->attribute('', ''));
         $this->assertNotSame($accordion, $accordion->attributes([]));
