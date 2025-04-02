@@ -2,8 +2,8 @@
 
 The **Alert** widget renders an [alert](https://getbootstrap.com/docs/5.3/components/alerts/) component.
 
-You can use it to provide contextual feedback messages for typical user actions with a handful of available and flexible
-alert messages.
+You can use it to provide contextual feedback messages for typical user actions with a handful of ready available and
+flexible alert message styles.
 
 ## Key Features
 - Multiple variants (primary, secondary, success, danger, etc.).
@@ -72,7 +72,7 @@ $alert = Alert::widget()
     ->variant(AlertVariant::INFO);
 ``` 
 
-Customize the header tag (default to h4):
+Customize the header tag (default to `h4`):
 
 ```php
 $alert = Alert::widget()
