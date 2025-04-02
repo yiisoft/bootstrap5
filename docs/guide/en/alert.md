@@ -110,7 +110,7 @@ $alert = Alert::widget()
     ->dismissable(true);
 ```
 
-Add attribute to the close button:
+Add attribute:
 
 ```php
 $alert = Alert::widget()
@@ -118,7 +118,7 @@ $alert = Alert::widget()
     ->dismissable(true);
 ```
 
-Add class to the close button:
+Add class:
 
 ```php
 $alert = Alert::widget()
@@ -127,7 +127,7 @@ $alert = Alert::widget()
     ->dismissable(true);
 ```
 
-Add style to the close button:
+Add style:
 
 ```php
 $alert = Alert::widget()
