@@ -89,25 +89,19 @@ $dropdown = Dropdown::widget()
     ->togglerContent('Options');
 ```
 
-Add custom attributes to the toggler:
-
-```php
-$dropdown = Dropdown::widget()->togglerAttributes(['data-action' => 'toggle']);
-```
-
-Add attribute to the toggler:
+Add attribute:
 
 ```php
 $dropdown = Dropdown::widget()->addTogglerAttribute(['data-id' => '123']);
 ```
 
-Add class to the toggler:
+Add class:
 
 ```php
 $dropdown = Dropdown::widget()->addTogglerClass('custom-class', null, 'another-class', BackgroundColor::PRIMARY);
 ```
 
-Add style to the toggler:
+Add style:
 
 ```php
 $dropdown = Dropdown::widget()->addTogglerCssStyle(['color' => 'red', 'font-weight' => 'bold']);
