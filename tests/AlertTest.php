@@ -55,6 +55,111 @@ final class AlertTest extends TestCase
         );
     }
 
+    public function testAddCloseButtonAttribute(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            Body
+            <button type="button" class="btn-close" data-id="123" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            HTML,
+            Alert::widget()
+                ->addCloseButtonAttribute('data-id', '123')
+                ->body('Body')
+                ->dismissable(true)
+                ->id('accordion')
+                ->render(),
+        );
+    }
+
+    public function testAddCloseButtonClass(): void
+    {
+        $alert = Alert::widget()
+            ->addCloseButtonClass('test-class', null, BackgroundColor::PRIMARY)
+            ->body('Body')
+            ->dismissable(true)
+            ->id('accordion');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            Body
+            <button type="button" class="btn-close test-class bg-primary" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            HTML,
+            $alert->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            Body
+            <button type="button" class="btn-close test-class bg-primary test-class-1 test-class-2" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            HTML,
+            $alert->addCloseButtonClass('test-class-1', 'test-class-2')->render(),
+        );
+    }
+
+    public function testAddCloseButtonCssStyle(): void
+    {
+        $alert = Alert::widget()
+            ->addCloseButtonCssStyle('color: red;')
+            ->body('Body')
+            ->dismissable(true)
+            ->id('accordion');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            Body
+            <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            HTML,
+            $alert->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            Body
+            <button type="button" class="btn-close" style="color: red; font-weight: bold;" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            HTML,
+            $alert->addCloseButtonCssStyle('font-weight: bold;')->render(),
+        );
+    }
+
+    public function testAddCloseButtonCssStyleWithOverwriteFalse(): void
+    {
+        $alert = Alert::widget()
+            ->addCloseButtonCssStyle('color: red;')
+            ->body('Body')
+            ->dismissable(true)
+            ->id('accordion');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            Body
+            <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            HTML,
+            $alert->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            Body
+            <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            HTML,
+            $alert->addCloseButtonCssStyle('color: blue;', false)->render(),
+        );
+    }
+
     public function testAddCssStyle(): void
     {
         $alert = Alert::widget()->addCssStyle('color: red;')->body('Body')->id(false);
@@ -419,6 +524,9 @@ final class AlertTest extends TestCase
 
         $this->assertNotSame($alert, $alert->addAttributes([]));
         $this->assertNotSame($alert, $alert->addClass(''));
+        $this->assertNotSame($alert, $alert->addCloseButtonAttribute('', ''));
+        $this->assertNotSame($alert, $alert->addCloseButtonClass(''));
+        $this->assertNotSame($alert, $alert->addCloseButtonCssStyle(''));
         $this->assertNotSame($alert, $alert->addCssStyle(''));
         $this->assertNotSame($alert, $alert->attribute('', ''));
         $this->assertNotSame($alert, $alert->attributes([]));
@@ -429,10 +537,10 @@ final class AlertTest extends TestCase
         $this->assertNotSame($alert, $alert->closeButtonTag(''));
         $this->assertNotSame($alert, $alert->dismissable(false));
         $this->assertNotSame($alert, $alert->fade(false));
-        $this->assertNotSame($alert, $alert->id(false));
         $this->assertNotSame($alert, $alert->header('', false));
         $this->assertNotSame($alert, $alert->headerAttributes([]));
         $this->assertNotSame($alert, $alert->headerTag('div'));
+        $this->assertNotSame($alert, $alert->id(false));
         $this->assertNotSame($alert, $alert->id(false));
         $this->assertNotSame($alert, $alert->templateContent(''));
         $this->assertNotSame($alert, $alert->variant(AlertVariant::PRIMARY));
