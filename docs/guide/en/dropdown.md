@@ -89,6 +89,24 @@ $dropdown = Dropdown::widget()
     ->togglerContent('Options');
 ```
 
+Add attribute:
+
+```php
+$dropdown = Dropdown::widget()->addTogglerAttribute(['data-id' => '123']);
+```
+
+Add class:
+
+```php
+$dropdown = Dropdown::widget()->addTogglerClass('custom-class', null, 'another-class', BackgroundColor::PRIMARY);
+```
+
+Add style:
+
+```php
+$dropdown = Dropdown::widget()->addTogglerCssStyle(['color' => 'red', 'font-weight' => 'bold']);
+```
+
 ### Direction and Alignment
 Set the dropdown direction with `direction()`:
 
