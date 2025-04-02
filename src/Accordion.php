@@ -125,7 +125,7 @@ final class Accordion extends Widget
     }
 
     /**
-     * Adds a sets attribute value.
+     * Adds toggler attribute value.
      *
      * @param string $name The attribute name.
      * @param mixed $value The attribute value.
