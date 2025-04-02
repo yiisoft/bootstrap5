@@ -92,7 +92,7 @@ final class Alert extends Widget
     }
 
     /**
-     * Adds a sets attribute value.
+     * Adds close button attribute value.
      *
      * @param string $name The attribute name.
      * @param mixed $value The attribute value.
@@ -113,7 +113,7 @@ final class Alert extends Widget
     }
 
     /**
-     * Adds one or more CSS classes to the existing classes.
+     * Adds one or more CSS classes to the existing close button classes.
      *
      * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
      * automatically.
@@ -141,10 +141,10 @@ final class Alert extends Widget
     }
 
     /**
-     * Adds a CSS style.
+     * Adds a close button CSS style.
      *
      * @param array|string $style The CSS style. If the value is an array, a space will separate the values.
-     * for example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
+     * For example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
      * If it is a string, it will be added as is, for example, `color: red`.
      * @param bool $overwrite Whether to overwrite existing styles with the same name. If `false`, the new value will be
      * appended to the existing one.
@@ -171,7 +171,7 @@ final class Alert extends Widget
      * Adds a CSS style.
      *
      * @param array|string $style The CSS style. If the value is an array, a space will separate the values.
-     * for example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
+     * For example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
      * If it is a string, it will be added as is, for example, `color: red`.
      * @param bool $overwrite Whether to overwrite existing styles with the same name. If `false`, the new value will be
      * appended to the existing one.
