@@ -89,12 +89,10 @@ $dropdown = Dropdown::widget()
     ->togglerContent('Options');
 ```
 
-Add custom attributes or classes to the toggler:
+Add custom attributes to the toggler:
 
 ```php
-$dropdown = Dropdown::widget()
-    ->addClass('bg-light')
-    ->togglerAttributes(['data-action' => 'toggle']);
+$dropdown = Dropdown::widget()->togglerAttributes(['data-action' => 'toggle']);
 ```
 
 Add attribute to the toggler:
