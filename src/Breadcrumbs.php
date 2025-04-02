@@ -396,16 +396,11 @@ final class Breadcrumbs extends Widget
             return '';
         }
 
-        $list = $this->renderList();
-
-        if ($list === '') {
-            return '';
-        }
 
         return Nav::tag()
             ->addAttributes($attributes)
             ->addClass(...$this->cssClasses)
-            ->content("\n", $list, "\n")
+            ->content("\n", $this->renderList(), "\n")
             ->encode(false)
             ->render();
     }
@@ -451,10 +446,6 @@ final class Breadcrumbs extends Widget
         }
 
         $items = implode("\n", $items);
-
-        if ($items === '') {
-            return '';
-        }
 
         if ($this->listTagName === '') {
             throw new InvalidArgumentException('List tag cannot be empty.');
