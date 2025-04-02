@@ -21,7 +21,10 @@ Once you’re set up, explore the widget-specific guides below to start building
 
 - [Accordion](accordion.md): Learn how to create and customize an accordion component with various item types, 
   toggle options.
-- [Alert](alert.md): Learn how to create and customize alert component with variants, headers, and dismissible options.
+- [Alert](alert.md): Learn how to create and customize an alert component with variants, headers, and dismissible 
+  options.
+- [Breadcrumbs](breadcrumbs.md): Learn how to create and customize breadcrumb navigation, including separators and
+  links.
 - [Dropdown](dropdown.md): Learn how to create and customize interactive dropdown menus with various item types, toggle
   options.
 
