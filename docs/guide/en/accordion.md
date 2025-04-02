@@ -102,27 +102,19 @@ Change the toggler tag (defaults to `button`):
 $accordion = Accordion::widget()->togglerTag('div');
 ```
 
-Add custom attributes or classes to the toggler:
-
-```php
-$accordion = Accordion::widget()
-    ->addClass('bg-light')
-    ->togglerAttributes(['data-action' => 'toggle']);
-```
-
-Add attribute to the toggler:
+Add attribute:
 
 ```php
 $accordion = Accordion::widget()->addTogglerAttribute(['data-id' => '123']);
 ```
 
-Add class to the toggler:
+Add class:
 
 ```php
 $accordion = Accordion::widget()->addTogglerClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
 ```
 
-Add style to the toggler:
+Add style:
 
 ```php
 $accordion = Accordion::widget()->addTogglerCssStyle(['color' => 'red', 'font-weight' => 'bold']);
