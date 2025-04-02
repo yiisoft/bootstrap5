@@ -101,7 +101,7 @@ final class Accordion extends Widget
      * Adds a CSS style.
      *
      * @param array|string $style The CSS style. If the value is an array, a space will separate the values.
-     * for example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
+     * For example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
      * If it is a string, it will be added as is, for example, `color: red`.
      * @param bool $overwrite Whether to overwrite existing styles with the same name. If `false`, the new value will be
      * appended to the existing one.
