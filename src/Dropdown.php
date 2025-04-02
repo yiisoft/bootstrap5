@@ -76,7 +76,7 @@ final class Dropdown extends Widget
     /**
      * Adds a sets of attributes.
      *
-     * @param array $attributes Attribute values indexed by attribute names. e.g. `['id' => 'my-id']`.
+     * @param array $attributes Attribute values indexed by attribute names. for example, `['id' => 'my-id']`.
      *
      * @return self A new instance with the specified attributes added.
      *
@@ -121,9 +121,9 @@ final class Dropdown extends Widget
     /**
      * Adds a CSS style.
      *
-     * @param array|string $style The CSS style. If an array, the values will be separated by a space. If a string, it
-     * will be added as is. For example, `color: red`. If the value is an array, the values will be separated by a
-     * space. e.g., `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
+     * @param array|string $style The CSS style. If the value is an array, a space will separate the values.
+     * For example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
+     * If it is a string, it will be added as is, for example, `color: red`.
      * @param bool $overwrite Whether to overwrite existing styles with the same name. If `false`, the new value will be
      * appended to the existing one.
      *
@@ -146,27 +146,28 @@ final class Dropdown extends Widget
     }
 
     /**
-     * Adds a set of attributes for the toggler button.
+     * Adds toggler attribute value.
      *
-     * @param array $attributes Attribute values indexed by attribute names. e.g. `['id' => 'my-id']`.
+     * @param string $name The attribute name.
+     * @param mixed $value The attribute value.
      *
-     * @return self A new instance with the specified attributes for the toggler button.
+     * @return self A new instance with the specified attribute added.
      *
      * Example usage:
      * ```php
-     * $dropdown->addTogglerAttributes(['data-id' => '123']);
+     * $dropdown->addTogglerAttribute('data-id', '123');
      * ```
      */
-    public function addTogglerAttributes(array $attributes): self
+    public function addTogglerAttribute(string $name, mixed $value): self
     {
         $new = clone $this;
-        $new->togglerAttributes = [...$this->togglerAttributes, ...$attributes];
+        $new->togglerAttributes[$name] = $value;
 
         return $new;
     }
 
     /**
-     * Adds one or more CSS classes to the existing classes.
+     * Adds one or more CSS classes to the existing toggler classes.
      *
      * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
      * automatically.
@@ -189,6 +190,33 @@ final class Dropdown extends Widget
         foreach ($class as $item) {
             Html::addCssClass($new->togglerAttributes, $item);
         }
+
+        return $new;
+    }
+
+    /**
+     * Adds a toggler CSS style.
+     *
+     * @param array|string $style The CSS style. If the value is an array, a space will separate the values.
+     * for example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
+     * If it is a string, it will be added as is, for example, `color: red`.
+     * @param bool $overwrite Whether to overwrite existing styles with the same name. If `false`, the new value will be
+     * appended to the existing one.
+     *
+     * @return self A new instance with the specified CSS style value added.
+     *
+     * Example usage:
+     * ```php
+     * $drodown->addTogglerCssStyle('color: red');
+     *
+     * // or
+     * $dropdown->addTogglerCssStyle(['color' => 'red', 'font-weight' => 'bold']);
+     * ```
+     */
+    public function addTogglerCssStyle(array|string $style, bool $overwrite = true): self
+    {
+        $new = clone $this;
+        Html::addCssStyle($new->togglerAttributes, $style, $overwrite);
 
         return $new;
     }
@@ -271,7 +299,7 @@ final class Dropdown extends Widget
      */
     public function autoClose(DropdownAutoClose $autoClose): self
     {
-        return $this->addTogglerAttributes(['data-bs-auto-close' => $autoClose->value]);
+        return $this->addTogglerAttribute('data-bs-auto-close', $autoClose->value);
     }
 
     /**

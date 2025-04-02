@@ -207,6 +207,36 @@ final class DropdownTest extends TestCase
         );
     }
 
+    public function testAddTogglerAttribute(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-id="123" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            </ul>
+            </div>
+            HTML,
+            Dropdown::widget()
+                ->addTogglerAttribute('data-id', '123')
+                ->items(
+                    DropdownItem::link('Action', '#'),
+                    DropdownItem::link('Another action', '#'),
+                    DropdownItem::link('Something else here', '#'),
+                )
+                ->render(),
+        );
+    }
+
     public function testAddTogglerClass(): void
     {
         $dropdownWidget = Dropdown::widget()
@@ -257,6 +287,109 @@ final class DropdownTest extends TestCase
             $dropdownWidget->addTogglerClass('test-class-1', 'test-class-2')->render(),
         );
     }
+
+    public function testAddTogglerCssStyle(): void
+    {
+        $dropdown = Dropdown::widget()
+            ->addTogglerCssStyle('color: red;')
+            ->items(
+                DropdownItem::link('Action', '#'),
+                DropdownItem::link('Another action', '#'),
+                DropdownItem::link('Something else here', '#'),
+            );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" style="color: red;" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            </ul>
+            </div>
+            HTML,
+            $dropdown->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" style="color: red; font-weight: bold;" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            </ul>
+            </div>
+            HTML,
+            $dropdown->addTogglerCssStyle('font-weight: bold;')->render(),
+        );
+    }
+
+    public function testAddTogglerCssStyleWithOverwriteFalse(): void
+    {
+        $dropdown = Dropdown::widget()
+            ->addTogglerCssStyle('color: red;')
+            ->items(
+                DropdownItem::link('Action', '#'),
+                DropdownItem::link('Another action', '#'),
+                DropdownItem::link('Something else here', '#'),
+            );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" style="color: red;" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            </ul>
+            </div>
+            HTML,
+            $dropdown->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" style="color: red;" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            </ul>
+            </div>
+            HTML,
+            $dropdown->addTogglerCssStyle('color: blue;', false)->render(),
+        );
+    }
+
 
     /**
      * @link https://getbootstrap.com/docs/5.3/components/dropdowns/#alignment-options
@@ -1111,6 +1244,9 @@ final class DropdownTest extends TestCase
         $this->assertNotSame($dropdownWidget, $dropdownWidget->addAttributes([]));
         $this->assertNotSame($dropdownWidget, $dropdownWidget->addClass(''));
         $this->assertNotSame($dropdownWidget, $dropdownWidget->addCssStyle([]));
+        $this->assertNotSame($dropdownWidget, $dropdownWidget->addTogglerAttribute('', ''));
+        $this->assertNotSame($dropdownWidget, $dropdownWidget->addTogglerClass(''));
+        $this->assertNotSame($dropdownWidget, $dropdownWidget->addTogglerCssStyle([]));
         $this->assertNotSame($dropdownWidget, $dropdownWidget->alignment(DropdownAlignment::END));
         $this->assertNotSame($dropdownWidget, $dropdownWidget->attribute('', ''));
         $this->assertNotSame($dropdownWidget, $dropdownWidget->attributes([]));
