@@ -111,7 +111,7 @@ $accordion = Accordion::widget()->addTogglerAttribute(['data-id' => '123']);
 Add class:
 
 ```php
-$accordion = Accordion::widget()->addTogglerClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
+$accordion = Accordion::widget()->addTogglerClass('custom-class', null, 'another-class', BackgroundColor::PRIMARY);
 ```
 
 Add style:
