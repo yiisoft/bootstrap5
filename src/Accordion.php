@@ -146,7 +146,7 @@ final class Accordion extends Widget
     }
 
     /**
-     * Adds one or more CSS classes to the existing classes.
+     * Adds one or more CSS classes to the existing toggler classes.
      *
      * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
      * automatically.
