@@ -680,4 +680,9 @@ final class BreadcrumbsTest extends TestCase
                 ->render(),
         );
     }
+
+    public function testRenderWithEmptyItems(): void
+    {
+        $this->assertEmpty(Breadcrumbs::widget()->render());
+    }
 }
