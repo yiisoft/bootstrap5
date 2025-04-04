@@ -36,6 +36,18 @@ $breadcrumb = Breadcrumbs::widget()
     ->class('custom-breadcrumb');
 ```
 
+Add single attributes:
+
+```php
+$breadcrumb = Breadcrumbs::widget()->attribute('data-id', '123');
+```
+
+Add multiple attributes:
+
+```php
+$breadcrumb = Breadcrumbs::widget()->addAttributes(['data-id' => '123', 'data-action' => 'submit']);
+```
+
 For the list of items, use `listAttributes()`:
 
 ```php
@@ -46,6 +58,32 @@ For links within items, use `linkAttributes()`:
 
 ```php
 $breadcrumb = Breadcrumbs::widget()->linkAttributes(['class' => 'custom-link']);
+```
+
+### Adding CSS Classes
+Add one or more CSS classes:
+
+```php
+$breadcrumb = Breadcrumbs::widget()->addClass('btn-rounded', 'text-uppercase');
+```
+
+Replace all existing classes:
+
+```php
+$breadcrumb = Breadcrumbs::widget()->class('custom-class', 'another-class');
+```
+
+### Adding CSS Styles
+Add CSS styles to the button:
+
+```php
+$breadcrumb = Breadcrumbs::widget()->addCssStyle('color: red;');
+```
+
+Add multiple styles:
+
+```php
+$breadcrumb = Breadcrumbs::widget()->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
 ```
 
 ### Customizing the Divider

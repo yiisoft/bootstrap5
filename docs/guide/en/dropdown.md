@@ -51,12 +51,50 @@ $dropdown = Dropdown::widget()
     ->class('custom-dropdown');
 ```
 
+Add single attributes:
+
+```php
+$dropdown = Dropdown::widget()->attribute('data-id', '123');
+```
+
+Add multiple attributes:
+
+```php
+$dropdown = Dropdown::widget()->addAttributes(['data-id' => '123', 'data-action' => 'submit']);
+```
+
 For the toggle button, use `togglerAttributes()` and `togglerClass()`:
 
 ```php
 $dropdown = Dropdown::widget()
     ->togglerAttributes(['data-test' => 'toggle'])
     ->togglerClass('btn-lg');
+```
+
+### Adding CSS Classes
+Add one or more CSS classes:
+
+```php
+$dropdown = Dropdown::widget()->addClass('btn-rounded', 'text-uppercase');
+```
+
+Replace all existing classes:
+
+```php
+$dropdown = Dropdown::widget()->class('custom-class', 'another-class');
+```
+
+### Adding CSS Styles
+Add CSS styles to the button:
+
+```php
+$dropdown = Dropdown::widget()->addCssStyle('color: red;');
+```
+
+Add multiple styles:
+
+```php
+$dropdown = Dropdown::widget()->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
 ```
 
 ### Customizing the Toggle Button

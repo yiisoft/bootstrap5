@@ -46,10 +46,48 @@ $alert = Alert::widget()
     ->class('custom-alert');
 ```
 
+Add single attributes:
+
+```php
+$alert = Alert::widget()->attribute('data-id', '123');
+```
+
+Add multiple attributes:
+
+```php
+$alert = Alert::widget()->addAttributes(['data-id' => '123', 'data-action' => 'submit']);
+```
+
 For the dismissible button, use `closeButtonAttributes()`:
 
 ```php
 $alert = Alert::widget()->closeButtonAttributes(['data-test' => 'dismiss-button']);
+```
+
+### Adding CSS Classes
+Add one or more CSS classes:
+
+```php
+$alert = Alert::widget()->addClass('btn-rounded', 'text-uppercase');
+```
+
+Replace all existing classes:
+
+```php
+$alert = Alert::widget()->class('custom-class', 'another-class');
+```
+
+### Adding CSS Styles
+Add CSS styles to the button:
+
+```php
+$alert = Alert::widget()->addCssStyle('color: red;');
+```
+
+Add multiple styles:
+
+```php
+$alert = Alert::widget()->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
 ```
 
 ### Customizing Body

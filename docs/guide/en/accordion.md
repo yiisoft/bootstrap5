@@ -76,10 +76,48 @@ $accordion = Accordion::widget()
     ->class('custom-accordion');
 ```
 
+Add single attributes:
+
+```php
+$accordion = Accordion::widget()->attribute('data-id', '123');
+```
+
+Add multiple attributes:
+
+```php
+$accordion = Accordion::widget()->addAttributes(['data-id' => '123', 'data-action' => 'submit']);
+```
+
 For the toggler, use `togglerAttributes()`:
 
 ```php
 $accordion = Accordion::widget()->togglerAttributes(['data-test' => 'toggle']);
+```
+
+### Adding CSS Classes
+Add one or more CSS classes:
+
+```php
+$accordion = Accordion::widget()->addClass('btn-rounded', 'text-uppercase');
+```
+
+Replace all existing classes:
+
+```php
+$accordion = Accordion::widget()->class('custom-class', 'another-class');
+```
+
+### Adding CSS Styles
+Add CSS styles to the button:
+
+```php
+$accordion = Accordion::widget()->addCssStyle('color: red;');
+```
+
+Add multiple styles:
+
+```php
+$accordion = Accordion::widget()->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
 ```
 
 ### Customizing Headers
