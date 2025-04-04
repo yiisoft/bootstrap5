@@ -42,7 +42,7 @@ This generates a simple horizontal button group with three primary buttons.
 Customize the button group container with HTML attributes:
 
 ```php
-$buttonGroup = ButtonGroup::widget()
+ButtonGroup::widget()
     ->attributes(['id' => 'my-button-group'])
     ->class('custom-button-group');
 ```
@@ -50,46 +50,46 @@ $buttonGroup = ButtonGroup::widget()
 Add single attributes:
 
 ```php
-$buttonGroup = ButtonGroup::widget()->attribute('data-id', '123');
+ButtonGroup::widget()->attribute('data-id', '123');
 ```
 
 Add multiple attributes:
 
 ```php
-$buttonGroup = ButtonGroup::widget()->addAttributes(['data-id' => '123', 'data-action' => 'toggle']);
+ButtonGroup::widget()->addAttributes(['data-id' => '123', 'data-action' => 'toggle']);
 ```
 
 ### Adding CSS Classes
 Add one or more CSS classes:
 
 ```php
-$buttonGroup = ButtonGroup::widget()->addClass('custom-class', 'bg-primary');
+ButtonGroup::widget()->addClass('custom-class', 'bg-primary');
 ```
 
 Replace all existing classes:
 
 ```php
-$buttonGroup = ButtonGroup::widget()->class('custom-class', 'another-class', 'bg-primary');
+ButtonGroup::widget()->class('custom-class', 'another-class', 'bg-primary');
 ```
 
 ### Adding CSS Styles
 Add CSS styles to the button group:
 
 ```php
-$buttonGroup = ButtonGroup::widget()->addCssStyle('color: red;');
+ButtonGroup::widget()->addCssStyle('color: red;');
 ```
 
 Add multiple styles:
 
 ```php
-$buttonGroup = ButtonGroup::widget()->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
+ButtonGroup::widget()->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
 ```
 
 ### ARIA Label
 Set an ARIA label for accessibility:
 
 ```php
-$buttonGroup = ButtonGroup::widget()->ariaLabel('Button group for actions');
+ButtonGroup::widget()->ariaLabel('Button group for actions');
 ```
 
 ### Group Size
@@ -98,22 +98,22 @@ Change the button group size:
 ```php
 use Yiisoft\Bootstrap5\ButtonSize;
 
-$buttonGroup = ButtonGroup::widget()->size(ButtonSize::LARGE);
-$buttonGroup = ButtonGroup::widget()->size(ButtonSize::SMALL);
+ButtonGroup::widget()->size(ButtonSize::LARGE);
+ButtonGroup::widget()->size(ButtonSize::SMALL);
 ```
 
 ### Orientation
 Create a vertical button group:
 
 ```php
-$buttonGroup = ButtonGroup::widget()->vertical();
+ButtonGroup::widget()->vertical();
 ```
 
 ### Mixed Styles Example
 Create a button group with different button variants:
 
 ```php
-$buttonGroup = ButtonGroup::widget()
+ButtonGroup::widget()
     ->buttons(
         Button::widget()->label('Left')->variant(ButtonVariant::DANGER),
         Button::widget()->label('Middle')->variant(ButtonVariant::WARNING),
@@ -125,7 +125,7 @@ $buttonGroup = ButtonGroup::widget()
 Create a button group with outlined button variants:
 
 ```php
-$buttonGroup = ButtonGroup::widget()
+ButtonGroup::widget()
     ->buttons(
         Button::widget()->label('Left')->variant(ButtonVariant::OUTLINE_PRIMARY),
         Button::widget()->label('Middle')->variant(ButtonVariant::OUTLINE_SECONDARY),
@@ -139,7 +139,7 @@ Create a button group with checkbox inputs:
 ```php
 use Yiisoft\Html\Tag\Input\Checkbox;
 
-$buttonGroup = ButtonGroup::widget()
+ButtonGroup::widget()
     ->ariaLabel('Basic checkbox toggle button group')
     ->buttons(
         Checkbox::tag()
@@ -166,7 +166,7 @@ Create a button group with radio inputs:
 ```php
 use Yiisoft\Html\Tag\Input\Radio;
 
-$buttonGroup = ButtonGroup::widget()
+ButtonGroup::widget()
     ->ariaLabel('Basic radio toggle button group')
     ->buttons(
         Radio::tag()
