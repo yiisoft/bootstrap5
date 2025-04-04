@@ -27,9 +27,9 @@ use Yiisoft\Bootstrap5\ButtonVariant;
 <?= ButtonGroup::widget()
         ->ariaLabel('Basic example')
         ->buttons(
-            Button::widget()->id(false)->label('Left')->variant(ButtonVariant::PRIMARY),
-            Button::widget()->id(false)->label('Middle')->variant(ButtonVariant::PRIMARY),
-            Button::widget()->id(false)->label('Right')->variant(ButtonVariant::PRIMARY),
+            Button::widget()->label('Left')->variant(ButtonVariant::PRIMARY),
+            Button::widget()->label('Middle')->variant(ButtonVariant::PRIMARY),
+            Button::widget()->label('Right')->variant(ButtonVariant::PRIMARY),
         )
 ?>
 ```
@@ -115,9 +115,9 @@ Create a button group with different button variants:
 ```php
 $buttonGroup = ButtonGroup::widget()
     ->buttons(
-        Button::widget()->id(false)->label('Left')->variant(ButtonVariant::DANGER),
-        Button::widget()->id(false)->label('Middle')->variant(ButtonVariant::WARNING),
-        Button::widget()->id(false)->label('Right')->variant(ButtonVariant::SUCCESS),
+        Button::widget()->label('Left')->variant(ButtonVariant::DANGER),
+        Button::widget()->label('Middle')->variant(ButtonVariant::WARNING),
+        Button::widget()->label('Right')->variant(ButtonVariant::SUCCESS),
     );
 ```
 
@@ -127,9 +127,9 @@ Create a button group with outlined button variants:
 ```php
 $buttonGroup = ButtonGroup::widget()
     ->buttons(
-        Button::widget()->id(false)->label('Left')->variant(ButtonVariant::OUTLINE_PRIMARY),
-        Button::widget()->id(false)->label('Middle')->variant(ButtonVariant::OUTLINE_SECONDARY),
-        Button::widget()->id(false)->label('Right')->variant(ButtonVariant::OUTLINE_SUCCESS),
+        Button::widget()->label('Left')->variant(ButtonVariant::OUTLINE_PRIMARY),
+        Button::widget()->label('Middle')->variant(ButtonVariant::OUTLINE_SECONDARY),
+        Button::widget()->label('Right')->variant(ButtonVariant::OUTLINE_SUCCESS),
     );
 ```
 
