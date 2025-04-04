@@ -40,7 +40,7 @@ This generates a large primary button with the text "Primary Button."
 Customize the button container with HTML attributes:
 
 ```php
-$button = Button::widget()
+Button::widget()
     ->attributes(['id' => 'my-button'])
     ->class('custom-button');
 ```
@@ -48,55 +48,55 @@ $button = Button::widget()
 Add single attributes:
 
 ```php
-$button = Button::widget()->attribute('data-id', '123');
+Button::widget()->attribute('data-id', '123');
 ```
 
 Add multiple attributes:
 
 ```php
-$button = Button::widget()->addAttributes(['data-id' => '123', 'data-action' => 'submit']);
+Button::widget()->addAttributes(['data-id' => '123', 'data-action' => 'submit']);
 ```
 
 ### Adding CSS Classes
 Add one or more CSS classes:
 
 ```php
-$button = Button::widget()->addClass('btn-rounded', 'text-uppercase');
+Button::widget()->addClass('btn-rounded', 'text-uppercase');
 ```
 
 Replace all existing classes:
 
 ```php
-$button = Button::widget()->class('custom-class', 'another-class');
+Button::widget()->class('custom-class', 'another-class');
 ```
 
 ### Adding CSS Styles
 Add CSS styles to the button:
 
 ```php
-$button = Button::widget()->addCssStyle('color: red;');
+Button::widget()->addCssStyle('color: red;');
 ```
 
 Add multiple styles:
 
 ```php
-$button = Button::widget()->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
+Button::widget()->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
 ```
 
 ### Button Variants
 Set the button's visual variant:
 
 ```php
-$button = Button::widget()->variant(ButtonVariant::SUCCESS);
-$button = Button::widget()->variant(ButtonVariant::OUTLINE_DANGER);
+Button::widget()->variant(ButtonVariant::SUCCESS);
+Button::widget()->variant(ButtonVariant::OUTLINE_DANGER);
 ```
 
 ### Button Sizes
 Change the button size:
 
 ```php
-$button = Button::widget()->size(ButtonSize::LARGE);
-$button = Button::widget()->size(ButtonSize::SMALL);
+Button::widget()->size(ButtonSize::LARGE);
+Button::widget()->size(ButtonSize::SMALL);
 ```
 
 ### Button Types
@@ -105,10 +105,10 @@ Create different types of buttons:
 **Submit Button**:
 ```php
 // Using factory method
-$button = Button::submit('Submit Form');
+Button::submit('Submit Form');
 
 // Using type method
-$button = Button::widget()
+Button::widget()
     ->label('Submit Form')
     ->type(ButtonType::SUBMIT);
 ```
@@ -116,10 +116,10 @@ $button = Button::widget()
 **Reset Button**:
 ```php
 // Using factory method
-$button = Button::reset('Reset Form');
+Button::reset('Reset Form');
 
 // Using type method
-$button = Button::widget()
+Button::widget()
     ->label('Reset Form')
     ->type(ButtonType::RESET);
 ```
@@ -127,10 +127,10 @@ $button = Button::widget()
 **Link Button**:
 ```php
 // Using factory method
-$button = Button::link('Visit Page', '/path/to/page');
+Button::link('Visit Page', '/path/to/page');
 
 // Using type method
-$button = Button::widget()
+Button::widget()
     ->label('Visit Page')
     ->type(ButtonType::LINK)
     ->url('/path/to/page');
@@ -139,10 +139,10 @@ $button = Button::widget()
 **Input Submit Button**:
 ```php
 // Using factory method
-$button = Button::submitInput('Submit');
+Button::submitInput('Submit');
 
 // Using type method
-$button = Button::widget()
+Button::widget()
     ->label('Submit')
     ->type(ButtonType::SUBMIT_INPUT);
 ```
@@ -150,10 +150,10 @@ $button = Button::widget()
 **Input Reset Button**:
 ```php
 // Using factory method
-$button = Button::resetInput('Reset');
+Button::resetInput('Reset');
 
 // Using type method
-$button = Button::widget()
+Button::widget()
     ->label('Reset')
     ->type(ButtonType::RESET_INPUT);
 ```
@@ -162,25 +162,25 @@ $button = Button::widget()
 
 **Active State**:
 ```php
-$button = Button::widget()->active()->label('Active Button');
+Button::widget()->active()->label('Active Button');
 ```
 
 **Disabled State**:
 ```php
-$button = Button::widget()->disabled()->label('Disabled Button');
+Button::widget()->disabled()->label('Disabled Button');
 ```
 
 ### Toggle Functionality
 Add toggle behavior to the button:
 
 ```php
-$button = Button::widget()
+Button::widget()
     ->label('Toggle Button')
     ->toggle()
     ->variant(ButtonVariant::PRIMARY);
 
 // Specify a toggler type
-$button = Button::widget()
+Button::widget()
     ->label('Modal Toggle')
     ->toggle(TogglerType::MODAL);
 ```
@@ -189,10 +189,10 @@ $button = Button::widget()
 
 **Prevent Text Wrapping**:
 ```php
-$button = Button::widget()->label('Long Button Text')->disableTextWrapping();
+Button::widget()->label('Long Button Text')->disableTextWrapping();
 ```
 
 **Using HTML in Labels**:
 ```php
-$button = Button::widget()->label('<i>HTML Content</i>', false);
+Button::widget()->label('<i>HTML Content</i>', false);
 ```
