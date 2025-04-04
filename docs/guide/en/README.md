@@ -26,6 +26,8 @@ Once you’re set up, explore the widget-specific guides below to start building
 - [Breadcrumbs](breadcrumbs.md): Learn how to create and customize breadcrumb navigation, including separators and
   links.
 - [Button](button.md): Learn how to create and customize buttons with different variants, sizes, and states.
+- [Button Group](button-group.md): Learn how to create and customize button groups for creating sets of related 
+  buttons displayed side by side.
 - [Dropdown](dropdown.md): Learn how to create and customize interactive dropdown menus with various item types, toggle
   options.
 
