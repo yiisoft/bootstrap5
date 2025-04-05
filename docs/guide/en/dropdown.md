@@ -46,17 +46,55 @@ This generates a simple dropdown menu with a toggle button and three clickable i
 Customize the dropdown container with HTML attributes:
 
 ```php
-$dropdown = Dropdown::widget()
+Dropdown::widget()
     ->attributes(['id' => 'my-dropdown'])
     ->class('custom-dropdown');
+```
+
+Add single attributes:
+
+```php
+Dropdown::widget()->attribute('data-id', '123');
+```
+
+Add multiple attributes:
+
+```php
+Dropdown::widget()->addAttributes(['data-id' => '123', 'data-action' => 'submit']);
 ```
 
 For the toggle button, use `togglerAttributes()` and `togglerClass()`:
 
 ```php
-$dropdown = Dropdown::widget()
+Dropdown::widget()
     ->togglerAttributes(['data-test' => 'toggle'])
     ->togglerClass('btn-lg');
+```
+
+### Adding CSS Classes
+Add one or more CSS classes:
+
+```php
+Dropdown::widget()->addClass('btn-rounded', 'text-uppercase');
+```
+
+Replace all existing classes:
+
+```php
+Dropdown::widget()->class('custom-class', 'another-class');
+```
+
+### Adding CSS Styles
+Add CSS styles to the button:
+
+```php
+Dropdown::widget()->addCssStyle('color: red;');
+```
+
+Add multiple styles:
+
+```php
+Dropdown::widget()->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
 ```
 
 ### Customizing the Toggle Button
@@ -66,7 +104,7 @@ Change the toggle content, variant, or size:
 use Yiisoft\Bootstrap5\ButtonVariant;
 use Yiisoft\Bootstrap5\ButtonSize;
 
-$dropdown = Dropdown::widget()
+Dropdown::widget()
     ->togglerContent('Menu')
     ->togglerVariant(ButtonVariant::PRIMARY)
     ->togglerSize(ButtonSize::SMALL());
@@ -75,7 +113,7 @@ $dropdown = Dropdown::widget()
 To use a link instead of a button:
 
 ```php
-$dropdown = Dropdown::widget()
+Dropdown::widget()
     ->togglerAsLink()
     ->togglerUrl('/menu');
 ```
@@ -83,7 +121,7 @@ $dropdown = Dropdown::widget()
 For a split button:
 
 ```php
-$dropdown = Dropdown::widget()
+Dropdown::widget()
     ->togglerSplit()
     ->togglerSplitContent('Action')
     ->togglerContent('Options');
@@ -92,19 +130,19 @@ $dropdown = Dropdown::widget()
 Add attribute:
 
 ```php
-$dropdown = Dropdown::widget()->addTogglerAttribute(['data-id' => '123']);
+Dropdown::widget()->addTogglerAttribute(['data-id' => '123']);
 ```
 
 Add class:
 
 ```php
-$dropdown = Dropdown::widget()->addTogglerClass('custom-class', null, 'another-class', BackgroundColor::PRIMARY);
+Dropdown::widget()->addTogglerClass('custom-class', null, 'another-class', BackgroundColor::PRIMARY);
 ```
 
 Add style:
 
 ```php
-$dropdown = Dropdown::widget()->addTogglerCssStyle(['color' => 'red', 'font-weight' => 'bold']);
+Dropdown::widget()->addTogglerCssStyle(['color' => 'red', 'font-weight' => 'bold']);
 ```
 
 ### Direction and Alignment
@@ -113,7 +151,7 @@ Set the dropdown direction with `direction()`:
 ```php
 use Yiisoft\Bootstrap5\DropdownDirection;
 
-$dropdown = Dropdown::widget()->direction(DropdownDirection::DROPUP);
+Dropdown::widget()->direction(DropdownDirection::DROPUP);
 ```
 
 Align the menu with `alignment()`:
@@ -121,7 +159,7 @@ Align the menu with `alignment()`:
 ```php
 use Yiisoft\Bootstrap5\DropdownAlignment;
 
-$dropdown = Dropdown::widget()->alignment(DropdownAlignment::END);
+Dropdown::widget()->alignment(DropdownAlignment::END);
 ```
 
 ### Auto close Behavior
@@ -130,14 +168,14 @@ Control when the dropdown closes using `autoClose()`:
 ```php
 use Yiisoft\Bootstrap5\DropdownAutoClose;
 
-$dropdown = Dropdown::widget()->autoClose(DropdownAutoClose::OUTSIDE);
+Dropdown::widget()->autoClose(DropdownAutoClose::OUTSIDE);
 ```
 
 ### Themes
 Apply a Bootstrap theme (for example, dark mode):
 
 ```php
-$dropdown = Dropdown::widget()->theme('dark');
+Dropdown::widget()->theme('dark');
 ```
 
 ## Item Types

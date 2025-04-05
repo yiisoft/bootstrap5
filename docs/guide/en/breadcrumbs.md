@@ -31,47 +31,85 @@ This generates a simple breadcrumb navigation with three items: two clickable li
 Customize the breadcrumb container with HTML attributes:
 
 ```php
-$breadcrumb = Breadcrumbs::widget()
+Breadcrumbs::widget()
     ->attributes(['id' => 'my-breadcrumb'])
     ->class('custom-breadcrumb');
+```
+
+Add single attributes:
+
+```php
+Breadcrumbs::widget()->attribute('data-id', '123');
+```
+
+Add multiple attributes:
+
+```php
+Breadcrumbs::widget()->addAttributes(['data-id' => '123', 'data-action' => 'submit']);
 ```
 
 For the list of items, use `listAttributes()`:
 
 ```php
-$breadcrumb = Breadcrumbs::widget()->itemAttributes(['data-test' => 'item']);
+Breadcrumbs::widget()->itemAttributes(['data-test' => 'item']);
 ```
 
 For links within items, use `linkAttributes()`:
 
 ```php
-$breadcrumb = Breadcrumbs::widget()->linkAttributes(['class' => 'custom-link']);
+Breadcrumbs::widget()->linkAttributes(['class' => 'custom-link']);
+```
+
+### Adding CSS Classes
+Add one or more CSS classes:
+
+```php
+Breadcrumbs::widget()->addClass('btn-rounded', 'text-uppercase');
+```
+
+Replace all existing classes:
+
+```php
+Breadcrumbs::widget()->class('custom-class', 'another-class');
+```
+
+### Adding CSS Styles
+Add CSS styles to the button:
+
+```php
+Breadcrumbs::widget()->addCssStyle('color: red;');
+```
+
+Add multiple styles:
+
+```php
+Breadcrumbs::widget()->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
 ```
 
 ### Customizing the Divider
 Change the divider between breadcrumb items (default is a forward slash `/`):
 
 ```php
-$breadcrumb = Breadcrumbs::widget()->divider('>');
+Breadcrumbs::widget()->divider('>');
 ```
 
 ### Active Item Styling
 Customize the CSS class for the active item (default is `active`):
 
 ```php
-$breadcrumb = Breadcrumbs::widget()->itemActiveClass('current-page');
+Breadcrumbs::widget()->itemActiveClass('current-page');
 ```
 
 ### ARIA Label
 Set an ARIA label for accessibility (default is `breadcrumb`):
 
 ```php
-$breadcrumb = Breadcrumbs::widget()->ariaLabel('Navigation path');
+Breadcrumbs::widget()->ariaLabel('Navigation path');
 ```
 
 ### List Tag
 Change the HTML tag used for the list (default is `ol`):
 
 ```php
-$breadcrumb = Breadcrumbs::widget()->listTagName('ul');
+Breadcrumbs::widget()->listTagName('ul');
 ```
