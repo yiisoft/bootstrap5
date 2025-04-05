@@ -534,7 +534,6 @@ final class NavBar extends Widget
         return $new;
     }
 
-
     /**
      * Sets the theme for the navbar component.
      *

@@ -885,7 +885,6 @@ final class NavBarTest extends TestCase
         );
     }
 
-
     public function testTogglerWithStringable(): void
     {
         Assert::equalsWithoutLE(
