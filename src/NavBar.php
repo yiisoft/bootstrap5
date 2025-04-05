@@ -68,14 +68,19 @@ final class NavBar extends Widget
     private string $innerContainerTag = 'div';
     private bool|string $id = true;
     private string $tag = 'nav';
-    private string $toggle = '';
+    private string|Stringable $toggler = '';
 
     /**
      * Adds a set of attributes for the navbar component.
      *
-     * @param array $attributes Attribute values indexed by attribute names. e.g. `['id' => 'my-collapse']`.
+     * @param array $attributes Attribute values indexed by attribute names. for example, `['id' => 'my-collapse']`.
      *
      * @return self A new instance with the specified attributes added.
+     *
+     * Usage example:
+     * ```php
+     * $navBar->addAttributes(['data-id' => '123']);
+     * ```
      */
     public function addAttributes(array $attributes): self
     {
@@ -101,6 +106,11 @@ final class NavBar extends Widget
      * @return self A new instance with the specified CSS classes added to existing ones.
      *
      * @link https://html.spec.whatwg.org/#classes
+     *
+     * Example usage:
+     * ```php
+     * $navBar->addClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
+     * ```
      */
     public function addClass(BackedEnum|string|null ...$class): self
     {
@@ -111,9 +121,9 @@ final class NavBar extends Widget
     }
 
     /**
-     * Adds a CSS style for the navbar component.
+     * Adds a CSS style for the nav component.
      *
-     * @param array|string $style The CSS style for the navbar component. If an array, the values will be separated by
+     * @param array|string $style The CSS style for the nav component. If an array, the values will be separated by
      * a space. If a string, it will be added as is. For example, `color: red`. If the value is an array, the values
      * will be separated by a space. e.g., `['color' => 'red', 'font-weight' => 'bold']` will be rendered as
      * `color: red; font-weight: bold;`.
@@ -121,11 +131,40 @@ final class NavBar extends Widget
      * appended to the existing one.
      *
      * @return self A new instance with the specified CSS style value added.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->addCssStyle('color: red');
+     *
+     * // or
+     * $navBar->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
+     * ```
      */
     public function addCssStyle(array|string $style, bool $overwrite = true): self
     {
         $new = clone $this;
         Html::addCssStyle($new->attributes, $style, $overwrite);
+
+        return $new;
+    }
+
+    /**
+     * Adds a sets attribute value.
+     *
+     * @param string $name The attribute name.
+     * @param mixed $value The attribute value.
+     *
+     * @return self A new instance with the specified attribute added.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->attribute('data-id', '123');
+     * ```
+     */
+    public function attribute(string $name, mixed $value): self
+    {
+        $new = clone $this;
+        $new->attributes[$name] = $value;
 
         return $new;
     }
@@ -138,11 +177,36 @@ final class NavBar extends Widget
      * @return self A new instance with the specified attributes.
      *
      * @see {\Yiisoft\Html\Html::renderTagAttributes()} for details on how attributes are being rendered.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->attributes(['data-id' => '123']);
+     * ```
      */
     public function attributes(array $attributes): self
     {
         $new = clone $this;
         $new->attributes = $attributes;
+
+        return $new;
+    }
+
+    /**
+     * Sets the brand for the navbar component.
+     *
+     * @param string|Stringable $brand The brand for the navbar component.
+     *
+     * @return self A new instance with the specified brand.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->brand('My Brand');
+     * ```
+     */
+    public function brand(string|Stringable $brand): self
+    {
+        $new = clone $this;
+        $new->brand = $brand;
 
         return $new;
     }
@@ -154,6 +218,14 @@ final class NavBar extends Widget
      * be displayed.
      *
      * @return self A new instance with the specified brand image.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->brandImage('path/to/image.png');
+     *
+     * // or
+     * $navBar->brandImage(Img::tag()->src('path/to/image.png'));
+     * ```
      */
     public function brandImage(string|Stringable $image): self
     {
@@ -171,6 +243,11 @@ final class NavBar extends Widget
      * @return self A new instance with the specified attributes.
      *
      * @see {\Yiisoft\Html\Html::renderTagAttributes()} for details on how attributes are being rendered.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->brandImageAttributes(['class' => 'brand-image']);
+     * ```
      */
     public function brandImageAttributes(array $attributes): self
     {
@@ -187,6 +264,11 @@ final class NavBar extends Widget
      * be displayed.
      *
      * @return self A new instance with the specified brand text.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->brandText('My Brand');
+     * ```
      */
     public function brandText(string|Stringable $text): self
     {
@@ -203,6 +285,11 @@ final class NavBar extends Widget
      * displayed.
      *
      * @return self A new instance with the specified brand URL.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->brandUrl('https://example.com');
+     * ```
      */
     public function brandUrl(string $url): self
     {
@@ -220,6 +307,11 @@ final class NavBar extends Widget
      * @return self A new instance with the specified attributes.
      *
      * @see {\Yiisoft\Html\Html::renderTagAttributes()} for details on how attributes are being rendered.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->brandAttributes(['class' => 'brand']);
+     * ```
      */
     public function brandAttributes(array $attributes): self
     {
@@ -239,7 +331,7 @@ final class NavBar extends Widget
      * For example:
      *
      * ```php
-     * $carousel->class('custom-class', null, 'another-class');
+     * $navBar->class('custom-class', null, 'another-class');
      * ```
      *
      * @return self A new instance with the specified CSS classes set.
@@ -260,6 +352,11 @@ final class NavBar extends Widget
      * If `false` navigation content spans full width.
      *
      * @return self A new instance with the specified container setting.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->container(true);
+     * ```
      */
     public function container(bool $enabled): self
     {
@@ -277,6 +374,11 @@ final class NavBar extends Widget
      * @return self A new instance with the specified attributes.
      *
      * @see {\Yiisoft\Html\Html::renderTagAttributes()} for details on how attributes are being rendered.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->containerAttributes(['class' => 'container']);
+     * ```
      */
     public function containerAttributes(array $attributes): self
     {
@@ -292,6 +394,11 @@ final class NavBar extends Widget
      * @param NavBarExpand $class The breakpoint class at which the navbar will expand.
      *
      * @return self A new instance with the specified expansion breakpoint.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->expand(NavBarExpand::MD);
+     * ```
      */
     public function expand(NavBarExpand $class): self
     {
@@ -306,8 +413,14 @@ final class NavBar extends Widget
      *
      * @param bool|string $id The ID of the alert component. If `true`, an ID will be generated automatically.
      *
-     *@throws InvalidArgumentException if the ID is an empty string or `false`.
+     * @throws InvalidArgumentException if the ID is an empty string or `false`.
+     *
      * @return self A new instance with the specified ID.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->id('navbarId');
+     * ```
      */
     public function id(bool|string $id): self
     {
@@ -323,6 +436,11 @@ final class NavBar extends Widget
      * @param bool $enabled 'true' to use an inner container for the navbar component, 'false' otherwise.
      *
      * @return self A new instance with the specified inner container setting.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->innerContainer(true);
+     * ```
      */
     public function innerContainer(bool $enabled): self
     {
@@ -340,6 +458,11 @@ final class NavBar extends Widget
      * @return self A new instance with the specified attributes.
      *
      * @see {\Yiisoft\Html\Html::renderTagAttributes()} for details on how attributes are being rendered.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->innerContainerAttributes(['class' => 'inner-container']);
+     * ```
      */
     public function innerContainerAttributes(array $attributes): self
     {
@@ -349,6 +472,20 @@ final class NavBar extends Widget
         return $new;
     }
 
+    /**
+     * Sets the placement for the navbar component.
+     *
+     * @param NavBarPlacement $value The placement for the navbar.
+     *
+     * @return self A new instance with the specified placement.
+     *
+     * @see https://getbootstrap.com/docs/5.3/components/navbar/#placement
+     *
+     * Example usage:
+     * ```php
+     * $navBar->placement(NavBarPlacement::FIXED_TOP);
+     * ```
+     */
     public function placement(NavBarPlacement $value): self
     {
         return $this->addClass($value);
@@ -360,6 +497,11 @@ final class NavBar extends Widget
      * @param string $tag The tag name for the navbar component.
      *
      * @return self A new instance with the specified tag name.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->tag('div');
+     * ```
      */
     public function tag(string $tag): self
     {
@@ -370,11 +512,40 @@ final class NavBar extends Widget
     }
 
     /**
+     * Sets the toggle button for the navbar component.
+     *
+     * @param string|Stringable $toggle The toggle button for the navbar component.
+     *
+     * @return self A new instance with the specified toggle button.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->toggler('Toggle');
+     *
+     * // or
+     * $navBar->toggler(Button::button('Toggle'));
+     * ```
+     */
+    public function toggler(string|Stringable $toggle): self
+    {
+        $new = clone $this;
+        $new->toggler = $toggle;
+
+        return $new;
+    }
+
+
+    /**
      * Sets the theme for the navbar component.
      *
      * @param string $theme The theme for the navbar component.
      *
      * @return self A new instance with the specified theme.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->theme('dark');
+     * ```
      */
     public function theme(string $theme): self
     {
@@ -430,7 +601,7 @@ final class NavBar extends Widget
             $htmlBegin .= $renderBrand . "\n";
         }
 
-        $htmlBegin .= $this->renderToggle($id) . "\n";
+        $htmlBegin .= $this->renderToggler($id) . "\n";
 
         $htmlBegin .= Html::openTag('div', ['class' => self::NAV_CONTAINER, 'id' => $id]);
 
@@ -467,7 +638,7 @@ final class NavBar extends Widget
      */
     private function renderBrand(): string
     {
-        if ($this->brand instanceof Stringable) {
+        if ($this->brand !== '') {
             return (string) $this->brand;
         }
 
@@ -491,10 +662,6 @@ final class NavBar extends Widget
             $content .= "\n";
         }
 
-        if ($content === '') {
-            return '';
-        }
-
         $brandAttributes = $this->brandAttributes;
         $classesBrand = $brandAttributes['class'] ?? null;
 
@@ -513,16 +680,16 @@ final class NavBar extends Widget
     }
 
     /**
-     * Renders the toggle button for the navbar.
+     * Renders the toggler button for the navbar.
      *
      * @param string $id The ID of the collapsible element.
      *
      * @return string The rendered toggle button HTML.
      */
-    private function renderToggle(string $id): string
+    private function renderToggler(string $id): string
     {
-        if ($this->toggle !== '') {
-            return $this->toggle;
+        if ($this->toggler !== '') {
+            return (string) $this->toggler;
         }
 
         return Button::button('')
