@@ -71,9 +71,9 @@ final class NavBar extends Widget
     private string|Stringable $toggler = '';
 
     /**
-     * Adds a set of attributes for the navbar component.
+     * Adds a sets of attributes.
      *
-     * @param array $attributes Attribute values indexed by attribute names. for example, `['id' => 'my-collapse']`.
+     * @param array $attributes Attribute values indexed by attribute names. for example, `['id' => 'my-id']`.
      *
      * @return self A new instance with the specified attributes added.
      *
@@ -91,17 +91,12 @@ final class NavBar extends Widget
     }
 
     /**
-     * Adds one or more CSS classes to the existing classes of the navbar component.
+     * Adds one or more CSS classes to the existing classes.
      *
      * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
      * automatically.
      *
      * @param BackedEnum|string|null ...$class One or more CSS class names to add. Pass `null` to skip adding a class.
-     * For example:
-     *
-     * ```php
-     * $carousel->addClass('custom-class', null, 'another-class');
-     * ```
      *
      * @return self A new instance with the specified CSS classes added to existing ones.
      *
@@ -169,7 +164,7 @@ final class NavBar extends Widget
     }
 
     /**
-     * Sets the HTML attributes for the navbar component.
+     * Sets the HTML attributes.
      *
      * @param array $attributes Attribute values indexed by attribute names.
      *
@@ -321,19 +316,18 @@ final class NavBar extends Widget
     }
 
     /**
-     * Replaces all existing CSS classes of the navbar component with the provided ones.
+     * Replaces all existing CSS classes with the specified one(s).
      *
      * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
      * automatically.
      *
      * @param BackedEnum|string|null ...$class One or more CSS class names to set. Pass `null` to skip setting a class.
-     * For example:
+     *
+     * @return self A new instance with the specified CSS classes set.
      *
      * ```php
      * $navBar->class('custom-class', null, 'another-class');
      * ```
-     *
-     * @return self A new instance with the specified CSS classes set.
      */
     public function class(BackedEnum|string|null ...$class): self
     {
@@ -408,9 +402,9 @@ final class NavBar extends Widget
     }
 
     /**
-     * Sets the ID of the navbar component.
+     * Sets the ID.
      *
-     * @param bool|string $id The ID of the alert component. If `true`, an ID will be generated automatically.
+     * @param bool|string $id The ID of the component. If `true`, an ID will be generated automatically.
      *
      * @throws InvalidArgumentException if the ID is an empty string or `false`.
      *
