@@ -208,6 +208,23 @@ final class NavTest extends TestCase
         );
     }
 
+    public function testAttribute(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul class="nav" data-id="123">
+            <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->attribute('data-id', '123')
+                ->items(NavLink::to('Active', '#', active: true))
+                ->render(),
+        );
+    }
+
     public function testAttributes(): void
     {
         Assert::equalsWithoutLE(
@@ -758,6 +775,7 @@ final class NavTest extends TestCase
         $this->assertNotSame($navWidget, $navWidget->addAttributes([]));
         $this->assertNotSame($navWidget, $navWidget->addClass(''));
         $this->assertNotSame($navWidget, $navWidget->addCssStyle(''));
+        $this->assertNotSame($navWidget, $navWidget->attribute('', ''));
         $this->assertNotSame($navWidget, $navWidget->attributes([]));
         $this->assertNotSame($navWidget, $navWidget->class(''));
         $this->assertNotSame($navWidget, $navWidget->currentPath(''));
