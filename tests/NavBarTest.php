@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Yiisoft\Bootstrap5\Tests;
 
+use InvalidArgumentException;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\TestCase;
 use Yiisoft\Bootstrap5\Dropdown;
@@ -383,7 +384,7 @@ final class NavBarTest extends TestCase
             </div>
             </nav>
             HTML,
-            trim(NavBar::widget()->brand(Span::tag('span')->content('NavBar'))->id('navbar')->begin()) . NavBar::end(),
+            trim(NavBar::widget()->brand(Span::tag()->content('NavBar'))->id('navbar')->begin()) . NavBar::end(),
         );
     }
 
@@ -636,7 +637,7 @@ final class NavBarTest extends TestCase
         $this->assertNotSame($navBar, $navBar->addClass(''));
         $this->assertNotSame($navBar, $navBar->addCssStyle(''));
         $this->assertNotSame($navBar, $navBar->attributes([]));
-        $this->assertNotSame($navBar, $navBar->brand(Span::tag('')));
+        $this->assertNotSame($navBar, $navBar->brand(Span::tag()));
         $this->assertNotSame($navBar, $navBar->brandImage(''));
         $this->assertNotSame($navBar, $navBar->brandImageAttributes([]));
         $this->assertNotSame($navBar, $navBar->brandText(''));
@@ -863,7 +864,7 @@ final class NavBarTest extends TestCase
 
     public function testThrowExceptionForTagWithEmptyValue(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('Tag cannot be empty string.');
 
         NavBar::widget()->tag('')->begin();
