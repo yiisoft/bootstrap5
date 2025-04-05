@@ -72,6 +72,11 @@ final class Nav extends Widget
      * @param bool $enabled Whether to activate items. Defaults to `true`.
      *
      * @return self A new instance with the specified activated items value.
+     *
+     * Example usage:
+     * ```php
+     * $nav->activateItems(false);
+     * ```
      */
     public function activateItems(bool $enabled): self
     {
@@ -82,11 +87,16 @@ final class Nav extends Widget
     }
 
     /**
-     * Adds a set of attributes for the nav component.
+     * Adds a set of attributes.
      *
-     * @param array $attributes Attribute values indexed by attribute names. e.g. `['id' => 'my-nav']`.
+     * @param array $attributes Attribute values indexed by attribute names. for example, `['id' => 'my-id']`.
      *
      * @return self A new instance with the specified attributes added.
+     *
+     * Example usage:
+     * ```php
+     * $nav->addAttributes(['data-id' => '123']);
+     * ```
      */
     public function addAttributes(array $attributes): self
     {
@@ -97,21 +107,21 @@ final class Nav extends Widget
     }
 
     /**
-     * Adds one or more CSS classes to the existing classes of the nav component.
+     * Adds one or more CSS classes to the existing classes.
      *
      * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
      * automatically.
      *
      * @param BackedEnum|string|null ...$class One or more CSS class names to add. Pass `null` to skip adding a class.
-     * For example:
-     *
-     * ```php
-     * $nav->addClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY());
-     * ```
      *
      * @return self A new instance with the specified CSS classes added to existing ones.
      *
      * @link https://html.spec.whatwg.org/#classes
+     *
+     * Example usage:
+     * ```php
+     * $nav->addClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
+     * ```
      */
     public function addClass(BackedEnum|string|null ...$class): self
     {
@@ -122,16 +132,23 @@ final class Nav extends Widget
     }
 
     /**
-     * Adds a CSS style for the nav component.
+     * Adds a CSS style.
      *
-     * @param array|string $style The CSS style for the nav component. If an array, the values will be separated by
-     * a space. If a string, it will be added as is. For example, `color: red`. If the value is an array, the values
-     * will be separated by a space. e.g., `['color' => 'red', 'font-weight' => 'bold']` will be rendered as
-     * `color: red; font-weight: bold;`.
+     * @param array|string $style The CSS style. If the value is an array, a space will separate the values.
+     * For example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
+     * If it is a string, it will be added as is, for example, `color: red`.
      * @param bool $overwrite Whether to overwrite existing styles with the same name. If `false`, the new value will be
      * appended to the existing one.
      *
      * @return self A new instance with the specified CSS style value added.
+     *
+     * Example usage:
+     * ```php
+     * $nav->addCssStyle('color: red');
+     *
+     * // or
+     * $nav->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
+     * ```
      */
     public function addCssStyle(array|string $style, bool $overwrite = true): self
     {
@@ -142,13 +159,39 @@ final class Nav extends Widget
     }
 
     /**
-     * Sets the HTML attributes for the nav component.
+     * Sets attribute value.
+     *
+     * @param string $name The attribute name.
+     * @param mixed $value The attribute value.
+     *
+     * @return self A new instance with the specified attribute added.
+     *
+     * Example usage:
+     * ```php
+     * $nav->attribute('data-id', '123');
+     * ```
+     */
+    public function attribute(string $name, mixed $value): self
+    {
+        $new = clone $this;
+        $new->attributes[$name] = $value;
+
+        return $new;
+    }
+
+    /**
+     * Sets the HTML attributes.
      *
      * @param array $attributes Attribute values indexed by attribute names.
      *
      * @return self A new instance with the specified attributes.
      *
      * @see {\Yiisoft\Html\Html::renderTagAttributes()} for details on how attributes are being rendered.
+     *
+     * Example usage:
+     * ```php
+     * $nav->attributes(['data-id' => '123']);
+     * ```
      */
     public function attributes(array $attributes): self
     {
@@ -159,19 +202,19 @@ final class Nav extends Widget
     }
 
     /**
-     * Replaces all existing CSS classes of the nav component with the provided ones.
+     * Replaces all existing CSS classes with the specified one(s).
      *
      * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
      * automatically.
      *
      * @param BackedEnum|string|null ...$class One or more CSS class names to set. Pass `null` to skip setting a class.
-     * For example:
-     *
-     * ```php
-     * $nav->class('custom-class', null, 'another-class', BackGroundColor::PRIMARY());
-     * ```
      *
      * @return self A new instance with the specified CSS classes set.
+     *
+     * Example usage:
+     * ```php
+     * $nav->class('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
+     * ```
      */
     public function class(BackedEnum|string|null ...$class): self
     {
@@ -187,6 +230,11 @@ final class Nav extends Widget
      * @param string $path The current path to be used to check the active state of the nav items.
      *
      * @return self A new instance with the specified current path.
+     *
+     * Example usage:
+     * ```php
+     * $nav->currentPath('/current/path');
+     * ```
      */
     public function currentPath(string $path): self
     {
@@ -202,6 +250,11 @@ final class Nav extends Widget
      * @param bool $enabled Whether to fade the navigation items when toggling between them.
      *
      * @return self A new instance with the specified fade value.
+     *
+     * Example usage:
+     * ```php
+     * $nav->fade(true);
+     * ```
      */
     public function fade(bool $enabled): self
     {
@@ -216,11 +269,16 @@ final class Nav extends Widget
     }
 
     /**
-     * Sets the ID of the component.
+     * Sets the ID.
      *
      * @param bool|string $id The ID of the component. If `true`, an ID will be generated automatically.
      *
      * @return self A new instance with the specified ID.
+     *
+     * Example usage:
+     * ```php
+     * $nav->id('my-id');
+     * ```
      */
     public function id(bool|string $id): self
     {
@@ -238,6 +296,15 @@ final class Nav extends Widget
      * @return self A new instance with the specified links to appear in the nav.
      *
      * @psalm-param Dropdown[]|NavLink[] $items The links to appear in the nav.
+     *
+     * Example usage:
+     * ```php
+     * $nav->items(
+     *     NavLink::to('Home', '#'),
+     *     NavLink::to('Link', '#'),
+     *     NavLink::to('Disabled', '#', disabled: true),
+     * );
+     * ```
      */
     public function items(Dropdown|NavLink ...$items): self
     {
@@ -255,6 +322,11 @@ final class Nav extends Widget
      * @return self A new instance with the specified pane attributes.
      *
      * @see {\Yiisoft\Html\Html::renderTagAttributes()} for details on how attributes are being rendered.
+     *
+     * Example usage:
+     * ```php
+     * $nav->paneAttributes(['class' => 'tab-pane']);
+     * ```
      */
     public function paneAttributes(array $attributes): self
     {
@@ -273,11 +345,12 @@ final class Nav extends Widget
      * @param NavStyle|null ...$styles One or more CSS style class names to add. Pass `null` to skip adding a class.
      * For example:
      *
-     * ```php
-     * $nav->styles(NavStyle::TABS, NavStyle::VERTICAL);
-     * ```
-     *
      * @return self A new instance with the specified CSS style classes added.
+     *
+     * Example usage:
+     * ```php
+     * $nav->styles(NavStyle::TABS);
+     * ```
      */
     public function styles(NavStyle|null ...$styles): self
     {
@@ -293,6 +366,11 @@ final class Nav extends Widget
      * @param string|Stringable $tag The tag name for the nav component.
      *
      * @return self A new instance with the specified tag name.
+     *
+     * Example usage:
+     * ```php
+     * $nav->tag('div');
+     * ```
      */
     public function tag(string|Stringable $tag): self
     {
