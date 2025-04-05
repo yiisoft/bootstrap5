@@ -152,6 +152,24 @@ final class NavBarTest extends TestCase
         );
     }
 
+    public function testAttribute(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav class="navbar navbar-expand-lg" data-id="123">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            </div>
+            </div>
+            </nav>
+            HTML,
+            trim(NavBar::widget()->attribute('data-id', '123')->id('navbar')->begin()) . NavBar::end(),
+        );
+    }
+
     public function testAttributes(): void
     {
         Assert::equalsWithoutLE(
@@ -636,6 +654,7 @@ final class NavBarTest extends TestCase
         $this->assertNotSame($navBar, $navBar->addAttributes([]));
         $this->assertNotSame($navBar, $navBar->addClass(''));
         $this->assertNotSame($navBar, $navBar->addCssStyle(''));
+        $this->assertNotSame($navBar, $navBar->attribute('', ''));
         $this->assertNotSame($navBar, $navBar->attributes([]));
         $this->assertNotSame($navBar, $navBar->brand(Span::tag()));
         $this->assertNotSame($navBar, $navBar->brandImage(''));
