@@ -1104,6 +1104,14 @@ final class ModalTest extends TestCase
         );
     }
 
+    public function testThrowExceptionForTriggerButtonNotSet(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Set the trigger button before rendering the modal.');
+
+        Modal::widget()->id('modal')->render();
+    }
+
     /**
      * @link https://getbootstrap.com/docs/5.3/components/modal/#live-demo
      */
