@@ -87,7 +87,7 @@ final class Nav extends Widget
     }
 
     /**
-     * Adds a sets of attributes.
+     * Adds a set of attributes.
      *
      * @param array $attributes Attribute values indexed by attribute names. for example, `['id' => 'my-id']`.
      *
