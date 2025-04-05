@@ -683,13 +683,13 @@ final class Dropdown extends Widget
         $classes = $attributes['class'] ?? null;
         $containerClasses = $this->containerClasses;
 
-        unset($attributes['class']);
-
         if ($this->items === []) {
             return '';
         }
 
         $togglerId = $this->getTogglerId();
+
+        unset($attributes['class'], $attributes['id']);
 
         if ($this->togglerSplit) {
             $containerClasses = [self::DROPDOWN_TOGGLER_CONTAINER_CLASS];
