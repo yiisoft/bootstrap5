@@ -121,12 +121,11 @@ final class NavBar extends Widget
     }
 
     /**
-     * Adds a CSS style for the nav component.
+     * Adds a CSS style.
      *
-     * @param array|string $style The CSS style for the nav component. If an array, the values will be separated by
-     * a space. If a string, it will be added as is. For example, `color: red`. If the value is an array, the values
-     * will be separated by a space. e.g., `['color' => 'red', 'font-weight' => 'bold']` will be rendered as
-     * `color: red; font-weight: bold;`.
+     * @param array|string $style The CSS style. If the value is an array, a space will separate the values.
+     * For example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
+     * If it is a string, it will be added as is, for example, `color: red`.
      * @param bool $overwrite Whether to overwrite existing styles with the same name. If `false`, the new value will be
      * appended to the existing one.
      *
