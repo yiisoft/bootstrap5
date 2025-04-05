@@ -625,6 +625,131 @@ final class NavTest extends TestCase
         );
     }
 
+    public function testId(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul id="test-id" class="nav">
+            <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->id('test-id')
+                ->items(
+                    NavLink::to('Active', '#', active: true),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Disabled', '#', disabled: true),
+                )
+                ->render(),
+        );
+    }
+
+    public function testIdWithEmpty(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul class="nav">
+            <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->id('')
+                ->items(
+                    NavLink::to('Active', '#', active: true),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Disabled', '#', disabled: true),
+                )
+                ->render(),
+        );
+    }
+
+    public function testIdWithFalse(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul class="nav">
+            <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->id(false)
+                ->items(
+                    NavLink::to('Active', '#', active: true),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Disabled', '#', disabled: true),
+                )
+                ->render(),
+        );
+    }
+
+    public function testIdWithSetAttributes(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul id="test-id" class="nav">
+            <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+            ->attributes(['id' => 'test-id'])
+            ->id(true)
+            ->items(
+                NavLink::to('Active', '#', active: true),
+                NavLink::to('Link', url: '#'),
+                NavLink::to('Link', url: '#'),
+                NavLink::to('Disabled', '#', disabled: true),
+            )
+            ->render(),
+        );
+    }
+
     public function testImmutability(): void
     {
         $navWidget = Nav::widget();
