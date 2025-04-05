@@ -159,7 +159,7 @@ final class Nav extends Widget
     }
 
     /**
-     * Adds a sets attribute value.
+     * Sets attribute value.
      *
      * @param string $name The attribute name.
      * @param mixed $value The attribute value.
