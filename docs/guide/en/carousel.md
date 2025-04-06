@@ -71,8 +71,6 @@ Carousel::widget()->addClass('custom-class', 'rounded-edges');
 Replace all existing classes:
 
 ```php
-use Yiisoft\Bootstrap5\Utility\BackgroundColor;
-
 Carousel::widget()->class('custom-class', 'another-class', BackgroundColor::PRIMARY);
 ```
 
