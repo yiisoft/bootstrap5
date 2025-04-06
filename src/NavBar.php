@@ -71,7 +71,7 @@ final class NavBar extends Widget
     private string|Stringable $toggler = '';
 
     /**
-     * Adds a sets of attributes.
+     * Adds a set of attributes.
      *
      * @param array $attributes Attribute values indexed by attribute names. for example, `['id' => 'my-id']`.
      *
@@ -143,7 +143,7 @@ final class NavBar extends Widget
     }
 
     /**
-     * Adds a sets attribute value.
+     * Sets attribute value.
      *
      * @param string $name The attribute name.
      * @param mixed $value The attribute value.
@@ -186,9 +186,9 @@ final class NavBar extends Widget
     }
 
     /**
-     * Sets the brand for the navbar component.
+     * Sets the brand.
      *
-     * @param string|Stringable $brand The brand for the navbar component.
+     * @param string|Stringable $brand The brand to use.
      *
      * @return self A new instance with the specified brand.
      *
@@ -206,10 +206,9 @@ final class NavBar extends Widget
     }
 
     /**
-     * Sets the brand image for the navbar component.
+     * Sets the brand image.
      *
-     * @param string|Stringable $image The brand image for the navbar component. If `null`, the brand image will not
-     * be displayed.
+     * @param string|Stringable $image The brand image to use. If `null`, the brand image will not be displayed.
      *
      * @return self A new instance with the specified brand image.
      *
@@ -466,9 +465,9 @@ final class NavBar extends Widget
     }
 
     /**
-     * Sets the placement for the navbar component.
+     * Sets the placement.
      *
-     * @param NavBarPlacement $value The placement for the navbar.
+     * @param NavBarPlacement $value The placement.
      *
      * @return self A new instance with the specified placement.
      *
@@ -505,9 +504,9 @@ final class NavBar extends Widget
     }
 
     /**
-     * Sets the toggle button for the navbar component.
+     * Sets the toggle button.
      *
-     * @param string|Stringable $toggle The toggle button for the navbar component.
+     * @param string|Stringable $toggle The toggle button.
      *
      * @return self A new instance with the specified toggle button.
      *
