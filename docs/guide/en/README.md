@@ -30,6 +30,8 @@ Once you’re set up, explore the widget-specific guides below to start building
   buttons displayed side by side.
 - [Button Toolbar](button-toolbar.md): Learn how to create button toolbars that combine multiple button groups to create
   complex control interfaces.
+- [Carousel](carousel.md): Learn how to create interactive slideshows with custom content, captions, controls, and animation
+  effects.
 - [Dropdown](dropdown.md): Learn how to create and customize interactive dropdown menus with various item types, toggle
   options.
 
