@@ -1,6 +1,6 @@
 # Carousel
 
-The **Carousel** widget renders a [carousel](https://getbootstrap.com/docs/5.3/components/carousel/#basic-examples/) component.
+The **Carousel** widget renders a [carousel](https://getbootstrap.com/docs/5.3/components/carousel/#basic-examples) component.
 
 You can use it to cycle through a series of content items like images or text, creating interactive slideshows for 
 presenting information or visuals. The carousel supports various customization options including control buttons, 
