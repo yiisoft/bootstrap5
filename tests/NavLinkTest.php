@@ -21,6 +21,7 @@ final class NavLinkTest extends TestCase
 
         $this->assertNotSame($navLink, $navLink->active(false));
         $this->assertNotSame($navLink, $navLink->attributes([]));
+        $this->assertNotSame($navLink, $navLink->content(''));
         $this->assertNotSame($navLink, $navLink->disabled(false));
         $this->assertNotSame($navLink, $navLink->encodeContent(false));
         $this->assertNotSame($navLink, $navLink->encodeLabel(false));
