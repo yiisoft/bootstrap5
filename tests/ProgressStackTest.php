@@ -290,4 +290,9 @@ final class ProgressStackTest extends TestCase
                 ->render(),
         );
     }
+
+    public function testRenderWithEmptyBars(): void
+    {
+        $this->assertEmpty(ProgressStack::widget()->bars()->id(false)->render());
+    }
 }
