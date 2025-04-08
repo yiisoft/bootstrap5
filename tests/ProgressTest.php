@@ -292,6 +292,18 @@ final class ProgressTest extends TestCase
         );
     }
 
+    public function testBarAttributes(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar test-class" style="width: 0%"></div>
+            </div>
+            HTML,
+            Progress::widget()->barAttributes(['class' => 'test-class'])->id(false)->render(),
+        );
+    }
+
     public function testClass(): void
     {
         Assert::equalsWithoutLE(
@@ -366,6 +378,7 @@ final class ProgressTest extends TestCase
         $this->assertNotSame($progress, $progress->attribute('', ''));
         $this->assertNotSame($progress, $progress->attributes([]));
         $this->assertNotSame($progress, $progress->backgroundColor(BackgroundColor::PRIMARY));
+        $this->assertNotSame($progress, $progress->barAttributes([]));
         $this->assertNotSame($progress, $progress->class(''));
         $this->assertNotSame($progress, $progress->content(''));
         $this->assertNotSame($progress, $progress->id(''));
