@@ -320,6 +320,29 @@ final class OffcanvasTest extends TestCase
         );
     }
 
+    public function testIdWithSetAttributes(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
+            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            </div>
+            HTML,
+            Offcanvas::widget()
+                ->addAttributes(['id' => 'offcanvasExample'])
+                ->title('Offcanvas')
+                ->togglerContent('Button with data-bs-target')
+                ->begin() .
+            Offcanvas::end(),
+        );
+    }
+
     public function testImmutability(): void
     {
         $offcanvas = Offcanvas::widget();

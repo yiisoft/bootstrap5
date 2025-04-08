@@ -421,7 +421,7 @@ final class Offcanvas extends Widget
     private function getId(): string
     {
         return match ($this->id) {
-            true => Html::generateId(self::NAME . '-'),
+            true => $this->attributes['id'] ?? Html::generateId(self::NAME . '-'),
             '', false => throw new InvalidArgumentException('The "id" must be specified.'),
             default => $this->id,
         };
