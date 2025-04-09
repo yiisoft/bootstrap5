@@ -38,6 +38,7 @@ Once you’re set up, explore the widget-specific guides below to start building
 - [Modal](modal.md): Learn how to create customizable dialog windows that temporarily block interactions with the main view.
 - [Nav](nav.md): Learn how to create and customize navigation components with different styles, layouts and interactive elements.
 - [NavBar](navbar.md): Learn how to create responsive navigation headers with support for branding, navigation, and other elements.
+- [Progress](progress.md): Learn how to create and customize progress bars to display the completion status of tasks or operations.
 
 ## How to Use This Guide
 
