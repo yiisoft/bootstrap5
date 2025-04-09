@@ -32,6 +32,7 @@ Once you’re set up, explore the widget-specific guides below to start building
   complex control interfaces.
 - [Carousel](carousel.md): Learn how to create interactive slideshows with custom content, captions, controls, and animation
   effects.
+- [Collapse](collapse.md): Learn how to create togglable content sections that can be shown and hidden with a simple click.
 - [Dropdown](dropdown.md): Learn how to create and customize interactive dropdown menus with various item types, toggle
   options.
 - [Modal](modal.md): Learn how to create customizable dialog windows that temporarily block interactions with the main view.
