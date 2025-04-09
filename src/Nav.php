@@ -342,8 +342,8 @@ final class Nav extends Widget
      * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
      * automatically.
      *
-     * @param NavStyle|null ...$styles One or more CSS style class names to add. Pass `null` to skip adding a class.
-     * For example:
+     * @param NavLayout|NavStyle|null ...$styles One or more CSS style class names to add. Pass `null` to skip adding a
+     * class.
      *
      * @return self A new instance with the specified CSS style classes added.
      *
@@ -352,7 +352,7 @@ final class Nav extends Widget
      * $nav->styles(NavStyle::TABS);
      * ```
      */
-    public function styles(NavStyle|null ...$styles): self
+    public function styles(NavLayout|NavStyle|null ...$styles): self
     {
         $new = clone $this;
         $new->styleClasses = [...$this->styleClasses, ...$styles];

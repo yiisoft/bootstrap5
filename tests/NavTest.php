@@ -10,6 +10,7 @@ use RuntimeException;
 use Yiisoft\Bootstrap5\Dropdown;
 use Yiisoft\Bootstrap5\DropdownItem;
 use Yiisoft\Bootstrap5\Nav;
+use Yiisoft\Bootstrap5\NavLayout;
 use Yiisoft\Bootstrap5\NavLink;
 use Yiisoft\Bootstrap5\NavStyle;
 use Yiisoft\Bootstrap5\Tests\Support\Assert;
@@ -609,9 +610,43 @@ final class NavTest extends TestCase
     }
 
     /**
+     * @link https://getbootstrap.com/docs/5.3/components/navs-tabs/#fill-and-justify
+     */
+    public function testFillAndJustified(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Much longer nav link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->items(
+                    NavLink::to('Active', '#', active: true),
+                    NavLink::to('Much longer nav link', url: '#'),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Disabled', '#', disabled: true),
+                )
+                ->styles(NavStyle::PILLS, NavLayout::JUSTIFY)
+                ->render(),
+        );
+    }
+
+    /**
      * @link https://getbootstrap.com/docs/5.3/components/navs-tabs/#horizontal-alignment
      */
-    public function testHorizontalAlignment(): void
+    public function testHorizontalAlignmentCenter(): void
     {
         Assert::equalsWithoutLE(
             <<<HTML
@@ -637,7 +672,41 @@ final class NavTest extends TestCase
                     NavLink::to('Link', url: '#'),
                     NavLink::to('Disabled', '#', disabled: true),
                 )
-                ->styles(NavStyle::HORIZONTAL_ALIGNMENT)
+                ->styles(NavLayout::CENTER)
+                ->render(),
+        );
+    }
+
+    /**
+     * @link https://getbootstrap.com/docs/5.3/components/navs-tabs/#horizontal-alignment
+     */
+    public function testHorizontalAlignmentRight(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul class="nav justify-content-end">
+            <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->items(
+                    NavLink::to('Active', '#', active: true),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Disabled', '#', disabled: true),
+                )
+                ->styles(NavLayout::RIGHT)
                 ->render(),
         );
     }
@@ -958,7 +1027,7 @@ final class NavTest extends TestCase
                     NavLink::to('Link', url: '#'),
                     NavLink::to('Disabled', '#', disabled: true),
                 )
-                ->styles(NavStyle::PILLS, NavStyle::FILL)
+                ->styles(NavStyle::PILLS, NavLayout::FILL)
                 ->render(),
         );
     }
@@ -992,7 +1061,7 @@ final class NavTest extends TestCase
                     NavLink::to('Link', url: '#'),
                     NavLink::to('Disabled', '#', disabled: true),
                 )
-                ->styles(NavStyle::PILLS, NavStyle::JUSTIFY)
+                ->styles(NavStyle::PILLS, NavLayout::JUSTIFY)
                 ->render(),
         );
     }
@@ -1374,7 +1443,7 @@ final class NavTest extends TestCase
                     NavLink::to('Link', url: '#'),
                     NavLink::to('Disabled', '#', disabled: true),
                 )
-                ->styles(NavStyle::VERTICAL)
+                ->styles(NavLayout::VERTICAL)
                 ->render(),
         );
     }
@@ -1401,7 +1470,7 @@ final class NavTest extends TestCase
                     NavLink::to('Link', url: '#'),
                     NavLink::to('Disabled', '#', disabled: true),
                 )
-                ->styles(NavStyle::PILLS, NavStyle::VERTICAL)
+                ->styles(NavStyle::PILLS, NavLayout::VERTICAL)
                 ->tag('nav')
                 ->render(),
         );
