@@ -750,9 +750,10 @@ final class Offcanvas extends Widget
 
         unset($togglerAttributes['class']);
 
-        $togglerTag = Button::button($this->togglerContent)
+        $togglerTag = Button::button('')
             ->addAttributes($togglerAttributes)
-            ->addClass(self::TOGGLER_CLASS, $togglerClasses);
+            ->addClass(self::TOGGLER_CLASS, $togglerClasses)
+            ->addContent($this->togglerContent);
 
         if (array_key_exists('aria-controls', $togglerAttributes) === false) {
             $togglerTag = $togglerTag->attribute('aria-controls', $id);
