@@ -14,6 +14,7 @@ use Yiisoft\Bootstrap5\OffcanvasPlacement;
 use Yiisoft\Bootstrap5\Tests\Support\Assert;
 use Yiisoft\Bootstrap5\Utility\BackgroundColor;
 use Yiisoft\Bootstrap5\Utility\Responsive;
+use Yiisoft\Html\Tag\Button;
 use Yiisoft\Html\Tag\Div;
 
 #[Group('offcanvas')]
@@ -45,7 +46,7 @@ final class OffcanvasTest extends TestCase
 
     public function testAddClass(): void
     {
-        $offCanvas = Offcanvas::widget()
+        $offcanvas = Offcanvas::widget()
             ->addClass('test-class', null, BackgroundColor::PRIMARY)
             ->id('offcanvasExample')
             ->title('Offcanvas')
@@ -63,7 +64,7 @@ final class OffcanvasTest extends TestCase
             </div>
             </div>
             HTML,
-            $offCanvas->begin() . Offcanvas::end(),
+            $offcanvas->begin() . Offcanvas::end(),
         );
 
         Assert::equalsWithoutLE(
@@ -78,13 +79,13 @@ final class OffcanvasTest extends TestCase
             </div>
             </div>
             HTML,
-            $offCanvas->addClass('test-class-1', 'test-class-2')->begin() . Offcanvas::end(),
+            $offcanvas->addClass('test-class-1', 'test-class-2')->begin() . Offcanvas::end(),
         );
     }
 
     public function testAddCssStyle(): void
     {
-        $offCanvas = Offcanvas::widget()
+        $offcanvas = Offcanvas::widget()
             ->addCssStyle('color: red;')
             ->id('offcanvasExample')
             ->title('Offcanvas')
@@ -102,7 +103,7 @@ final class OffcanvasTest extends TestCase
             </div>
             </div>
             HTML,
-            $offCanvas->begin() . Offcanvas::end(),
+            $offcanvas->begin() . Offcanvas::end(),
         );
 
         Assert::equalsWithoutLE(
@@ -117,13 +118,13 @@ final class OffcanvasTest extends TestCase
             </div>
             </div>
             HTML,
-            $offCanvas->addCssStyle('font-weight: bold;')->begin() . Offcanvas::end(),
+            $offcanvas->addCssStyle('font-weight: bold;')->begin() . Offcanvas::end(),
         );
     }
 
     public function testAddCssStyleWithOverwriteFalse(): void
     {
-        $offCanvas = Offcanvas::widget()
+        $offcanvas = Offcanvas::widget()
             ->addCssStyle('color: red;')
             ->id('offcanvasExample')
             ->title('Offcanvas')
@@ -141,7 +142,7 @@ final class OffcanvasTest extends TestCase
             </div>
             </div>
             HTML,
-            $offCanvas->begin() . Offcanvas::end(),
+            $offcanvas->begin() . Offcanvas::end(),
         );
 
         Assert::equalsWithoutLE(
@@ -156,7 +157,166 @@ final class OffcanvasTest extends TestCase
             </div>
             </div>
             HTML,
-            $offCanvas->addCssStyle('color: blue;', false)->begin() . Offcanvas::end(),
+            $offcanvas->addCssStyle('color: blue;', false)->begin() . Offcanvas::end(),
+        );
+    }
+
+    public function testAddTogglerAttribute(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button type="button" class="btn btn-primary" data-id="123" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            </div>
+            HTML,
+            Offcanvas::widget()
+                ->addTogglerAttribute('data-id', '123')
+                ->id('offcanvasExample')
+                ->togglerContent('Toggler')->begin() .
+            Offcanvas::end(),
+        );
+    }
+
+    public function testAddTogglerClass(): void
+    {
+        $offcanvas = Offcanvas::widget()
+            ->addTogglerClass('test-class', null, BackgroundColor::PRIMARY)
+            ->id('offcanvasExample')
+            ->togglerContent('Toggler');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button type="button" class="btn btn-primary test-class bg-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            </div>
+            HTML,
+            $offcanvas->begin() . Offcanvas::end(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button type="button" class="btn btn-primary test-class bg-primary test-class-1 test-class-2" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            </div>
+            HTML,
+            $offcanvas->addTogglerClass('test-class-1', 'test-class-2')->begin() . Offcanvas::end(),
+        );
+    }
+
+    public function testAddTogglerCssStyle(): void
+    {
+        $offcanvas = Offcanvas::widget()
+            ->addTogglerCssStyle('color: red;')
+            ->id('offcanvasExample')
+            ->togglerContent('Toggler');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button type="button" class="btn btn-primary" style="color: red;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            </div>
+            HTML,
+            $offcanvas->begin() . Offcanvas::end(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button type="button" class="btn btn-primary" style="color: red; font-weight: bold;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            </div>
+            HTML,
+            $offcanvas->addTogglerCssStyle('font-weight: bold;')->begin() . Offcanvas::end(),
+        );
+    }
+
+    public function testAddTogglerCssStyleWithOverwriteFalse(): void
+    {
+        $offcanvas = Offcanvas::widget()
+            ->addTogglerCssStyle('color: red;')
+            ->id('offcanvasExample')
+            ->togglerContent('Toggler');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button type="button" class="btn btn-primary" style="color: red;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            </div>
+            HTML,
+            $offcanvas->begin() . Offcanvas::end(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button type="button" class="btn btn-primary" style="color: red;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            </div>
+            HTML,
+            $offcanvas->addTogglerCssStyle('color: blue;', false)->begin() . Offcanvas::end(),
+        );
+    }
+
+    public function testAttribute(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div id="offcanvasExample" class="offcanvas offcanvas-start" data-id="123" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            </div>
+            HTML,
+            Offcanvas::widget()
+                ->attribute('data-id', '123')
+                ->id('offcanvasExample')
+                ->togglerContent('Toggler')
+                ->begin() .
+            Offcanvas::end(),
         );
     }
 
@@ -350,6 +510,9 @@ final class OffcanvasTest extends TestCase
         $this->assertNotSame($offcanvas, $offcanvas->addAttributes([]));
         $this->assertNotSame($offcanvas, $offcanvas->addClass(''));
         $this->assertNotSame($offcanvas, $offcanvas->addCssStyle(''));
+        $this->assertNotSame($offcanvas, $offcanvas->addTogglerAttribute('', ''));
+        $this->assertNotSame($offcanvas, $offcanvas->addTogglerClass(''));
+        $this->assertNotSame($offcanvas, $offcanvas->addTogglerCssStyle(''));
         $this->assertNotSame($offcanvas, $offcanvas->attributes([]));
         $this->assertNotSame($offcanvas, $offcanvas->backdrop());
         $this->assertNotSame($offcanvas, $offcanvas->backdropStatic());
@@ -357,13 +520,14 @@ final class OffcanvasTest extends TestCase
         $this->assertNotSame($offcanvas, $offcanvas->class(''));
         $this->assertNotSame($offcanvas, $offcanvas->headerAttributes([]));
         $this->assertNotSame($offcanvas, $offcanvas->id('value'));
-        $this->assertNotSame($offcanvas, $offcanvas->placement('offcanvas-top'));
+        $this->assertNotSame($offcanvas, $offcanvas->placement(OffcanvasPlacement::START));
         $this->assertNotSame($offcanvas, $offcanvas->responsive(Responsive::SM));
         $this->assertNotSame($offcanvas, $offcanvas->scrollable());
         $this->assertNotSame($offcanvas, $offcanvas->show());
         $this->assertNotSame($offcanvas, $offcanvas->theme('dark'));
         $this->assertNotSame($offcanvas, $offcanvas->title('value'));
         $this->assertNotSame($offcanvas, $offcanvas->titleAttributes([]));
+        $this->assertNotSame($offcanvas, $offcanvas->toggler(''));
         $this->assertNotSame($offcanvas, $offcanvas->togglerAttributes([]));
         $this->assertNotSame($offcanvas, $offcanvas->togglerContent('value'));
     }
@@ -903,6 +1067,28 @@ final class OffcanvasTest extends TestCase
                 ->title('Offcanvas')
                 ->togglerContent('Toggle offcanvas')
                 ->togglerAttributes(['data-id' => '123'])
+                ->begin() .
+            Offcanvas::end(),
+        );
+    }
+
+    public function testTogglerWithStringable(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button class="btn btn-primary">Toggle offcanvas</button>
+            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas-header">
+            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            </div>
+            </div>
+            HTML,
+            Offcanvas::widget()
+                ->id('offcanvasExample')
+                ->toggler(Button::tag()->addClass('btn btn-primary')->content('Toggle offcanvas'))
                 ->begin() .
             Offcanvas::end(),
         );

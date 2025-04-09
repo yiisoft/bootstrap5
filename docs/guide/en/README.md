@@ -38,6 +38,7 @@ Once you’re set up, explore the widget-specific guides below to start building
 - [Modal](modal.md): Learn how to create customizable dialog windows that temporarily block interactions with the main view.
 - [Nav](nav.md): Learn how to create and customize navigation components with different styles, layouts and interactive elements.
 - [NavBar](navbar.md): Learn how to create responsive navigation headers with support for branding, navigation, and other elements.
+- [Offcanvas](offcanvas.md): Learn how to create hidden sidebars that slide in from the edge of the screen for navigation or additional content.
 
 ## How to Use This Guide
 
