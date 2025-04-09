@@ -541,7 +541,6 @@ final class Offcanvas extends Widget
         return $new;
     }
 
-
     /**
      * Sets the HTML attributes for the toggler.
      *
@@ -764,7 +763,7 @@ final class Offcanvas extends Widget
         }
 
         if (array_key_exists('data-bs-target', $togglerAttributes) === false) {
-            $togglerTag = $togglerTag->attribute('data-bs-target', "#" . $id);
+            $togglerTag = $togglerTag->attribute('data-bs-target', '#' . $id);
         }
 
         return $togglerTag->render();
