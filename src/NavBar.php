@@ -69,6 +69,7 @@ final class NavBar extends Widget
     private bool|string $id = true;
     private string $tag = 'nav';
     private string|Stringable $toggler = '';
+    private array $togglerAttributes = [];
 
     /**
      * Adds a set of attributes.
@@ -143,6 +144,82 @@ final class NavBar extends Widget
     }
 
     /**
+     * Adds toggler attribute value.
+     *
+     * @param string $name The attribute name.
+     * @param mixed $value The attribute value.
+     *
+     * @return self A new instance with the specified attribute added.
+     *
+     * Example usage:
+     * ```php
+     * $navbar->addTogglerAttribute('data-id', '123');
+     * ```
+     */
+    public function addTogglerAttribute(string $name, mixed $value): self
+    {
+        $new = clone $this;
+        $new->togglerAttributes[$name] = $value;
+
+        return $new;
+    }
+
+    /**
+     * Adds one or more CSS classes to the existing toggler classes.
+     *
+     * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
+     * automatically.
+     *
+     * @param BackedEnum|string|null ...$class One or more CSS class names to add. Pass `null` to skip adding a class.
+     *
+     * @return self A new instance with the specified CSS classes added to existing ones.
+     *
+     * @link https://html.spec.whatwg.org/#classes
+     *
+     * Example usage:
+     * ```php
+     * $navbar->addTogglerClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
+     * ```
+     */
+    public function addTogglerClass(BackedEnum|string|null ...$class): self
+    {
+        $new = clone $this;
+
+        foreach ($class as $item) {
+            Html::addCssClass($new->togglerAttributes, $item);
+        }
+
+        return $new;
+    }
+
+    /**
+     * Adds a toggler CSS style.
+     *
+     * @param array|string $style The CSS style. If the value is an array, a space will separate the values.
+     * for example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
+     * If it is a string, it will be added as is, for example, `color: red`.
+     * @param bool $overwrite Whether to overwrite existing styles with the same name. If `false`, the new value will be
+     * appended to the existing one.
+     *
+     * @return self A new instance with the specified CSS style value added.
+     *
+     * Example usage:
+     * ```php
+     * $navbar->addTogglerCssStyle('color: red');
+     *
+     * // or
+     * $navbar->addTogglerCssStyle(['color' => 'red', 'font-weight' => 'bold']);
+     * ```
+     */
+    public function addTogglerCssStyle(array|string $style, bool $overwrite = true): self
+    {
+        $new = clone $this;
+        Html::addCssStyle($new->togglerAttributes, $style, $overwrite);
+
+        return $new;
+    }
+
+    /**
      * Sets attribute value.
      *
      * @param string $name The attribute name.
@@ -201,6 +278,28 @@ final class NavBar extends Widget
     {
         $new = clone $this;
         $new->brand = $brand;
+
+        return $new;
+    }
+
+    /**
+     * Sets the HTML attributes for the brand tag of the navbar component.
+     *
+     * @param array $attributes Attribute values indexed by attribute names.
+     *
+     * @return self A new instance with the specified attributes.
+     *
+     * @see {\Yiisoft\Html\Html::renderTagAttributes()} for details on how attributes are being rendered.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->brandAttributes(['class' => 'brand']);
+     * ```
+     */
+    public function brandAttributes(array $attributes): self
+    {
+        $new = clone $this;
+        $new->brandAttributes = $attributes;
 
         return $new;
     }
@@ -288,28 +387,6 @@ final class NavBar extends Widget
     {
         $new = clone $this;
         $new->brandUrl = $url;
-
-        return $new;
-    }
-
-    /**
-     * Sets the HTML attributes for the brand tag of the navbar component.
-     *
-     * @param array $attributes Attribute values indexed by attribute names.
-     *
-     * @return self A new instance with the specified attributes.
-     *
-     * @see {\Yiisoft\Html\Html::renderTagAttributes()} for details on how attributes are being rendered.
-     *
-     * Example usage:
-     * ```php
-     * $navBar->brandAttributes(['class' => 'brand']);
-     * ```
-     */
-    public function brandAttributes(array $attributes): self
-    {
-        $new = clone $this;
-        $new->brandAttributes = $attributes;
 
         return $new;
     }
@@ -527,6 +604,28 @@ final class NavBar extends Widget
     }
 
     /**
+     * Sets the HTML attributes for the toggler.
+     *
+     * @param array $attributes Attribute values indexed by attribute names.
+     *
+     * @return self A new instance with the specified attributes for the toggler.
+     *
+     * @see {\Yiisoft\Html\Html::renderTagAttributes()} for details on how attributes are being rendered.
+     *
+     * Example usage:
+     * ```php
+     * $navBar->toggleAttributes(['class' => 'my-class']);
+     * ```
+     */
+    public function togglerAttributes(array $attributes): self
+    {
+        $new = clone $this;
+        $new->togglerAttributes = $attributes;
+
+        return $new;
+    }
+
+    /**
      * Sets the theme for the navbar component.
      *
      * @param string $theme The theme for the navbar component.
@@ -683,19 +782,37 @@ final class NavBar extends Widget
             return (string) $this->toggler;
         }
 
-        return Button::button('')
-            ->addClass(self::NAV_TOGGLE)
-            ->addAttributes(
-                [
-                    'data-bs-toggle' => 'collapse',
-                    'data-bs-target' => '#' . $id,
-                    'aria-controls' => $id,
-                    'aria-expanded' => 'false',
-                    'aria-label' => 'Toggle navigation',
-                ],
-            )
+        $togglerAttributes = $this->togglerAttributes;
+        $togglerClasses = $togglerAttributes['class'] ?? null;
+
+        unset($togglerAttributes['class']);
+
+        $togglerTag = Button::button('')
+            ->addAttributes($togglerAttributes)
+            ->addClass(self::NAV_TOGGLE, $togglerClasses)
             ->addContent("\n", Span::tag()->addClass(self::NAV_TOGGLE_ICON), "\n")
-            ->encode(false)
-            ->render();
+            ->encode(false);
+
+        if (array_key_exists('data-bs-toggle', $togglerAttributes) === false) {
+            $togglerTag = $togglerTag->attribute('data-bs-toggle', 'collapse');
+        }
+
+        if (array_key_exists('data-bs-target', $togglerAttributes) === false) {
+            $togglerTag = $togglerTag->attribute('data-bs-target', '#' . $id);
+        }
+
+        if (array_key_exists('aria-controls', $togglerAttributes) === false) {
+            $togglerTag = $togglerTag->attribute('aria-controls', $id);
+        }
+
+        if (array_key_exists('aria-expanded', $togglerAttributes) === false) {
+            $togglerTag = $togglerTag->attribute('aria-expanded', 'false');
+        }
+
+        if (array_key_exists('aria-label', $togglerAttributes) === false) {
+            $togglerTag = $togglerTag->attribute('aria-label', 'Toggle navigation');
+        }
+
+        return $togglerTag->render();
     }
 }
