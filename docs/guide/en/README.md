@@ -36,6 +36,7 @@ Once you’re set up, explore the widget-specific guides below to start building
 - [Dropdown](dropdown.md): Learn how to create and customize interactive dropdown menus with various item types, toggle
   options.
 - [Modal](modal.md): Learn how to create customizable dialog windows that temporarily block interactions with the main view.
+- [Nav](nav.md): Learn how to create and customize navigation components with different styles, layouts and interactive elements.
 
 ## How to Use This Guide
 
