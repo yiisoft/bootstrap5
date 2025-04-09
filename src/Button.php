@@ -90,7 +90,7 @@ final class Button extends Widget
     }
 
     /**
-     * Get an instance of a submit button input.
+     * Get an instance of a "submit" button input.
      *
      * @param string|Stringable $value The content. By default, it's "Submit".
      * @param array $constructorArguments The constructor arguments.

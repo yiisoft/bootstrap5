@@ -207,7 +207,7 @@ final class Dropdown extends Widget
      *
      * Example usage:
      * ```php
-     * $drodown->addTogglerCssStyle('color: red');
+     * $dropdown->addTogglerCssStyle('color: red');
      *
      * // or
      * $dropdown->addTogglerCssStyle(['color' => 'red', 'font-weight' => 'bold']);
@@ -252,7 +252,7 @@ final class Dropdown extends Widget
      *
      * Example usage:
      * ```php
-     * $droddown->attribute('data-id', '123');
+     * $dropdown->attribute('data-id', '123');
      * ```
      */
     public function attribute(string $name, mixed $value): self
@@ -565,7 +565,7 @@ final class Dropdown extends Widget
      *
      * Example usage:
      * ```php
-     * $droddown->togglerId(true);
+     * $dropdown->togglerId(true);
      * ```
      */
     public function togglerId(bool|string $id): self

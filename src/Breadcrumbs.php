@@ -341,7 +341,7 @@ final class Breadcrumbs extends Widget
     }
 
     /**
-     * Sets the ID of the items list.
+     * Sets the ID of the item list.
      *
      * @param bool|string $id The ID. If `true`, an ID will be generated automatically.
      *

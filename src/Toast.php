@@ -25,7 +25,7 @@ use function is_string;
  * echo Toast::widget()
  *     ->body('Hello, world! This is a toast message.')
  *     ->image('https://example.com/150', 'Bootstrap5', ['class' => 'rounded me-2'])
- *     ->time('11 mins ago')
+ *     ->time('11 minutes ago')
  *     ->title('Bootstrap')
  *     ->render();
  * ```
@@ -403,13 +403,13 @@ final class Toast extends Widget
      * Example usage:
      * ```php
      * // Basic usage
-     * $toast->time('11 mins ago');
+     * $toast->time('11 minutes ago');
      *
      * // With additional classes
-     * $toast->time('11 mins ago', [], 'text-body-secondary');
+     * $toast->time('11 minutes ago', [], 'text-body-secondary');
      *
      * // With attributes
-     * $toast->time('11 mins ago', ['data-id' => '123']);
+     * $toast->time('11 minutes ago', ['data-id' => '123']);
      *
      * // Using a Stringable object
      * $toast->time($customTimeHtml);

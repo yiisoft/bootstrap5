@@ -7,7 +7,7 @@ namespace Yiisoft\Bootstrap5;
 /**
  * Defines the types of items that can be used in a Bootstrap dropdown.
  *
- * @see \Yiisoft\Bootstrap5\DropdownItem
+ * @see DropdownItem
  */
 enum DropdownItemType: string
 {

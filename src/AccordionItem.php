@@ -19,7 +19,7 @@ use Yiisoft\Html\Html;
  * ```php
  * AccordionItem::to(
  *     'Collapsible Group Item #1'
- *     'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.',
+ *     'Any sufficiently advanced technology is indistinguishable from magic.',
  * );
  * ```
  */

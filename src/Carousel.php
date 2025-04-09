@@ -206,8 +206,7 @@ final class Carousel extends Widget
     {
         $dataBsRide = match ($mode) {
             '', 'false', false => null,
-            'true' => 'true',
-            true => 'true',
+            'true', true => 'true',
             default => 'carousel',
         };
 

@@ -623,9 +623,9 @@ final class Nav extends Widget
     {
         $panes = [];
 
-        foreach ($this->items as $index => $item) {
+        foreach ($this->items as $item) {
             if ($item instanceof NavLink && $item->hasContent()) {
-                $panes[] = $this->renderTabPane($item, $index);
+                $panes[] = $this->renderTabPane($item);
             }
         }
 
@@ -649,11 +649,10 @@ final class Nav extends Widget
      * Renders a tab pane for the nav component.
      *
      * @param NavLink $item The tab pane to render.
-     * @param int $index The index of the tab pane.
      *
      * @return string The rendered tab pane.
      */
-    private function renderTabPane(NavLink $item, int $index): string
+    private function renderTabPane(NavLink $item): string
     {
         $paneAttributes = $item->getPaneAttributes();
 
