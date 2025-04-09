@@ -152,6 +152,108 @@ final class NavBarTest extends TestCase
         );
     }
 
+    public function testAddTogglerAttribute(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler" data-id="123" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            HTML,
+            trim(NavBar::widget()->addTogglerAttribute('data-id', '123')->id('navbar')->begin()),
+        );
+    }
+
+    public function testAddTogglerClass(): void
+    {
+        $navbar = NavBar::widget()->addTogglerClass('test-class', null, BackgroundColor::PRIMARY)->id('navbar');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler test-class bg-primary" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            HTML,
+            trim($navbar->begin()),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler test-class bg-primary test-class-1 test-class-2" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            HTML,
+            trim($navbar->addTogglerClass('test-class-1', 'test-class-2')->begin()),
+        );
+    }
+
+    public function testAddTogglerCssStyle(): void
+    {
+        $navbar = NavBar::widget()->addTogglerCssStyle('color: red;')->id('navbar');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler" style="color: red;" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            HTML,
+            trim($navbar->begin()),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler" style="color: red; font-weight: bold;" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            HTML,
+            trim($navbar->addTogglerCssStyle('font-weight: bold;')->begin()),
+        );
+    }
+
+    public function testAddTogglerCssStyleWithOverwriteFalse(): void
+    {
+        $navbar = NavBar::widget()->addTogglerCssStyle('color: red;')->id('navbar');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler" style="color: red;" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            HTML,
+            trim($navbar->begin()),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler" style="color: red;" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            HTML,
+            trim($navbar->addTogglerCssStyle('color: blue;', false)->begin()),
+        );
+    }
+
     public function testAttribute(): void
     {
         Assert::equalsWithoutLE(
@@ -654,6 +756,9 @@ final class NavBarTest extends TestCase
         $this->assertNotSame($navBar, $navBar->addAttributes([]));
         $this->assertNotSame($navBar, $navBar->addClass(''));
         $this->assertNotSame($navBar, $navBar->addCssStyle(''));
+        $this->assertNotSame($navBar, $navBar->addTogglerAttribute('', ''));
+        $this->assertNotSame($navBar, $navBar->addTogglerClass(''));
+        $this->assertNotSame($navBar, $navBar->addTogglerCssStyle(''));
         $this->assertNotSame($navBar, $navBar->attribute('', ''));
         $this->assertNotSame($navBar, $navBar->attributes([]));
         $this->assertNotSame($navBar, $navBar->brand(Span::tag()));
@@ -672,6 +777,7 @@ final class NavBarTest extends TestCase
         $this->assertNotSame($navBar, $navBar->placement(NavBarPlacement::FIXED_TOP));
         $this->assertNotSame($navBar, $navBar->tag(''));
         $this->assertNotSame($navBar, $navBar->toggler(''));
+        $this->assertNotSame($navBar, $navBar->togglerAttributes([]));
         $this->assertNotSame($navBar, $navBar->theme('dark'));
     }
 
@@ -902,6 +1008,21 @@ final class NavBarTest extends TestCase
             </nav>
             HTML,
             trim(NavBar::widget()->toggler('<button>Custom toggler</button>')->id('navbar')->begin()) . NavBar::end(),
+        );
+    }
+
+    public function testTogglerAttributes(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler btn-lg" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            HTML,
+            trim(NavBar::widget()->id('navbar')->togglerAttributes(['class' => 'btn-lg'])->begin()),
         );
     }
 
