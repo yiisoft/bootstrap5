@@ -12,21 +12,23 @@ use Yiisoft\Html\Html;
 use Yiisoft\Html\Tag\Div;
 use Yiisoft\Widget\Widget;
 
+use function sprintf;
+
 /**
  * Progress renders a bootstrap progress bar component.
  *
  * For example,
  *
  * ```php
- * echo Progress::widget()->percent(60)->render();
+ * <?= Progress::widget()->percent(60) ?>
  *
  * //
  *
- * echo Progress::widget()
+ * <?= Progress::widget()
  *     ->backgroundColor(BackgroundColor::SUCCESS)
  *     ->percent(60)
  *     ->variant(ProgressVariant::ANIMATED_STRIPED)
- *     ->render();
+ * ?>
  * ```
  *
  * @link https://getbootstrap.com/docs/5.3/components/progress/

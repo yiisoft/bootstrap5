@@ -10,6 +10,7 @@ use Yiisoft\Html\Html;
 use Yiisoft\Html\Tag\Div;
 use Yiisoft\Widget\Widget;
 
+use function count;
 use function implode;
 
 /**
@@ -18,29 +19,29 @@ use function implode;
  * For example:
  *
  * ```php
- * echo Collapse::widget()
- *     ->containerAttributes(['class' => 'row'])
- *     ->items(
- *         Toggler::to(
- *             'Some placeholder content for the first collapse component of this multi-collapse example. ' .
- *             'This panel is hidden by default but revealed when the user activates the relevant trigger.',
- *             'multiCollapseExample1',
- *             togglerContent: 'Toggle first element',
- *             togglerAsLink: true,
- *         ),
- *         Toggler::to(
- *             'Some placeholder content for the second collapse component of this multi-collapse example. ' .
- *             'This panel is hidden by default but revealed when the user activates the relevant trigger.',
- *             'multiCollapseExample2',
- *             togglerContent: 'Toggle second element',
- *         ),
- *         Toggler::to(
- *             togglerContent: 'Toggle both elements',
- *             togglerMultiple: true,
- *             ariaControls: 'multiCollapseExample1 multiCollapseExample2',
- *       ),
- *     )
- *     ->render();
+ * <?= Collapse::widget()
+ *         ->containerAttributes(['class' => 'row'])
+ *         ->items(
+ *             Toggler::to(
+ *                 'Some placeholder content for the first collapse component of this multi-collapse example. ' .
+ *                 'This panel is hidden by default but revealed when the user activates the relevant trigger.',
+ *                 'multiCollapseExample1',
+ *                 togglerContent: 'Toggle first element',
+ *                 togglerAsLink: true,
+ *             ),
+ *             Toggler::to(
+ *                 'Some placeholder content for the second collapse component of this multi-collapse example. ' .
+ *                 'This panel is hidden by default but revealed when the user activates the relevant trigger.',
+ *                 'multiCollapseExample2',
+ *                 togglerContent: 'Toggle second element',
+ *             ),
+ *             Toggler::to(
+ *                 togglerContent: 'Toggle both elements',
+ *                 togglerMultiple: true,
+ *                 ariaControls: 'multiCollapseExample1 multiCollapseExample2',
+ *             ),
+ *         )
+ * ?>
  * ```
  *
  * @link https://getbootstrap.com/docs/5.3/components/collapse/

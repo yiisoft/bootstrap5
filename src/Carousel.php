@@ -23,14 +23,14 @@ use function implode;
  * For example:
  *
  * ```php
- * echo Carousel::widget()
- *     ->id('carouselExample')
- *     ->items(
- *         CarouselItem::to(Img::tag()->alt('First slide')->src('image-1.jpg'), active: true),
- *         CarouselItem::to(Img::tag()->alt('Second slide')->src('image-2.jpg')),
- *         CarouselItem::to(Img::tag()->alt('Third slide')->src('image-3.jpg')),
- *     )
- *     ->render(),
+ * <?= Carousel::widget()
+ *         ->id('carouselExample')
+ *         ->items(
+ *             CarouselItem::to(Img::tag()->alt('First slide')->src('image-1.jpg'), active: true),
+ *             CarouselItem::to(Img::tag()->alt('Second slide')->src('image-2.jpg')),
+ *             CarouselItem::to(Img::tag()->alt('Third slide')->src('image-3.jpg')),
+ *         )
+ * ?>
  * ```
  *
  * @link https://getbootstrap.com/docs/5.3/components/carousel/

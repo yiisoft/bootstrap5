@@ -41,6 +41,7 @@ Once you’re set up, explore the widget-specific guides below to start building
 - [Offcanvas](offcanvas.md): Learn how to create hidden sidebars that slide in from the edge of the screen for navigation or additional content.
 - [Progress](progress.md): Learn how to create and customize progress bars to display the completion status of tasks or operations.
 - [Progress Stack](progress-stack.md): Learn how to create stacked progress bars for displaying multiple progress indicators in a single component.
+- [Toast](toast.md): Learn how to create and customize lightweight notifications that appear at the edge of the screen.
 
 ## How to Use This Guide
 

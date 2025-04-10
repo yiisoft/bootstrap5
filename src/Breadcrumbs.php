@@ -22,14 +22,14 @@ use function sprintf;
  * For example,
  *
  * ```php
- * echo Breadcrumbs::widget()
- *     ->links(
- *         BreadcrumbLink::to('Home', '#'),
- *         BreadcrumbLink::to('Library', '#'),
- *         BreadcrumbLink::to('Data', active: true),
- *     )
- *     ->listId(false)
- *     ->render();
+ * <?= Breadcrumbs::widget()
+ *         ->links(
+ *             BreadcrumbLink::to('Home', '#'),
+ *             BreadcrumbLink::to('Library', '#'),
+ *             BreadcrumbLink::to('Data', active: true),
+ *         )
+ *         ->listId(false)
+ * ?>
  * ```
  *
  * @see https://getbootstrap.com/docs/5.3/components/breadcrumb/

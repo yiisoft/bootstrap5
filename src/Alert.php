@@ -22,7 +22,7 @@ use function strtr;
  * For example,
  *
  * ```php
- * echo Alert::widget()->body('Say hello...')->variant(AlertVariant::PRIMARY)->render();
+ * <?= Alert::widget()->body('Say hello...')->variant(AlertVariant::PRIMARY) ?>
  * ```
  *
  * @link https://getbootstrap.com/docs/5.0/components/alerts/

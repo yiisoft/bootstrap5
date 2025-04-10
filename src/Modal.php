@@ -19,24 +19,24 @@ use Yiisoft\Widget\Widget;
  * For example,
  *
  * ```php
- * echo Modal::widget()
- *     ->body(P::tag()->content('Modal body text goes here.'))
- *     ->footer(
- *         Button::tag()
- *             ->addClass('btn btn-secondary')
- *             ->attribute('data-bs-dismiss', 'modal')
- *             ->content('Close'),
- *         Button::tag()
- *             ->addClass('btn btn-primary')
- *             ->content('Save changes'),
- *     )
- *     ->fullScreen(ModalDialogFullScreen::FULL_SCREEN)
- *     ->id('modal')
- *     ->scrollable()
- *     ->title('Modal title')
- *     ->triggerButton()
- *     ->verticalCentered()
- *    ->render();
+ * <?= Modal::widget()
+ *         ->body(P::tag()->content('Modal body text goes here.'))
+ *         ->footer(
+ *             Button::tag()
+ *                 ->addClass('btn btn-secondary')
+ *                 ->attribute('data-bs-dismiss', 'modal')
+ *                 ->content('Close'),
+ *             Button::tag()
+ *                 ->addClass('btn btn-primary')
+ *                 ->content('Save changes'),
+ *         )
+ *         ->fullScreen(ModalDialogFullScreen::FULL_SCREEN)
+ *         ->id('modal')
+ *         ->scrollable()
+ *         ->title('Modal title')
+ *         ->triggerButton()
+ *         ->verticalCentered()
+ * ?>
  * ```
  *
  * @link https://getbootstrap.com/docs/5.3/components/modal/

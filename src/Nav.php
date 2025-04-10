@@ -26,24 +26,24 @@ use function sprintf;
  *
  * ```php
  * // Basic navigation
- * echo Nav::widget()
- *     ->items(
- *         NavLink::to('Home', '#', active: true),
- *         NavLink::to('Link', '#'),
- *         NavLink::to('Disabled', '#', disabled: true),
- *     )
- *     ->render();
+ * <?= Nav::widget()
+ *         ->items(
+ *             NavLink::to('Home', '#', active: true),
+ *             NavLink::to('Link', '#'),
+ *             NavLink::to('Disabled', '#', disabled: true),
+ *         )
+ * ?>
  *
  * // Tabs navigation
- * echo Nav::widget()
- *     ->items(
- *         NavLink::tab('Tab 1', 'Content 1', active: true),
- *         NavLink::tab('Tab 2', 'Content 2'),
- *         NavLink::tab('Tab 3', 'Content 3', disabled: true),
- *     )
- *     ->styles(NavStyle::TABS)
- *     ->withFade()
- *     ->render();
+ * <?= Nav::widget()
+ *         ->items(
+ *             NavLink::tab('Tab 1', 'Content 1', active: true),
+ *             NavLink::tab('Tab 2', 'Content 2'),
+ *             NavLink::tab('Tab 3', 'Content 3', disabled: true),
+ *         )
+ *         ->styles(NavStyle::TABS)
+ *         ->withFade()
+ * ?>
  * ```
  */
 final class Nav extends Widget
