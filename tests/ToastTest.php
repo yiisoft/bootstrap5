@@ -70,6 +70,146 @@ final class ToastTest extends TestCase
         );
     }
 
+    public function testAddCloseButtonAttribute(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <button type="button" class="btn-close" data-id="123" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            Hello, world! This is a toast message.
+            </div>
+            </div>
+            HTML,
+            Toast::widget()
+                ->addCloseButtonAttribute('data-id', '123')
+                ->body('Hello, world! This is a toast message.')
+                ->id(false)
+                ->title('Bootstrap')
+                ->render(),
+        );
+    }
+
+    public function testAddCloseButtonClass(): void
+    {
+        $toast = Toast::widget()
+            ->addCloseButtonClass('test-class', null, BackgroundColor::PRIMARY)
+            ->body('Hello, world! This is a toast message.')
+            ->id(false)
+            ->title('Bootstrap');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <button type="button" class="test-class bg-primary btn-close test-class bg-primary" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            Hello, world! This is a toast message.
+            </div>
+            </div>
+            HTML,
+            $toast->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <button type="button" class="test-class bg-primary test-class-1 test-class-2 btn-close test-class bg-primary test-class-1 test-class-2" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            Hello, world! This is a toast message.
+            </div>
+            </div>
+            HTML,
+            $toast->addCloseButtonClass('test-class-1', 'test-class-2')->render(),
+        );
+    }
+
+    public function testAddCloseButtonCssStyle(): void
+    {
+        $toast = Toast::widget()
+            ->addCloseButtonCssStyle('color: red;')
+            ->body('Hello, world! This is a toast message.')
+            ->id(false)
+            ->title('Bootstrap');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            Hello, world! This is a toast message.
+            </div>
+            </div>
+            HTML,
+            $toast->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <button type="button" class="btn-close" style="color: red; font-weight: bold;" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            Hello, world! This is a toast message.
+            </div>
+            </div>
+            HTML,
+            $toast->addCloseButtonCssStyle('font-weight: bold;')->render(),
+        );
+    }
+
+    public function testAddCloseButtonCssStyleWithOverwriteFalse(): void
+    {
+        $toast = Toast::widget()
+            ->addCloseButtonCssStyle('color: red;')
+            ->body('Hello, world! This is a toast message.')
+            ->id(false)
+            ->title('Bootstrap');
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            Hello, world! This is a toast message.
+            </div>
+            </div>
+            HTML,
+            $toast->render(),
+        );
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            Hello, world! This is a toast message.
+            </div>
+            </div>
+            HTML,
+            $toast->addCloseButtonCssStyle('color: blue;', false)->render(),
+        );
+    }
+
     public function testAddCssStyle(): void
     {
         $toast = Toast::widget()->addCssStyle('color: red;')->body('Hello, world! This is a toast message.')->id(false);
@@ -490,6 +630,9 @@ final class ToastTest extends TestCase
 
         $this->assertNotSame($toast, $toast->addAttributes([]));
         $this->assertNotSame($toast, $toast->addClass(''));
+        $this->assertNotSame($toast, $toast->addCloseButtonAttribute('', ''));
+        $this->assertNotSame($toast, $toast->addCloseButtonClass(''));
+        $this->assertNotSame($toast, $toast->addCloseButtonCssStyle(''));
         $this->assertNotSame($toast, $toast->addCssStyle(''));
         $this->assertNotSame($toast, $toast->attribute('', ''));
         $this->assertNotSame($toast, $toast->attributes([]));

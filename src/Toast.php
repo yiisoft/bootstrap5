@@ -14,7 +14,10 @@ use Yiisoft\Html\Tag\Small;
 use Yiisoft\Html\Tag\Strong;
 use Yiisoft\Widget\Widget;
 
+use function array_key_exists;
+use function implode;
 use function is_string;
+use function preg_replace;
 
 /**
  * Toasts renders a toast bootstrap widget.
@@ -43,6 +46,7 @@ final class Toast extends Widget
     private array $attributes = [];
     private string $body = '';
     private string|Stringable $closeButton = '';
+    private array $closeButtonAttributes = [];
     private string|Stringable $content = '';
     private array $cssClasses = [];
     private bool $container = false;
@@ -56,13 +60,13 @@ final class Toast extends Widget
     /**
      * Adds a set of attributes.
      *
-     * @param array $attributes Attribute values indexed by attribute names. e.g. `['id' => 'my-id']`.
+     * @param array $attributes Attribute values indexed by attribute names. for example, `['id' => 'my-id']`.
      *
      * @return self A new instance with the specified attributes added.
      *
      * Example usage:
      * ```php
-     * $progress->addAttributes(['data-id' => '123']);
+     * $toast->addAttributes(['data-id' => '123']);
      * ```
      */
     public function addAttributes(array $attributes): self
@@ -84,13 +88,89 @@ final class Toast extends Widget
      *
      * Example usage:
      * ```php
-     * $progress->addClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
+     * $toast->addClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
      * ```
      */
     public function addClass(BackedEnum|string|null ...$class): self
     {
         $new = clone $this;
         $new->cssClasses = [...$this->cssClasses, ...$class];
+
+        return $new;
+    }
+
+    /**
+     * Adds close button attribute value.
+     *
+     * @param string $name The attribute name.
+     * @param mixed $value The attribute value.
+     *
+     * @return self A new instance with the specified attribute added.
+     *
+     * Example usage:
+     * ```php
+     * $toast->addCloseButtonAttribute('data-id', '123');
+     * ```
+     */
+    public function addCloseButtonAttribute(string $name, mixed $value): self
+    {
+        $new = clone $this;
+        $new->closeButtonAttributes[$name] = $value;
+
+        return $new;
+    }
+
+    /**
+     * Adds one or more CSS classes to the existing close button classes.
+     *
+     * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
+     * automatically.
+     *
+     * @param BackedEnum|string|null ...$class One or more CSS class names to add. Pass `null` to skip adding a class.
+     *
+     * @return self A new instance with the specified CSS classes added to existing ones.
+     *
+     * @link https://html.spec.whatwg.org/#classes
+     *
+     * Example usage:
+     * ```php
+     * $toast->addCloseButtonClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
+     * ```
+     */
+    public function addCloseButtonClass(BackedEnum|string|null ...$class): self
+    {
+        $new = clone $this;
+
+        foreach ($class as $item) {
+            Html::addCssClass($new->closeButtonAttributes, $item);
+        }
+
+        return $new;
+    }
+
+    /**
+     * Adds a close button CSS style.
+     *
+     * @param array|string $style The CSS style. If the value is an array, a space will separate the values.
+     * For example, `['color' => 'red', 'font-weight' => 'bold']` will be rendered as `color: red; font-weight: bold;`.
+     * If it is a string, it will be added as is, for example, `color: red`.
+     * @param bool $overwrite Whether to overwrite existing styles with the same name. If `false`, the new value will be
+     * appended to the existing one.
+     *
+     * @return self A new instance with the specified CSS style value added.
+     *
+     * Example usage:
+     * ```php
+     * $alert->addCloseButtonCssStyle('color: red');
+     *
+     * // or
+     * $toast->addCloseButtonCssStyle(['color' => 'red', 'font-weight' => 'bold']);
+     * ```
+     */
+    public function addCloseButtonCssStyle(array|string $style, bool $overwrite = true): self
+    {
+        $new = clone $this;
+        Html::addCssStyle($new->closeButtonAttributes, $style, $overwrite);
 
         return $new;
     }
@@ -108,10 +188,10 @@ final class Toast extends Widget
      *
      * Example usage:
      * ```php
-     * $progress->addCssStyle('color: red');
+     * $toast->addCssStyle('color: red');
      *
      * // or
-     * $progress->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
+     * $toast->addCssStyle(['color' => 'red', 'font-weight' => 'bold']);
      * ```
      */
     public function addCssStyle(array|string $style, bool $overwrite = true): self
@@ -132,7 +212,7 @@ final class Toast extends Widget
      *
      * Example usage:
      * ```php
-     * $progress->attribute('data-id', '123');
+     * $toast->attribute('data-id', '123');
      * ```
      */
     public function attribute(string $name, mixed $value): self
@@ -154,7 +234,7 @@ final class Toast extends Widget
      *
      * Example usage:
      * ```php
-     * $progress->attributes(['data-id' => '123']);
+     * $toast->attributes(['data-id' => '123']);
      * ```
      */
     public function attributes(array $attributes): self
@@ -222,7 +302,7 @@ final class Toast extends Widget
      *
      * Example usage:
      * ```php
-     * $progress->class('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
+     * $toast->class('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
      * ```
      */
     public function class(BackedEnum|string|null ...$class): self
@@ -540,19 +620,28 @@ final class Toast extends Widget
     /**
      * Renders the close button for the header section.
      *
-     * @param string $content The content.
-     *
      * @return string The HTML representation of the element.
      */
-    private function renderCloseButton(string $content): string
+    private function renderCloseButton(): string
     {
-        return Button::tag()
-            ->addClass(self::CLASS_CLOSE_BUTTON)
-            ->attribute('data-bs-dismiss', self::NAME)
-            ->attribute('aria-label', 'Close')
-            ->content($content)
-            ->type('button')
-            ->render();
+        $closeButtonAttributes = $this->closeButtonAttributes;
+        $closeButtonClasses = $closeButtonAttributes['class'] ?? null;
+
+        $closeButtonTag = Button::tag()
+            ->addAttributes($closeButtonAttributes)
+            ->addClass(self::CLASS_CLOSE_BUTTON, $closeButtonClasses)
+            ->content($this->closeButton)
+            ->type('button');
+
+        if (array_key_exists('data-bs-dismiss', $closeButtonAttributes) === false) {
+            $closeButtonTag = $closeButtonTag->attribute('data-bs-dismiss', self::NAME);
+        }
+
+        if (array_key_exists('aria-label', $closeButtonAttributes) === false) {
+            $closeButtonTag = $closeButtonTag->attribute('aria-label', 'Close');
+        }
+
+        return $closeButtonTag->render();
     }
 
     /**
@@ -596,7 +685,7 @@ final class Toast extends Widget
                 "\n",
             )
             ->addContent(
-                is_string($this->closeButton) ? $this->renderCloseButton($this->closeButton) : $this->closeButton,
+                is_string($this->closeButton) ? $this->renderCloseButton() : $this->closeButton,
                 "\n",
             )
             ->encode(false)
