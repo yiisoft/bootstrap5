@@ -20,19 +20,21 @@ use Yiisoft\Html\Html;
  *
  * Example usage:
  * ```php
- * CarouselItem::to(
- *     '<img src="example.jpg" alt="Example">',
- *     'Image Caption',
- *     'Caption Placeholder'
- * );
+ * <?= CarouselItem::to(
+ *         '<img src="example.jpg" alt="Example">',
+ *         'Image Caption',
+ *         'Caption Placeholder'
+ *     );
+ * ?>
  *
  * // Create an active carousel item with autoplay.
- * CarouselItem::to(
- *     content: '<img src="example.jpg">',
- *     caption: 'Slide 1',
- *     active: true,
- *     autoPlayingInterval: 5000
- * );
+ * <?= CarouselItem::to(
+ *         content: '<img src="example.jpg">',
+ *         caption: 'Slide 1',
+ *         active: true,
+ *         autoPlayingInterval: 5000
+ *     );
+ * ?>
  * ```
  */
 final class CarouselItem

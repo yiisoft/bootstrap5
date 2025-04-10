@@ -7,6 +7,10 @@ namespace Yiisoft\Bootstrap5;
 use BackedEnum;
 use Stringable;
 use Yiisoft\Bootstrap5\Utility\TogglerType;
+use Yiisoft\Definitions\Exception\CircularReferenceException;
+use Yiisoft\Definitions\Exception\InvalidConfigException;
+use Yiisoft\Definitions\Exception\NotInstantiableException;
+use Yiisoft\Factory\NotFoundException;
 use Yiisoft\Html\Html;
 use Yiisoft\Html\Tag\A;
 use Yiisoft\Html\Tag\Button as ButtonTag;
@@ -19,11 +23,11 @@ use Yiisoft\Widget\Widget;
  * For example,
  *
  * ```php
- * echo Button::widget()
- *     ->label('Button')
- *     ->largeSize()
- *     ->variant(ButtonVariant::PRIMARY)
- *     ->render();
+ * <?= Button::widget()
+ *         ->label('Button')
+ *         ->largeSize()
+ *         ->variant(ButtonVariant::PRIMARY)
+ * ?>
  * ```
  *
  * @link https://getbootstrap.com/docs/5.3/components/buttons/
@@ -48,13 +52,18 @@ final class Button extends Widget
      * @param array $config The configuration.
      * @param string|null $theme The theme.
      *
+     * @throws CircularReferenceException
+     * @throws InvalidConfigException
+     * @throws NotFoundException
+     * @throws NotInstantiableException
+     *
      * @return self A new instance with the button as a link.
      *
      * Example usage:
      * ```php
-     * echo Button::link('Button', '/path/to/page')->render();
+     * Button::link('Button', '/path/to/page');
      * ```
-     */
+ */
     public static function link(
         string|Stringable $label = '',
         string|null $url = null,
@@ -73,11 +82,16 @@ final class Button extends Widget
      * @param array $config The configuration.
      * @param string|null $theme The theme.
      *
+     * @throws CircularReferenceException
+     * @throws InvalidConfigException
+     * @throws NotFoundException
+     * @throws NotInstantiableException
+     *
      * @return self A new instance with the input of "reset" type.
      *
      * Example usage:
      * ```php
-     * echo Button::resetInput('Reset')->render();
+     * Button::resetInput('Reset');
      * ```
      */
     public static function resetInput(
@@ -97,11 +111,16 @@ final class Button extends Widget
      * @param array $config The configuration.
      * @param string|null $theme The theme.
      *
+     * @throws CircularReferenceException
+     * @throws InvalidConfigException
+     * @throws NotFoundException
+     * @throws NotInstantiableException
+     *
      * @return self A new instance of an input with "submit" type.
      *
      * Example usage:
      * ```php
-     * echo Button::submitInput('Submit')->render();
+     * Button::submitInput('Submit');
      * ```
      */
     public static function submitInput(
@@ -121,11 +140,16 @@ final class Button extends Widget
      * @param array $config The configuration.
      * @param string|null $theme The theme.
      *
+     * @throws CircularReferenceException
+     * @throws InvalidConfigException
+     * @throws NotFoundException
+     * @throws NotInstantiableException
+     *
      * @return self A new instance with the button as a reset button.
      *
      * Example usage:
      * ```php
-     * echo Button::reset('Reset')->render();
+     * Button::reset('Reset');
      * ```
      */
     public static function reset(
@@ -145,11 +169,17 @@ final class Button extends Widget
      * @param array $config The configuration.
      * @param string|null $theme The theme.
      *
+     *
+     * @throws CircularReferenceException
+     * @throws InvalidConfigException
+     * @throws NotFoundException
+     * @throws NotInstantiableException
+     *
      * @return self A new instance with the button as a "submit" button.
      *
      * Example usage:
      * ```php
-     * echo Button::submit('Submit')->render();
+     * Button::submit('Submit');
      * ```
      */
     public static function submit(

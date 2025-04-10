@@ -20,13 +20,13 @@ use function implode;
  * For example:
  *
  * ```php
- * echo Accordion::widget()
- *     ->items(
- *        AccordionItem::to('Accordion Item #1', 'This is the first item\'s accordion body.'),
- *        AccordionItem::to('Accordion Item #2', 'This is the second item\'s accordion body.'),
- *        AccordionItem::to('Accordion Item #3', 'This is the third item\'s accordion body.'),
- *    )
- *    ->render(),
+ * <?= Accordion::widget()
+ *         ->items(
+ *            AccordionItem::to('Accordion Item #1', 'This is the first item\'s accordion body.'),
+ *            AccordionItem::to('Accordion Item #2', 'This is the second item\'s accordion body.'),
+ *            AccordionItem::to('Accordion Item #3', 'This is the third item\'s accordion body.'),
+ *        )
+ * ?>
  * ```
  *
  * @link https://getbootstrap.com/docs/5.3/components/accordion/

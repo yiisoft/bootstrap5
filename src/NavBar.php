@@ -12,6 +12,8 @@ use Yiisoft\Html\Tag\Button;
 use Yiisoft\Html\Tag\Span;
 use Yiisoft\Widget\Widget;
 
+use function array_key_exists;
+
 /**
  * `NavBar` renders a navbar HTML component.
  *
@@ -19,13 +21,13 @@ use Yiisoft\Widget\Widget;
  * navbar. You may use widgets such as {@see Nav} or {@see \Yiisoft\Widget\Menu} to build up such content. For example,
  *
  * ```php
- * echo NavBar::widget()
- *     ->addClass(BackgroundColor::BODY_TERTIARY)
- *     ->brandText('NavBar')
- *     ->brandUrl('#')
- *     ->id('navbarSupportedContent')
- *     ->begin();
- *     echo Nav::widget()
+ * <?= NavBar::widget()
+ *         ->addClass(BackgroundColor::BODY_TERTIARY)
+ *         ->brandText('NavBar')
+ *         ->brandUrl('#')
+ *         ->id('navbarSupportedContent')
+ * ?>
+ * <?= Nav::widget()
  *         ->items(
  *             NavLink::item('Home', '#', active: true),
  *             NavLink::item(label: 'Link', url: '#'),
@@ -39,8 +41,8 @@ use Yiisoft\Widget\Widget;
  *             NavLink::item('Disabled', '#', disabled: true),
  *         )
  *         ->styles(NavStyle::NAVBAR)
- *        ->render();
- * echo NavBar::end();
+ * ?>
+ * <?= NavBar::end() ?>
  * ```
  */
 final class NavBar extends Widget

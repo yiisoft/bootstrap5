@@ -19,15 +19,15 @@ use function implode;
  * For example,
  *
  * ```php
- * echo ButtonGroup::widget()
- *     ->addClass('btn-lg')
- *     ->ariaLabel('Basic example')
- *     ->buttons(
- *         Button::widget()->label('Left')->variant(ButtonVariant::PRIMARY),
- *         Button::widget()->label('Middle')->variant(ButtonVariant::PRIMARY),
- *         Button::widget()->label('Right')->variant(ButtonVariant::PRIMARY),
- *     )
- *     ->render();
+ * <?= ButtonGroup::widget()
+ *         ->addClass('btn-lg')
+ *         ->ariaLabel('Basic example')
+ *         ->buttons(
+ *             Button::widget()->label('Left')->variant(ButtonVariant::PRIMARY),
+ *             Button::widget()->label('Middle')->variant(ButtonVariant::PRIMARY),
+ *             Button::widget()->label('Right')->variant(ButtonVariant::PRIMARY),
+ *         )
+ * ?>
  * ```
  *
  * Pressing on the button should be handled via JavaScript. See the following for details:

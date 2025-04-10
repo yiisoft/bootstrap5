@@ -12,21 +12,24 @@ use Yiisoft\Html\Html;
 use Yiisoft\Html\Tag\Button;
 use Yiisoft\Html\Tag\Div;
 use Yiisoft\Widget\Widget;
+use function array_key_exists;
 
 /**
  * Offcanvas renders a Bootstrap offcanvas component.
  *
  * For example,
  * ```php
- * echo Offcanvas::widget()
+ * <?= Offcanvas::widget()
  *     ->placement(OffcanvasPlacement::END)
  *     ->title('Offcanvas Title')
  *     ->togglerContent('Toggle Offcanvas')
- *     ->begin();
+ *     ->begin()
+ * ?>
  *
  * // content of the offcanvas
- * echo 'Offcanvas content here';
- * echo Offcanvas::end();
+ * 'Offcanvas content here'
+ *
+ * <?= Offcanvas::end ?>
  * ```
  *
  * @link https://getbootstrap.com/docs/5.3/components/offcanvas/#how-it-works
