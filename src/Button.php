@@ -169,7 +169,6 @@ final class Button extends Widget
      * @param array $config The configuration.
      * @param string|null $theme The theme.
      *
-     *
      * @throws CircularReferenceException
      * @throws InvalidConfigException
      * @throws NotFoundException

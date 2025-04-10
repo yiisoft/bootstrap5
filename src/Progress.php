@@ -11,6 +11,7 @@ use Yiisoft\Bootstrap5\Utility\Sizing;
 use Yiisoft\Html\Html;
 use Yiisoft\Html\Tag\Div;
 use Yiisoft\Widget\Widget;
+
 use function sprintf;
 
 /**
