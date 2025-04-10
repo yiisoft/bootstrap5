@@ -12,8 +12,9 @@ systems. Toasts are built with flexbox and are easy to align and position.
 - Trigger button integration for displaying toast notifications on demand.
 - Flexible positioning through container utilities.
 
-## Important Note
-Toasts are opt-in for performance reasons, so **you must initialize them with JavaScript** after rendering:
+## Initializing and using toasts:
+
+You must initialize and invoke toasts with JavaScript:
 
 ```javascript
 // Initialize all toasts on the page
