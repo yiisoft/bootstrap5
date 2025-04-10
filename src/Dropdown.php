@@ -22,20 +22,20 @@ use Yiisoft\Widget\Widget;
  * For example,
  *
  * ```php
- * echo Dropdown::widget()
- *     ->items(
- *         DropdownItem::link('Action', '#'),
- *         DropdownItem::link('Another action', '#'),
- *         DropdownItem::link('Something else here', '#'),
- *         DropdownItem::divider(),
- *         DropdownItem::link('Separated link', '#'),
- *     )
- *     ->toggleContent('Toggle dropdown')
- *     ->toggleVariant(ButtonVariant::DANGER)
- *     ->toggleSplit()
- *     ->toggleSplitContent('Danger')
- *     ->toggleSizeLarge()
- *     ->render();
+ * <?= Dropdown::widget()
+ *         ->items(
+ *             DropdownItem::link('Action', '#'),
+ *             DropdownItem::link('Another action', '#'),
+ *             DropdownItem::link('Something else here', '#'),
+ *             DropdownItem::divider(),
+ *             DropdownItem::link('Separated link', '#'),
+ *         )
+ *         ->toggleContent('Toggle dropdown')
+ *         ->toggleVariant(ButtonVariant::DANGER)
+ *         ->toggleSplit()
+ *         ->toggleSplitContent('Danger')
+ *         ->toggleSizeLarge()
+ * ?>
  * ```
  */
 final class Dropdown extends Widget
