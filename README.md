@@ -21,6 +21,61 @@ This [Yii Framework] extension encapsulates [Twitter Bootstrap 5] components
 and plugins in terms of Yii widgets, and thus makes using Bootstrap components/plugins
 in Yii applications extremely easy.
 
+For example, to use the [Bootstrap 5 Carousel](https://getbootstrap.com/docs/5.3/components/carousel/) component, you
+can do the following: 
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Yiisoft\Bootstrap5\Carousel;
+use Yiisoft\Bootstrap5\CarouselItem;
+use Yiisoft\Html\Tag\Div;
+use Yiisoft\Html\Tag\H2;
+use Yiisoft\Html\Tag\P;
+
+?>
+
+<?= Carousel::widget()
+    ->id('carouselExampleOnlyText')
+    ->items(
+        CarouselItem::to(
+            Div::tag()
+                ->addClass('bg-primary text-white p-5 text-center')
+                ->addContent(
+                    "\n",
+                    H2::tag()->content('Title 1'),
+                    "\n",
+                    P::tag()->content('This is the first slide with text.'),
+                    "\n",
+                ),
+        ),
+        CarouselItem::to(
+            Div::tag()
+                ->addClass('bg-success text-white p-5 text-center')
+                ->addContent(
+                    "\n",
+                    H2::tag()->content('Title 2'),
+                    "\n",
+                    P::tag()->content('This is the second slide with text.'),
+                    "\n",
+                ),
+        ),
+        CarouselItem::to(
+            Div::tag()
+                ->addClass('bg-danger text-white p-5 text-center')
+                ->addContent(
+                    "\n",
+                    H2::tag()->content('Title 3'),
+                    "\n",
+                    P::tag()->content('This is the third slide with text.'),
+                    "\n",
+                ),
+        ),
+    );
+```
+
 ## Requirements
 
 - PHP 8.1 or higher.
@@ -87,16 +142,6 @@ install additional packages:
     
 ```shell
 composer require yiisoft/assets yiisoft/files
-```
-
-## General usage
-
-For example, the following single line of code in a view file would render a Bootstrap Progress plugin:
-
-```php
-<?= Yiisoft\Bootstrap5\Progress::widget()
-    ->percent('60')
-    ->label('test') ?>
 ```
 
 ## Documentation
