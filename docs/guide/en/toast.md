@@ -61,7 +61,7 @@ Toast::widget()
     ->class('custom-toast');
 ```
 
-Add single attributes:
+Add single attribute:
 
 ```php
 Toast::widget()->attribute('data-id', '123');
