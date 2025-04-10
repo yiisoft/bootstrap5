@@ -40,6 +40,7 @@ Once you’re set up, explore the widget-specific guides below to start building
 - [NavBar](navbar.md): Learn how to create responsive navigation headers with support for branding, navigation, and other elements.
 - [Offcanvas](offcanvas.md): Learn how to create hidden sidebars that slide in from the edge of the screen for navigation or additional content.
 - [Progress](progress.md): Learn how to create and customize progress bars to display the completion status of tasks or operations.
+- [Progress Stack](progress-stack.md): Learn how to create stacked progress bars for displaying multiple progress indicators in a single component.
 
 ## How to Use This Guide
 
