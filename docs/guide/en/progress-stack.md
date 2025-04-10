@@ -55,7 +55,7 @@ ProgressStack::widget()
     ->class('custom-progress-stack');
 ```
 
-Add single attributes:
+Add single attribute:
 
 ```php
 ProgressStack::widget()->attribute('data-id', '123');
