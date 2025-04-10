@@ -39,6 +39,7 @@ Once you’re set up, explore the widget-specific guides below to start building
 - [Nav](nav.md): Learn how to create and customize navigation components with different styles, layouts and interactive elements.
 - [NavBar](navbar.md): Learn how to create responsive navigation headers with support for branding, navigation, and other elements.
 - [Offcanvas](offcanvas.md): Learn how to create hidden sidebars that slide in from the edge of the screen for navigation or additional content.
+- [Progress](progress.md): Learn how to create and customize progress bars to display the completion status of tasks or operations.
 
 ## How to Use This Guide
 
