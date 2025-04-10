@@ -44,33 +44,24 @@ use Yiisoft\Html\Tag\P;
             Div::tag()
                 ->addClass('bg-primary text-white p-5 text-center')
                 ->addContent(
-                    "\n",
                     H2::tag()->content('Title 1'),
-                    "\n",
                     P::tag()->content('This is the first slide with text.'),
-                    "\n",
                 ),
         ),
         CarouselItem::to(
             Div::tag()
                 ->addClass('bg-success text-white p-5 text-center')
                 ->addContent(
-                    "\n",
                     H2::tag()->content('Title 2'),
-                    "\n",
                     P::tag()->content('This is the second slide with text.'),
-                    "\n",
                 ),
         ),
         CarouselItem::to(
             Div::tag()
                 ->addClass('bg-danger text-white p-5 text-center')
                 ->addContent(
-                    "\n",
                     H2::tag()->content('Title 3'),
-                    "\n",
                     P::tag()->content('This is the third slide with text.'),
-                    "\n",
                 ),
         ),
     );
