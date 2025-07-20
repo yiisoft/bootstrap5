@@ -1630,6 +1630,42 @@ final class DropdownTest extends TestCase
     /**
      * @link https://getbootstrap.com/docs/5.3/components/dropdowns/#single-button
      */
+    public function testSingleButtonWithoutVariant(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="dropdown">
+            <a class="btn dropdown-toggle btn-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            </ul>
+            </div>
+            HTML,
+            Dropdown::widget()
+                ->items(
+                    DropdownItem::link('Action', '#'),
+                    DropdownItem::link('Another action', '#'),
+                    DropdownItem::link('Something else here', '#'),
+                )
+                ->togglerAsLink()
+                ->togglerContent('Dropdown link')
+                ->togglerVariant(null)
+				->addTogglerClass('btn-custom')
+                ->render(),
+        );
+    }
+
+    /**
+     * @link https://getbootstrap.com/docs/5.3/components/dropdowns/#single-button
+     */
     public function testSingleButtonWithVariantDanger(): void
     {
         Assert::equalsWithoutLE(
