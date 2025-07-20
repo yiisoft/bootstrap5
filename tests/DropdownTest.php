@@ -1658,7 +1658,7 @@ final class DropdownTest extends TestCase
                 ->togglerAsLink()
                 ->togglerContent('Dropdown link')
                 ->togglerVariant(null)
-				->addTogglerClass('btn-custom')
+                ->addTogglerClass('btn-custom')
                 ->render(),
         );
     }
