@@ -660,7 +660,7 @@ final class Dropdown extends Widget
     /**
      * Sets the variant for the toggler.
      *
-     * @param ButtonVariant $variant The variant for the toggler.
+     * @param ButtonVariant|null $variant The variant for the toggler. If `null`, the variant will not be set.
      *
      * @return self A new instance with the specified variant for the toggler.
      */
