@@ -71,7 +71,7 @@ final class Dropdown extends Widget
     private string|null $togglerSize = null;
     private bool $togglerSplit = false;
     private string $togglerSplitContent = 'Action';
-    private ButtonVariant $togglerVariant = ButtonVariant::SECONDARY;
+    private ButtonVariant|null $togglerVariant = ButtonVariant::SECONDARY;
 
     /**
      * Adds a sets of attributes.
@@ -660,11 +660,11 @@ final class Dropdown extends Widget
     /**
      * Sets the variant for the toggler.
      *
-     * @param ButtonVariant $variant The variant for the toggler.
+     * @param ButtonVariant|null $variant The variant for the toggler. If `null`, the variant will not be set.
      *
      * @return self A new instance with the specified variant for the toggler.
      */
-    public function togglerVariant(ButtonVariant $variant): self
+    public function togglerVariant(ButtonVariant|null $variant): self
     {
         $new = clone $this;
         $new->togglerVariant = $variant;
