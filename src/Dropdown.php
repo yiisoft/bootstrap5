@@ -936,7 +936,6 @@ final class Dropdown extends Widget
 
         $togglerAttributes = $this->togglerAttributes;
         $togglerClasses = $this->togglerClasses;
-
         $classes = $togglerAttributes['class'] ?? null;
 
         unset($togglerAttributes['class']);
@@ -953,7 +952,7 @@ final class Dropdown extends Widget
                     $classes,
                 ],
             ),
-            default => Html::addCssClass($togglerAttributes, $togglerClasses),
+            default => Html::addCssClass($togglerAttributes, [...$togglerClasses, $classes]),
         };
 
         if ($this->togglerLink) {
