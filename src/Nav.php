@@ -607,7 +607,7 @@ final class Nav extends Widget
         $dropDownItems = $this->isDropdownActive($items);
 
         return Li::tag()
-            ->addClass(...$this->dropdownCssClasses)
+            ->addClass(...$this->dropdownCssClasses, ...$dropDownItems->getCssClasses())
             ->addContent(
                 "\n",
                 $dropDownItems
