@@ -1475,4 +1475,175 @@ final class NavTest extends TestCase
                 ->render(),
         );
     }
+
+    public function testDropdownAddTogglerClass(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul class="nav nav-tabs">
+            <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle test-class" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            <li>
+            <hr class="dropdown-divider">
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Separated link</a>
+            </li>
+            </ul>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->items(
+                    NavLink::to('Active', '#', active: true),
+                    Dropdown::widget()
+                        ->addTogglerClass('test-class')
+                        ->items(
+                            DropdownItem::link('Action', '#'),
+                            DropdownItem::link('Another action', '#'),
+                            DropdownItem::link('Something else here', '#'),
+                            DropdownItem::divider(),
+                            DropdownItem::link('Separated link', '#'),
+                        )
+                        ->togglerContent('Dropdown'),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Disabled', '#', disabled: true),
+                )
+                ->styles(NavStyle::TABS)
+            ->render(),
+        );
+    }
+
+    public function testDropdownAddClassForAllItemsDropdown(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul class="nav nav-tabs">
+            <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            </li>
+            <li class="nav-item dropdown test-class">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            <li>
+            <hr class="dropdown-divider">
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Separated link</a>
+            </li>
+            </ul>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->addDropdownClass('test-class')
+                ->items(
+                    NavLink::to('Active', '#', active: true),
+                    Dropdown::widget()
+                        ->items(
+                            DropdownItem::link('Action', '#'),
+                            DropdownItem::link('Another action', '#'),
+                            DropdownItem::link('Something else here', '#'),
+                            DropdownItem::divider(),
+                            DropdownItem::link('Separated link', '#'),
+                        )
+                        ->togglerContent('Dropdown'),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Disabled', '#', disabled: true),
+                )
+                ->styles(NavStyle::TABS)
+            ->render(),
+        );
+    }
+
+    public function testDropdownAddClassForIndividualItemDropdown(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul class="nav nav-tabs">
+            <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            </li>
+            <li class="nav-item dropdown test-class">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            <li>
+            <hr class="dropdown-divider">
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Separated link</a>
+            </li>
+            </ul>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->items(
+                    NavLink::to('Active', '#', active: true),
+                    Dropdown::widget()
+                        ->addClass('test-class')
+                        ->items(
+                            DropdownItem::link('Action', '#'),
+                            DropdownItem::link('Another action', '#'),
+                            DropdownItem::link('Something else here', '#'),
+                            DropdownItem::divider(),
+                            DropdownItem::link('Separated link', '#'),
+                        )
+                        ->togglerContent('Dropdown'),
+                    NavLink::to('Link', url: '#'),
+                    NavLink::to('Disabled', '#', disabled: true),
+                )
+                ->styles(NavStyle::TABS)
+            ->render(),
+        );
+    }
 }
