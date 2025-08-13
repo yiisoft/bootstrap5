@@ -58,6 +58,7 @@ final class Nav extends Widget
     private array $attributes = [];
     private array $cssClasses = [];
     private string $currentPath = '';
+    private array $dropdownCssClasses = [self::NAV_ITEM_DROPDOWN_CLASS];
     private bool $fade = true;
     private bool|string $id = false;
     /** @var array<int, Dropdown|NavLink> */
@@ -154,6 +155,31 @@ final class Nav extends Widget
     {
         $new = clone $this;
         Html::addCssStyle($new->attributes, $style, $overwrite);
+
+        return $new;
+    }
+
+    /**
+     * Adds one or more CSS classes to the existing classes for dropdown.
+     *
+     * Multiple classes can be added by passing them as separate arguments. `null` values are filtered out
+     * automatically.
+     *
+     * @param BackedEnum|string|null ...$class One or more CSS class names to add. Pass `null` to skip adding a class.
+     *
+     * @return self A new instance with the specified CSS classes added to existing ones for dropdown.
+     *
+     * @link https://html.spec.whatwg.org/#classes
+     *
+     * Example usage:
+     * ```php
+     * $nav->addDropdownClass('custom-class', null, 'another-class', BackGroundColor::PRIMARY);
+     * ```
+     */
+    public function addDropdownClass(BackedEnum|string|null ...$class): self
+    {
+        $new = clone $this;
+        $new->dropdownCssClasses = [...$this->dropdownCssClasses, ...$class];
 
         return $new;
     }
@@ -581,7 +607,7 @@ final class Nav extends Widget
         $dropDownItems = $this->isDropdownActive($items);
 
         return Li::tag()
-            ->addClass(self::NAV_ITEM_DROPDOWN_CLASS)
+            ->addClass(...$this->dropdownCssClasses, ...$dropDownItems->getCssClasses())
             ->addContent(
                 "\n",
                 $dropDownItems

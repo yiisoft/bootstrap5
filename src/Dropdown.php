@@ -387,6 +387,16 @@ final class Dropdown extends Widget
     }
 
     /**
+     * Returns the CSS classes for the container.
+     *
+     * @return array The CSS classes for the container.
+     */
+    public function getCssClasses(): array
+    {
+        return $this->cssClasses;
+    }
+
+    /**
      * Returns the list of links to appear in the dropdown.
      *
      * @return DropdownItem[] The links to appear in the dropdown.
@@ -936,7 +946,6 @@ final class Dropdown extends Widget
 
         $togglerAttributes = $this->togglerAttributes;
         $togglerClasses = $this->togglerClasses;
-
         $classes = $togglerAttributes['class'] ?? null;
 
         unset($togglerAttributes['class']);
@@ -953,7 +962,7 @@ final class Dropdown extends Widget
                     $classes,
                 ],
             ),
-            default => Html::addCssClass($togglerAttributes, $togglerClasses),
+            default => Html::addCssClass($togglerAttributes, [...$togglerClasses, $classes]),
         };
 
         if ($this->togglerLink) {
