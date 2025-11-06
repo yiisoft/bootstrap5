@@ -69,6 +69,7 @@ final class NavBar extends Widget
     private array $innerContainerAttributes = [];
     private string $innerContainerTag = 'div';
     private bool|string $id = true;
+    private bool|string $navId = false;
     private string $tag = 'nav';
     private string|Stringable $toggler = '';
     private array $togglerAttributes = [];
@@ -544,6 +545,28 @@ final class NavBar extends Widget
     }
 
     /**
+     * Sets the ID attribute for the `<nav>` element of the navbar component.
+     *
+     * This method allows assigning an independent identifier to the `<nav>` container itself, without affecting the
+     * internal collapse element used by the toggler button.
+     *
+     * The `id()` method continues to control the identifier used by the collapse container and its corresponding
+     * toggler target.
+     *
+     * @param bool|string $id The ID of `nav` element of the navbar component. If `false`, no ID will be assigned to the
+     * `nav` element.
+     *
+     * @return self A new instance with the specified ID for the `<nav>` element of the navbar component.
+     */
+    public function navId(bool|string $id): self
+    {
+        $new = clone $this;
+        $new->navId = $id;
+
+        return $new;
+    }
+
+    /**
      * Sets the placement.
      *
      * @param NavBarPlacement $value The placement.
@@ -677,6 +700,10 @@ final class NavBar extends Widget
 
         if ($this->container) {
             $htmlBegin = Html::openTag('div', $this->containerAttributes) . "\n";
+        }
+
+        if ($this->navId !== false) {
+            $attributes['id'] = $this->navId;
         }
 
         $htmlBegin .= Html::openTag($this->tag, $attributes) . "\n";

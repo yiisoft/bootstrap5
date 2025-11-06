@@ -238,3 +238,19 @@ use Yiisoft\Html\Tag\Button;
 
 NavBar::widget()->toggler(Button::button('Toggle')->addClass('navbar-toggler'));
 ```
+
+### Using `navId()` for the `<nav>` Element
+
+By default, the `id()` method in `NavBar` controls the identifier used by the **collapse container**
+(`<div class="collapse navbar-collapse">`) and the corresponding `data-bs-target` and `aria-controls` attributes of the
+toggler button.
+
+If you also need a separate `id` for the outer `<nav>` element for example, to apply custom CSS you can use the 
+`navId()` method:
+
+```php
+NavBar::widget()
+    ->id('navbarCollapse')      // ID used by the collapse container and toggler
+    ->navId('mainNav')          // ID applied to the <nav> element
+    ->begin();
+```

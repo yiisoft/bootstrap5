@@ -43,7 +43,7 @@ final class NavBarTest extends TestCase
             </div>
             </nav>
             HTML,
-            trim(NavBar::widget()->addAttributes(['data-id' => '123'])->id('navbar')->begin()) . NavBar::end(),
+            trim(NavBar::widget()->addAttributes(['id' => 'nav-id', 'data-id' => '123'])->id('navbar')->begin()) . NavBar::end(),
         );
     }
 
@@ -774,11 +774,49 @@ final class NavBarTest extends TestCase
         $this->assertNotSame($navBar, $navBar->id(false));
         $this->assertNotSame($navBar, $navBar->innerContainer(false));
         $this->assertNotSame($navBar, $navBar->innerContainerAttributes([]));
+        $this->assertNotSame($navBar, $navBar->navId(''));
         $this->assertNotSame($navBar, $navBar->placement(NavBarPlacement::FIXED_TOP));
         $this->assertNotSame($navBar, $navBar->tag(''));
         $this->assertNotSame($navBar, $navBar->toggler(''));
         $this->assertNotSame($navBar, $navBar->togglerAttributes([]));
         $this->assertNotSame($navBar, $navBar->theme('dark'));
+    }
+
+    public function testNavId(): void
+    {
+        $navbar = NavBar::widget()->id('navbar')->navId('main-nav')->begin();
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav id="main-nav" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            </div>
+            </div>
+            </nav>
+            HTML,
+            trim($navbar) . NavBar::end(),
+        );
+
+        $navbar = NavBar::widget()->id('navbar')->navId(false)->begin();
+
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+            </div>
+            </div>
+            </nav>
+            HTML,
+            trim($navbar) . NavBar::end(),
+        );
     }
 
     /**
