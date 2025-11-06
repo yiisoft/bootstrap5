@@ -547,12 +547,6 @@ final class NavBar extends Widget
     /**
      * Sets the ID attribute for the `<nav>` element of the navbar component.
      *
-     * This method allows assigning an independent identifier to the `<nav>` container itself, without affecting the
-     * internal collapse element used by the toggler button.
-     *
-     * The `id()` method continues to control the identifier used by the collapse container and its corresponding
-     * toggler target.
-     *
      * @param bool|string $id The ID of `nav` element of the navbar component. If `false`, no ID will be assigned to the
      * `nav` element.
      *

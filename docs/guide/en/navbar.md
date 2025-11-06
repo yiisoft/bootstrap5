@@ -241,7 +241,7 @@ NavBar::widget()->toggler(Button::button('Toggle')->addClass('navbar-toggler'));
 
 ### Using `navId()` for the `<nav>` Element
 
-By default, the `id()` method in `NavBar` controls the identifier used by the **collapse container**
+The `id()` method in `NavBar` controls the identifier used by the **collapse container**
 (`<div class="collapse navbar-collapse">`) and the corresponding `data-bs-target` and `aria-controls` attributes of the
 toggler button.
 
