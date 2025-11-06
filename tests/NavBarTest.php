@@ -43,7 +43,7 @@ final class NavBarTest extends TestCase
             </div>
             </nav>
             HTML,
-            trim(NavBar::widget()->addAttributes(['id' => 'nav-id', 'data-id' => '123'])->id('navbar')->begin()) . NavBar::end(),
+            trim(NavBar::widget()->addAttributes(['data-id' => '123'])->id('navbar')->begin()) . NavBar::end(),
         );
     }
 
