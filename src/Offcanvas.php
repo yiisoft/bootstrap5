@@ -38,28 +38,49 @@ use function array_key_exists;
 final class Offcanvas extends Widget
 {
     private const NAME = 'offcanvas';
+
     private const BODY_CLASS = 'offcanvas-body';
+
     private const CLOSE_CLASS = 'btn-close';
+
     private const HEADER_CLASS = 'offcanvas-header';
+
     private const SHOW_CLASS = 'show';
+
     private const TITLE_CLASS = 'offcanvas-title';
+
     private const TOGGLER_CLASS = 'btn btn-primary';
 
     private array $attributes = [];
+
     private bool $backdrop = false;
+
     private bool $backdropStatic = false;
+
     private array $bodyAttributes = [];
+
     private array $cssClasses = [];
+
     private array $headerAttributes = [];
+
     private bool|string $id = true;
+
     private OffcanvasPlacement|string $placement = OffcanvasPlacement::START;
+
     private string $responsive = '';
+
     private bool $scrollable = false;
+
     private bool $show = false;
+
     private string|Stringable $title = '';
+
     private array $titleAttributes = [];
+
     private string|Stringable $toggler = '';
+
     private array $togglerAttributes = [];
+
     private string|Stringable $togglerContent = '';
 
     /**

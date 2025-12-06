@@ -39,10 +39,15 @@ use Yiisoft\Widget\Widget;
 final class ProgressStack extends Widget
 {
     private const NAME = 'progress-stack';
+
     private const PROGRESS_STACKED = 'progress-stacked';
+
     private array $attributes = [];
+
     private array $cssClasses = [];
+
     private array $bars = [];
+
     private bool|string $id = true;
 
     /**

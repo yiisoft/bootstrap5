@@ -49,17 +49,28 @@ use function implode;
 final class Collapse extends Widget
 {
     private const NAME = 'collapse';
+
     private const CARD = 'card';
+
     private const CARD_BODY = 'card-body';
+
     private const COLLAPSE_MULTIPLE = 'multi-collapse';
+
     private array $attributes = [];
+
     private array $cardBodyAttributes = [];
+
     private bool $container = true;
+
     private array $containerAttributes = [];
+
     private array $cssClasses = [];
+
     /** @var Toggler[] */
     private array $items = [];
+
     private string $togglerContainerTag = 'p';
+
     private array $togglerContainerAttributes = [];
 
     /**
