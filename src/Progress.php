@@ -36,17 +36,29 @@ use function sprintf;
 final class Progress extends Widget
 {
     private const NAME = 'progress';
+
     private const PROGRESS_BAR = 'progress-bar';
+
     private array $attributes = [];
+
     private array $barAttributes = [];
+
     private array $barClasses = [];
+
     private array $cssClasses = [];
+
     private string $content = '';
+
     private bool|string $id = true;
+
     private int|float $max = 100;
+
     private int|float $min = 0;
+
     private int|float $percent = 0;
+
     private bool $sizing = false;
+
     private bool $stacked = false;
 
     /**

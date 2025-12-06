@@ -44,28 +44,51 @@ use Yiisoft\Widget\Widget;
 final class Modal extends Widget
 {
     private const CLASS_CLOSE_BUTTON = 'btn-close';
+
     private const NAME = 'modal';
+
     private const MODAL_BODY = 'modal-body';
+
     private const MODAL_CONTENT = 'modal-content';
+
     private const MODAL_DIALOG = 'modal-dialog';
+
     private const MODAL_FOOTER = 'modal-footer';
+
     private const MODAL_HEADER = 'modal-header';
+
     private const MODAL_TITLE = 'modal-title';
+
     private array $attributes = [];
+
     private string $body = '';
+
     private array $bodyAttributes = [];
+
     private array $closeButtonAttributes = [];
+
     private string $closeButtonLabel = '';
+
     private array $contentAttributes = [];
+
     private array $cssClasses = [];
+
     private array $dialogAttributes = [];
+
     private array $dialogClasses = [];
+
     private string $footer = '';
+
     private array $footerAttributes = [];
+
     private array $headerAttributes = [];
+
     private bool|string $id = true;
+
     private string $responsive = '';
+
     private string|Stringable $title = '';
+
     private string|Stringable $triggerButton = '';
 
     /**

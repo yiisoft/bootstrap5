@@ -38,23 +38,41 @@ use function preg_replace;
 final class Toast extends Widget
 {
     private const CLASS_CLOSE_BUTTON = 'btn-close';
+
     private const NAME = 'toast';
+
     private const TOAST_BODY = 'toast-body';
+
     private const TOAST_CONTAINER = 'toast-container position-fixed bottom-0 end-0 p-3';
+
     private const TOAST_HEADER = 'toast-header';
+
     private const TOAST_TITLE_HEADER = 'me-auto';
+
     private array $attributes = [];
+
     private string $body = '';
+
     private string|Stringable $closeButton = '';
+
     private array $closeButtonAttributes = [];
+
     private string|Stringable $content = '';
+
     private array $cssClasses = [];
+
     private bool $container = false;
+
     private array $headerAttributes = [];
+
     private bool|string $id = true;
+
     private string|Stringable $image = '';
+
     private string $time = '';
+
     private string|Stringable $title = '';
+
     private string|Stringable $triggerButton = '';
 
     /**

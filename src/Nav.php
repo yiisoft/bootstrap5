@@ -49,22 +49,38 @@ use function sprintf;
 final class Nav extends Widget
 {
     private const NAME = 'nav';
+
     private const NAV_ITEM_CLASS = 'nav-item';
+
     private const NAV_ITEM_DROPDOWN_CLASS = 'nav-item dropdown';
+
     private const NAV_LINK_ACTIVE_CLASS = 'active';
+
     private const NAV_LINK_CLASS = 'nav-link';
+
     private const NAV_LINK_DISABLED_CLASS = 'disabled';
+
     private bool $activateItems = true;
+
     private array $attributes = [];
+
     private array $cssClasses = [];
+
     private string $currentPath = '';
+
     private array $dropdownCssClasses = [self::NAV_ITEM_DROPDOWN_CLASS];
+
     private bool $fade = true;
+
     private bool|string $id = false;
+
     /** @var array<int, Dropdown|NavLink> */
     private array $items = [];
+
     private array $paneAttributes = [];
+
     private array $styleClasses = [];
+
     private string $tag = '';
 
     /**
