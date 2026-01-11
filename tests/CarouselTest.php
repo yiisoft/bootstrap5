@@ -519,7 +519,7 @@ final class CarouselTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage(
-            'The "captionTagName" and "captionPlaceholderTagName" properties cannot be empty.'
+            'The "captionTagName" and "captionPlaceholderTagName" properties cannot be empty.',
         );
 
         Carousel::widget()
@@ -539,7 +539,7 @@ final class CarouselTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage(
-            'The "captionTagName" and "captionPlaceholderTagName" properties cannot be empty.'
+            'The "captionTagName" and "captionPlaceholderTagName" properties cannot be empty.',
         );
 
         Carousel::widget()

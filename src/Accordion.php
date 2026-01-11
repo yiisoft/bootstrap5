@@ -67,7 +67,7 @@ final class Accordion extends Widget
 
     private array $togglerAttributes = [];
 
-    private string|null $togglerTag = null;
+    private ?string $togglerTag = null;
 
     /**
      * Adds a sets of attributes.

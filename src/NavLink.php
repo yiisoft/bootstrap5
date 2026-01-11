@@ -44,14 +44,13 @@ final class NavLink
         private bool $encodeContent = true,
         private bool $disabled = false,
         private string|Stringable $label = '',
-        private string|null $url = '',
+        private ?string $url = '',
         private array $urlAttributes = [],
         private bool $visible = true,
         private string|Stringable $content = '',
         private bool|string $paneId = false,
         private array $paneAttributes = [],
-    ) {
-    }
+    ) {}
 
     /**
      * Creates a {@see NavLink} instance.
@@ -71,7 +70,7 @@ final class NavLink
      */
     public static function to(
         string|Stringable $label = '',
-        string|null $url = null,
+        ?string $url = null,
         bool $active = false,
         bool $disabled = false,
         bool $encodeLabel = true,
@@ -268,7 +267,7 @@ final class NavLink
     /**
      * @return string|null The URL of the nav item.
      */
-    public function getUrl(): string|null
+    public function getUrl(): ?string
     {
         return $this->url;
     }
@@ -343,7 +342,7 @@ final class NavLink
      *
      * @return self New instance with the specified URL.
      */
-    public function url(string|null $url): self
+    public function url(?string $url): self
     {
         $new = clone $this;
         $new->url = $url;

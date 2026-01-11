@@ -260,7 +260,7 @@ final class ButtonGroup extends Widget
      * $buttonGroup->size(ButtonSize::LARGE);
      * ```
      */
-    public function size(ButtonSize|null $size): self
+    public function size(?ButtonSize $size): self
     {
         return $this->addClass($size?->value);
     }
@@ -320,7 +320,7 @@ final class ButtonGroup extends Widget
      *
      * @psalm-return non-empty-string|null The generated ID.
      */
-    private function getId(): string|null
+    private function getId(): ?string
     {
         return match ($this->id) {
             true => $this->attributes['id'] ?? Html::generateId(self::NAME . '-'),

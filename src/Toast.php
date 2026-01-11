@@ -626,7 +626,7 @@ final class Toast extends Widget
      *
      * @psalm-return non-empty-string|null The generated ID.
      */
-    private function getId(): string|null
+    private function getId(): ?string
     {
         return match ($this->id) {
             true => $this->attributes['id'] ?? Html::generateId(self::NAME . '-'),

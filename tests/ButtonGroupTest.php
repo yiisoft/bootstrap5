@@ -341,7 +341,7 @@ final class ButtonGroupTest extends TestCase
                     Button::widget()->id(false)->label('Button B'),
                     Button::widget()->id(false)->label('Button A')->variant(ButtonVariant::PRIMARY),
                 )
-                ->render()
+                ->render(),
         );
     }
 

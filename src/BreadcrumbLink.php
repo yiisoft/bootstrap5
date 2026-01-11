@@ -31,12 +31,11 @@ final class BreadcrumbLink
      */
     private function __construct(
         private string $label,
-        private string|null $url,
+        private ?string $url,
         private bool $active,
         private bool $encodeLabel,
         private array $attributes,
-    ) {
-    }
+    ) {}
 
     /**
      * Creates a new {@see BreadcrumbLink} instance.
@@ -51,10 +50,10 @@ final class BreadcrumbLink
      */
     public static function to(
         string $label,
-        string|null $url = null,
+        ?string $url = null,
         bool $active = false,
         array $attributes = [],
-        bool $encodeLabel = true
+        bool $encodeLabel = true,
     ): self {
         return new self($label, $url, $active, $encodeLabel, $attributes);
     }
@@ -128,7 +127,7 @@ final class BreadcrumbLink
      *
      * @return self A new instance with the specified URL.
      */
-    public function url(string|null $url): self
+    public function url(?string $url): self
     {
         $new = clone $this;
         $new->url = $url;
@@ -156,7 +155,7 @@ final class BreadcrumbLink
     /**
      * @return string|null The URL for the link.
      */
-    public function getUrl(): string|null
+    public function getUrl(): ?string
     {
         return $this->url;
     }

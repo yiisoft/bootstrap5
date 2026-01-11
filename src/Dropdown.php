@@ -95,13 +95,13 @@ final class Dropdown extends Widget
 
     private string $togglerUrl = '#';
 
-    private string|null $togglerSize = null;
+    private ?string $togglerSize = null;
 
     private bool $togglerSplit = false;
 
     private string $togglerSplitContent = 'Action';
 
-    private ButtonVariant|null $togglerVariant = ButtonVariant::SECONDARY;
+    private ?ButtonVariant $togglerVariant = ButtonVariant::SECONDARY;
 
     /**
      * Adds a sets of attributes.
@@ -264,7 +264,7 @@ final class Dropdown extends Widget
      * $dropdown->alignment(DropdownAlignment::END());
      * ```
      */
-    public function alignment(DropdownAlignment|null ...$alignment): self
+    public function alignment(?DropdownAlignment ...$alignment): self
     {
         $new = clone $this;
         $new->alignmentClasses = $alignment;
@@ -628,7 +628,7 @@ final class Dropdown extends Widget
      * $dropdown->togglerSize(ButtonSize::SMALL());
      * ```
      */
-    public function togglerSize(ButtonSize|null $size): self
+    public function togglerSize(?ButtonSize $size): self
     {
         $new = clone $this;
         $new->togglerSize = $size?->value;
@@ -704,7 +704,7 @@ final class Dropdown extends Widget
      *
      * @return self A new instance with the specified variant for the toggler.
      */
-    public function togglerVariant(ButtonVariant|null $variant): self
+    public function togglerVariant(?ButtonVariant $variant): self
     {
         $new = clone $this;
         $new->togglerVariant = $variant;
@@ -768,7 +768,7 @@ final class Dropdown extends Widget
      *
      * @psalm-return non-empty-string|null The generated ID.
      */
-    private function getTogglerId(): string|null
+    private function getTogglerId(): ?string
     {
         return match ($this->togglerId) {
             true => $this->attributes['id'] ?? Html::generateId(self::NAME . '-'),
@@ -813,7 +813,7 @@ final class Dropdown extends Widget
                     ->addAttributes($item->getItemAttributes())
                     ->addContent($item->getContent())
                     ->addClass(self::DROPDOWN_ITEM_CLASS),
-                "\n"
+                "\n",
             );
     }
 
@@ -831,7 +831,7 @@ final class Dropdown extends Widget
             ->addContent(
                 "\n",
                 Hr::tag()->addAttributes($item->getItemAttributes())->addClass(self::DROPDOWN_ITEM_DIVIDER_CLASS),
-                "\n"
+                "\n",
             );
     }
 
@@ -852,7 +852,7 @@ final class Dropdown extends Widget
                     ->addAttributes($item->getItemAttributes())
                     ->addClass(self::DROPDOWN_ITEM_HEADER_CLASS)
                     ->content($item->getContent()),
-                "\n"
+                "\n",
             );
     }
 
@@ -920,7 +920,7 @@ final class Dropdown extends Widget
                     ->addClass(self::DROPDOWN_ITEM_TEXT_CLASS)
                     ->content($item->getContent())
                     ->encode(false),
-                "\n"
+                "\n",
             );
     }
 
@@ -933,7 +933,7 @@ final class Dropdown extends Widget
      *
      * @psalm-param non-empty-string|null $togglerId
      */
-    private function renderItems(string|null $togglerId): string
+    private function renderItems(?string $togglerId): string
     {
         $items = [];
 
@@ -958,19 +958,19 @@ final class Dropdown extends Widget
      *
      * @psalm-param non-empty-string|null $togglerId
      */
-    private function renderToggler(string|null $togglerId): string
+    private function renderToggler(?string $togglerId): string
     {
         if ($this->toggler !== '') {
             return (string) $this->toggler;
         }
 
         $togglerContent = match ($this->togglerSplit) {
-            true => "\n" .
-                Span::tag()
+            true => "\n"
+                . Span::tag()
                     ->addContent($this->togglerContent)
                     ->addClass(self::DROPDOWN_TOGGLER_SPAN_CLASS)
-                    ->render() .
-                "\n",
+                    ->render()
+                . "\n",
             default => $this->togglerContent,
         };
 

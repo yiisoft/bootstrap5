@@ -13,6 +13,9 @@ use Yiisoft\Html\Tag\Button;
 use Yiisoft\Html\Tag\Div;
 use Yiisoft\Widget\Widget;
 
+use function array_key_exists;
+use function is_string;
+
 /**
  * Modal renders a modal window that can be toggled by clicking on a trigger element.
  *
@@ -620,7 +623,7 @@ final class Modal extends Widget
      *
      * @psalm-return non-empty-string|null The generated ID.
      */
-    private function getId(): string|null
+    private function getId(): ?string
     {
         return match ($this->id) {
             true => $this->attributes['id'] ?? Html::generateId(self::NAME . '-'),
