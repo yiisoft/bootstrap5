@@ -368,9 +368,9 @@ final class Collapse extends Widget
                             ->addContent(
                                 "\n",
                                 $item->getContent(),
-                                "\n"
+                                "\n",
                             ),
-                        "\n"
+                        "\n",
                     )
                     ->id($item->getId());
 

@@ -43,7 +43,7 @@ final class Alert extends Widget
 
     private array $closeButtonAttributes = [];
 
-    private string|null $closeButtonTag = null;
+    private ?string $closeButtonTag = null;
 
     private string $closeButtonLabel = '';
 
@@ -51,7 +51,7 @@ final class Alert extends Widget
 
     private bool $fade = false;
 
-    private string|null $header = null;
+    private ?string $header = null;
 
     private array $headerAttributes = [];
 
@@ -417,7 +417,7 @@ final class Alert extends Widget
      * $alert->header('Header content');
      * ```
      */
-    public function header(string|null $content, bool $encode = true): self
+    public function header(?string $content, bool $encode = true): self
     {
         if ($encode) {
             $content = Html::encode($content);
@@ -562,7 +562,7 @@ final class Alert extends Widget
                 '{header}' => $this->renderHeader(),
                 '{body}' => $this->body,
                 '{toggler}' => $toggler,
-            ]
+            ],
         );
 
         $content = preg_replace("/\n{2}/", "\n", $content) ?? '';
@@ -577,7 +577,7 @@ final class Alert extends Widget
      *
      * @psalm-return non-empty-string|null The generated ID.
      */
-    private function getId(): string|null
+    private function getId(): ?string
     {
         return match ($this->id) {
             true => $this->attributes['id'] ?? Html::generateId(self::NAME . '-'),

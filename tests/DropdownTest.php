@@ -1229,7 +1229,7 @@ final class DropdownTest extends TestCase
                     DropdownItem::listContent(
                         <<<HTML
                         <share class="dropdown-item text-nowrap" :link="fullLocation" v-memo="[fullLocation]" url="https://api.whatsapp.com/send?text={title} {link}"><svg class="me-2 rounded-circle bi" width="1rem" height="1rem" style="background-color: #25D366;" viewbox="0 0 16 16" fill="#fff"><use xlink:href="/assets/74b80618/bootstrap-icons.svg#whatsapp"></use></svg>WhatsApp</share>
-                        HTML
+                        HTML,
                     ),
                 )
                 ->render(),
@@ -1877,7 +1877,7 @@ final class DropdownTest extends TestCase
                             ],
                         )
                         ->addClass('btn btn-primary dropdown-toggle')
-                        ->content('Dropdown custom button')
+                        ->content('Dropdown custom button'),
                 )
                 ->render(),
         );

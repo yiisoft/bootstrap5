@@ -17,6 +17,8 @@ use Yiisoft\Bootstrap5\Utility\Responsive;
 use Yiisoft\Html\Tag\Button;
 use Yiisoft\Html\Tag\Div;
 
+use const PHP_EOL;
+
 #[Group('offcanvas')]
 final class OffcanvasTest extends TestCase
 {
@@ -39,8 +41,8 @@ final class OffcanvasTest extends TestCase
                 ->id('offcanvasExample')
                 ->title('Offcanvas')
                 ->togglerContent('Button with data-bs-target')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -178,8 +180,8 @@ final class OffcanvasTest extends TestCase
             Offcanvas::widget()
                 ->addTogglerAttribute('data-id', '123')
                 ->id('offcanvasExample')
-                ->togglerContent('Toggler')->begin() .
-            Offcanvas::end(),
+                ->togglerContent('Toggler')->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -315,8 +317,8 @@ final class OffcanvasTest extends TestCase
                 ->attribute('data-id', '123')
                 ->id('offcanvasExample')
                 ->togglerContent('Toggler')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -339,8 +341,8 @@ final class OffcanvasTest extends TestCase
                 ->id('offcanvasExample')
                 ->title('Offcanvas')
                 ->togglerContent('Button with data-bs-target')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -364,10 +366,10 @@ final class OffcanvasTest extends TestCase
                 ->id('offcanvas')
                 ->title('Offcanvas')
                 ->togglerContent('Toggle Offcanvas')
-                ->begin() .
-                'Content for the offcanvas goes here. You can place just about any Bootstrap component or custom ' .
-                'elements here.' . "\n" .
-            Offcanvas::end(),
+                ->begin()
+                . 'Content for the offcanvas goes here. You can place just about any Bootstrap component or custom '
+                . 'elements here.' . "\n"
+            . Offcanvas::end(),
         );
     }
 
@@ -394,9 +396,9 @@ final class OffcanvasTest extends TestCase
                 ->scrollable()
                 ->title('Offcanvas with body scrolling')
                 ->togglerContent('Enable body scrolling')
-                ->begin() .
-                '<p>Try scrolling the rest of the page to see this option in action.</p>' . PHP_EOL .
-            Offcanvas::end(),
+                ->begin()
+                . '<p>Try scrolling the rest of the page to see this option in action.</p>' . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -424,9 +426,9 @@ final class OffcanvasTest extends TestCase
                 ->scrollable()
                 ->title('Backdrop with scrolling')
                 ->togglerContent('Enable both scrolling & backdrop')
-                ->begin() .
-                '<p>Try scrolling the rest of the page to see this option in action.</p>' . PHP_EOL .
-            Offcanvas::end(),
+                ->begin()
+                . '<p>Try scrolling the rest of the page to see this option in action.</p>' . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -450,8 +452,8 @@ final class OffcanvasTest extends TestCase
                 ->id('offcanvasExample')
                 ->title('Offcanvas')
                 ->togglerContent('Button with data-bs-target')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -475,8 +477,8 @@ final class OffcanvasTest extends TestCase
                 ->id('offcanvasExample')
                 ->title('Offcanvas')
                 ->togglerContent('Button with data-bs-target')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -498,8 +500,8 @@ final class OffcanvasTest extends TestCase
                 ->addAttributes(['id' => 'offcanvasExample'])
                 ->title('Offcanvas')
                 ->togglerContent('Button with data-bs-target')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -554,8 +556,8 @@ final class OffcanvasTest extends TestCase
                 ->placement(OffcanvasPlacement::BOTTOM)
                 ->title('Offcanvas')
                 ->togglerContent('Toggle bottom offcanvas')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -581,8 +583,8 @@ final class OffcanvasTest extends TestCase
                 ->placement(OffcanvasPlacement::END)
                 ->title('Offcanvas')
                 ->togglerContent('Toggle end offcanvas')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -608,8 +610,8 @@ final class OffcanvasTest extends TestCase
                 ->placement(OffcanvasPlacement::START)
                 ->title('Offcanvas')
                 ->togglerContent('Toggle start offcanvas')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -635,8 +637,8 @@ final class OffcanvasTest extends TestCase
                 ->placement(OffcanvasPlacement::TOP)
                 ->title('Offcanvas')
                 ->togglerContent('Toggle top offcanvas')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -678,21 +680,21 @@ final class OffcanvasTest extends TestCase
                 ->id('offcanvasExample')
                 ->title('Offcanvas')
                 ->togglerContent('Button with data-bs-target')
-                ->begin() .
-                Div::tag()->content(
+                ->begin()
+                . Div::tag()->content(
                     "\n",
                     'Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.',
                     "\n",
-                ) . PHP_EOL .
-                Dropdown::widget()
+                ) . PHP_EOL
+                . Dropdown::widget()
                     ->addClass('mt-3')
                     ->items(
                         DropdownItem::link('Action', '#'),
                         DropdownItem::link('Another action', '#'),
                         DropdownItem::link('Something else here', '#'),
                     )
-                    ->render() . PHP_EOL .
-            Offcanvas::end(),
+                    ->render() . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -720,9 +722,9 @@ final class OffcanvasTest extends TestCase
                 ->responsive(Responsive::SM)
                 ->title('Offcanvas on small devices')
                 ->togglerContent('Toggle offcanvas on small devices')
-                ->begin() .
-                '<p>On small devices this will take up the entire screen.</p>' . PHP_EOL .
-            Offcanvas::end(),
+                ->begin()
+                . '<p>On small devices this will take up the entire screen.</p>' . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -750,9 +752,9 @@ final class OffcanvasTest extends TestCase
                 ->responsive(Responsive::MD)
                 ->title('Offcanvas on medium devices')
                 ->togglerContent('Toggle offcanvas on medium devices')
-                ->begin() .
-                '<p>On medium devices this will take up the entire screen.</p>' . PHP_EOL .
-            Offcanvas::end(),
+                ->begin()
+                . '<p>On medium devices this will take up the entire screen.</p>' . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -780,9 +782,9 @@ final class OffcanvasTest extends TestCase
                 ->responsive(Responsive::LG)
                 ->title('Offcanvas on large devices')
                 ->togglerContent('Toggle offcanvas on large devices')
-                ->begin() .
-                '<p>On large devices this will take up the entire screen.</p>' . PHP_EOL .
-            Offcanvas::end(),
+                ->begin()
+                . '<p>On large devices this will take up the entire screen.</p>' . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -810,9 +812,9 @@ final class OffcanvasTest extends TestCase
                 ->responsive(Responsive::XL)
                 ->title('Offcanvas on extra large devices')
                 ->togglerContent('Toggle offcanvas on extra large devices')
-                ->begin() .
-                '<p>On extra large devices this will take up the entire screen.</p>' . PHP_EOL .
-            Offcanvas::end(),
+                ->begin()
+                . '<p>On extra large devices this will take up the entire screen.</p>' . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -840,9 +842,9 @@ final class OffcanvasTest extends TestCase
                 ->responsive(Responsive::XXL)
                 ->title('Offcanvas on extra extra large devices')
                 ->togglerContent('Toggle offcanvas on extra extra large devices')
-                ->begin() .
-                '<p>On extra extra large devices this will take up the entire screen.</p>' . PHP_EOL .
-            Offcanvas::end(),
+                ->begin()
+                . '<p>On extra extra large devices this will take up the entire screen.</p>' . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -868,10 +870,10 @@ final class OffcanvasTest extends TestCase
                 ->show()
                 ->title('Offcanvas')
                 ->togglerContent('Toggle Offcanvas')
-                ->begin() .
-                'Content for the offcanvas goes here. You can place just about any Bootstrap component or custom ' .
-                'elements here.' . "\n" .
-            Offcanvas::end(),
+                ->begin()
+                . 'Content for the offcanvas goes here. You can place just about any Bootstrap component or custom '
+                . 'elements here.' . "\n"
+            . Offcanvas::end(),
         );
     }
 
@@ -898,9 +900,9 @@ final class OffcanvasTest extends TestCase
                 ->backdropStatic()
                 ->title('Offcanvas')
                 ->togglerContent('Toggle static offcanvas')
-                ->begin() .
-                '<div>I will not close if you click outside of me.</div>' . PHP_EOL .
-            Offcanvas::end(),
+                ->begin()
+                . '<div>I will not close if you click outside of me.</div>' . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -922,8 +924,8 @@ final class OffcanvasTest extends TestCase
                 ->id('offcanvasExample')
                 ->title('Custom title')
                 ->togglerContent('Button with data-bs-target')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -946,8 +948,8 @@ final class OffcanvasTest extends TestCase
                 ->title('Custom title')
                 ->titleAttributes(['data-id' => '123'])
                 ->togglerContent('Button with data-bs-target')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -974,9 +976,9 @@ final class OffcanvasTest extends TestCase
                 ->theme('dark')
                 ->title('Offcanvas')
                 ->togglerContent('Toggle dark offcanvas')
-                ->begin() .
-                '<div>Dark offcanvas content.</div>' . PHP_EOL .
-            Offcanvas::end(),
+                ->begin()
+                . '<div>Dark offcanvas content.</div>' . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -1003,9 +1005,9 @@ final class OffcanvasTest extends TestCase
                 ->theme('light')
                 ->title('Offcanvas')
                 ->togglerContent('Toggle light offcanvas')
-                ->begin() .
-                '<div>Light offcanvas content.</div>' . PHP_EOL .
-            Offcanvas::end(),
+                ->begin()
+                . '<div>Light offcanvas content.</div>' . PHP_EOL
+            . Offcanvas::end(),
         );
     }
 
@@ -1043,8 +1045,8 @@ final class OffcanvasTest extends TestCase
                 ->id('offcanvasExample')
                 ->title('Offcanvas')
                 ->togglerContent('Toggle offcanvas')
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -1067,8 +1069,8 @@ final class OffcanvasTest extends TestCase
                 ->title('Offcanvas')
                 ->togglerContent('Toggle offcanvas')
                 ->togglerAttributes(['data-id' => '123'])
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 
@@ -1089,8 +1091,8 @@ final class OffcanvasTest extends TestCase
             Offcanvas::widget()
                 ->id('offcanvasExample')
                 ->toggler(Button::tag()->addClass('btn btn-primary')->content('Toggle offcanvas'))
-                ->begin() .
-            Offcanvas::end(),
+                ->begin()
+            . Offcanvas::end(),
         );
     }
 }

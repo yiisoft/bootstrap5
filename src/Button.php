@@ -38,7 +38,7 @@ final class Button extends Widget
 
     private array $attributes = [];
 
-    private ButtonVariant|null $buttonVariant = ButtonVariant::SECONDARY;
+    private ?ButtonVariant $buttonVariant = ButtonVariant::SECONDARY;
 
     private array $cssClasses = [];
 
@@ -73,10 +73,10 @@ final class Button extends Widget
  */
     public static function link(
         string|Stringable $label = '',
-        string|null $url = null,
+        ?string $url = null,
         array $constructorArguments = [],
         array $config = [],
-        string|null $theme = null
+        ?string $theme = null,
     ): self {
         return self::widget($constructorArguments, $config, $theme)->label($label)->type(ButtonType::LINK)->url($url);
     }
@@ -105,7 +105,7 @@ final class Button extends Widget
         string|Stringable $value = 'Reset',
         array $constructorArguments = [],
         array $config = [],
-        string|null $theme = null
+        ?string $theme = null,
     ): self {
         return self::widget($constructorArguments, $config, $theme)->label($value)->type(ButtonType::RESET_INPUT);
     }
@@ -134,7 +134,7 @@ final class Button extends Widget
         string|Stringable $value = 'Submit',
         array $constructorArguments = [],
         array $config = [],
-        string|null $theme = null
+        ?string $theme = null,
     ): self {
         return self::widget($constructorArguments, $config, $theme)->label($value)->type(ButtonType::SUBMIT_INPUT);
     }
@@ -163,7 +163,7 @@ final class Button extends Widget
         string|Stringable $value = 'Reset',
         array $constructorArguments = [],
         array $config = [],
-        string|null $theme = null
+        ?string $theme = null,
     ): self {
         return self::widget($constructorArguments, $config, $theme)->label($value)->type(ButtonType::RESET);
     }
@@ -192,7 +192,7 @@ final class Button extends Widget
         string|Stringable $value = 'Submit',
         array $constructorArguments = [],
         array $config = [],
-        string|null $theme = null
+        ?string $theme = null,
     ): self {
         return self::widget($constructorArguments, $config, $theme)->label($value)->type(ButtonType::SUBMIT);
     }
@@ -467,7 +467,7 @@ final class Button extends Widget
      * $button->size(ButtonSize::LARGE);
      * ```
      */
-    public function size(ButtonSize|null $size): self
+    public function size(?ButtonSize $size): self
     {
         return $this->addClass($size?->value);
     }
@@ -485,7 +485,7 @@ final class Button extends Widget
      * $button->toggle(TogglerType::BUTTON);
      * ```
      */
-    public function toggle(TogglerType|null $type = TogglerType::BUTTON): self
+    public function toggle(?TogglerType $type = TogglerType::BUTTON): self
     {
         return $this->attribute('data-bs-toggle', $type?->value);
     }
@@ -528,7 +528,7 @@ final class Button extends Widget
      * $button->url('/path/to/page');
      * ```
      */
-    public function url(string|null $url): self
+    public function url(?string $url): self
     {
         return $this->attribute('href', $url);
     }
@@ -545,7 +545,7 @@ final class Button extends Widget
      * $button->variant(ButtonVariant::PRIMARY);
      * ```
      */
-    public function variant(ButtonVariant|null $variant): self
+    public function variant(?ButtonVariant $variant): self
     {
         $new = clone $this;
         $new->buttonVariant = $variant;
@@ -589,7 +589,7 @@ final class Button extends Widget
      *
      * @psalm-return non-empty-string|null The generated ID.
      */
-    private function getId(): string|null
+    private function getId(): ?string
     {
         return match ($this->id) {
             true => $this->attributes['id'] ?? Html::generateId(self::NAME . '-'),

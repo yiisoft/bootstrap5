@@ -423,6 +423,55 @@ final class Nav extends Widget
     }
 
     /**
+     * Run the nav widget.
+     *
+     * @return string The HTML representation of the element.
+     */
+    public function render(): string
+    {
+        if ($this->items === []) {
+            return '';
+        }
+
+        $attributes = $this->attributes;
+        $classes = $attributes['class'] ?? null;
+        $tabContent = '';
+
+        /** @psalm-var non-empty-string|null $id */
+        $id = match ($this->id) {
+            true => $attributes['id'] ?? Html::generateId(self::NAME . '-'),
+            '', false => null,
+            default => $this->id,
+        };
+
+        unset($attributes['class'], $attributes['id']);
+
+        if (in_array(NavStyle::NAVBAR, $this->styleClasses, true)) {
+            Html::addCssClass($attributes, [...$this->styleClasses, ...$this->cssClasses, $classes]);
+        } else {
+            Html::addCssClass($attributes, [self::NAME, ...$this->styleClasses, ...$this->cssClasses, $classes]);
+        }
+
+        if ($this->isTabsOrPills()) {
+            $tabContent = $this->renderTabContent();
+        }
+
+        if ($tabContent !== '') {
+            $attributes['role'] = 'tablist';
+        }
+
+        $html = $this->tag === ''
+            ? Ul::tag()->addAttributes($attributes)->id($id)->items(...$this->renderItems())->render()
+            : Html::tag($this->tag)
+                ->addAttributes($attributes)
+                ->addContent("\n", implode("\n", $this->createLinks()), "\n")
+                ->encode(false)
+                ->render();
+
+        return $html . $tabContent;
+    }
+
+    /**
      * Create a link or button for the navigation component.
      *
      * @param NavLink $item The link or button to be created.
@@ -520,9 +569,9 @@ final class Nav extends Widget
 
         foreach ($items as $key => $value) {
             if (
-                $this->activateItems &&
-                $value->getType() === DropdownItemType::LINK &&
-                $value->getUrl() === $this->currentPath
+                $this->activateItems
+                && $value->getType() === DropdownItemType::LINK
+                && $value->getUrl() === $this->currentPath
             ) {
                 $items[$key] = DropdownItem::link($value->getContent(), $value->getUrl(), active: true);
             }
@@ -538,57 +587,8 @@ final class Nav extends Widget
      */
     private function isTabsOrPills(): bool
     {
-        return in_array(NavStyle::TABS, $this->styleClasses, true) ||
-            in_array(NavStyle::PILLS, $this->styleClasses, true);
-    }
-
-    /**
-     * Run the nav widget.
-     *
-     * @return string The HTML representation of the element.
-     */
-    public function render(): string
-    {
-        if ($this->items === []) {
-            return '';
-        }
-
-        $attributes = $this->attributes;
-        $classes = $attributes['class'] ?? null;
-        $tabContent = '';
-
-        /** @psalm-var non-empty-string|null $id */
-        $id = match ($this->id) {
-            true => $attributes['id'] ?? Html::generateId(self::NAME . '-'),
-            '', false => null,
-            default => $this->id,
-        };
-
-        unset($attributes['class'], $attributes['id']);
-
-        if (in_array(NavStyle::NAVBAR, $this->styleClasses, true)) {
-            Html::addCssClass($attributes, [...$this->styleClasses, ...$this->cssClasses, $classes]);
-        } else {
-            Html::addCssClass($attributes, [self::NAME, ...$this->styleClasses, ...$this->cssClasses, $classes]);
-        }
-
-        if ($this->isTabsOrPills()) {
-            $tabContent = $this->renderTabContent();
-        }
-
-        if ($tabContent !== '') {
-            $attributes['role'] = 'tablist';
-        }
-
-        $html = $this->tag === ''
-            ? Ul::tag()->addAttributes($attributes)->id($id)->items(...$this->renderItems())->render()
-            : Html::tag($this->tag)
-                ->addAttributes($attributes)
-                ->addContent("\n", implode("\n", $this->createLinks()), "\n")
-                ->encode(false)
-                ->render();
-
-        return $html . $tabContent;
+        return in_array(NavStyle::TABS, $this->styleClasses, true)
+            || in_array(NavStyle::PILLS, $this->styleClasses, true);
     }
 
     /**
@@ -631,7 +631,7 @@ final class Nav extends Widget
                     ->togglerAsLink()
                     ->togglerClass('nav-link', 'dropdown-toggle')
                     ->render(),
-                "\n"
+                "\n",
             )
             ->encode(false);
     }
@@ -679,8 +679,8 @@ final class Nav extends Widget
 
         Html::addCssClass($paneAttributes, ['widget' => 'tab-content']);
 
-        return "\n" .
-            Div::tag()
+        return "\n"
+            . Div::tag()
                 ->addAttributes($paneAttributes)
                 ->content("\n" . implode("\n", $panes) . "\n")
                 ->encode(false)
@@ -721,7 +721,7 @@ final class Nav extends Widget
                     'role' => 'tabpanel',
                     'aria-labelledby' => $item->getId(),
                     'tabindex' => 0,
-                ]
+                ],
             )
             ->content($item->getContent())
             ->encode($item->shouldEncodeContent())

@@ -639,7 +639,7 @@ final class Carousel extends Widget
         if ($caption !== null && $caption !== '') {
             if ($this->captionTagName === '' || $this->captionPlaceholderTagName === '') {
                 throw new InvalidArgumentException(
-                    'The "captionTagName" and "captionPlaceholderTagName" properties cannot be empty.'
+                    'The "captionTagName" and "captionPlaceholderTagName" properties cannot be empty.',
                 );
             }
 
@@ -654,14 +654,14 @@ final class Carousel extends Widget
                     Html::tag($this->captionPlaceholderTagName)
                         ->addAttributes($carouselItem->getCaptionPlaceholderAttributes())
                         ->addContent($carouselItem->getcaptionPlaceholder() ?? ''),
-                    "\n"
+                    "\n",
                 ) . "\n";
         }
 
         return Div::tag()
             ->addClass(
                 self::CLASS_CAROUSEL_ITEM,
-                $carouselItem->isActive() || $active ? 'active' : null
+                $carouselItem->isActive() || $active ? 'active' : null,
             )
             ->addAttributes(['data-bs-interval' => $carouselItem->getAutoPlayingInterval()])
             ->addContent(
@@ -687,7 +687,7 @@ final class Carousel extends Widget
         $indicators = [];
         $renderIndicators = '';
 
-        $activeItems = array_filter($this->items, static fn (CarouselItem $item): bool => $item->isActive());
+        $activeItems = array_filter($this->items, static fn(CarouselItem $item): bool => $item->isActive());
 
         if (count($activeItems) > 1) {
             throw new InvalidArgumentException('Only one carousel item can be active at a time.');
@@ -711,8 +711,8 @@ final class Carousel extends Widget
                 ->render() . "\n";
         }
 
-        return $renderIndicators .
-            Div::tag()
+        return $renderIndicators
+            . Div::tag()
                 ->addClass(self::CLASS_CAROUSEL_INNER)
                 ->addContent("\n" . implode("\n", $items) . "\n")
                 ->encode(false)

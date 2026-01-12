@@ -287,8 +287,8 @@ final class CollapseTest extends TestCase
             Collapse::widget()
                 ->items(
                     Toggler::for(
-                        'Some placeholder content for the collapse component. ' .
-                        'This panel is hidden by default but revealed when the user activates the relevant trigger.',
+                        'Some placeholder content for the collapse component. '
+                        . 'This panel is hidden by default but revealed when the user activates the relevant trigger.',
                         'collapseExample',
                         togglerContent: 'Link with href',
                         togglerAsLink: true,
@@ -327,8 +327,8 @@ final class CollapseTest extends TestCase
                 ->containerAttributes(['style' => 'min-height: 120px;'])
                 ->items(
                     Toggler::for(
-                        'This is some placeholder content for a horizontal collapse. ' .
-                        "It's hidden by default and shown when triggered.",
+                        'This is some placeholder content for a horizontal collapse. '
+                        . "It's hidden by default and shown when triggered.",
                         'collapseExample',
                         togglerContent: 'Toggle width collapse',
                     ),
@@ -386,15 +386,15 @@ final class CollapseTest extends TestCase
                 ->containerAttributes(['class' => 'row'])
                 ->items(
                     Toggler::for(
-                        'Some placeholder content for the first collapse component of this multi-collapse example. ' .
-                        'This panel is hidden by default but revealed when the user activates the relevant trigger.',
+                        'Some placeholder content for the first collapse component of this multi-collapse example. '
+                        . 'This panel is hidden by default but revealed when the user activates the relevant trigger.',
                         'multiCollapseExample1',
                         togglerContent: 'Toggle first element',
                         togglerAsLink: true,
                     ),
                     Toggler::for(
-                        'Some placeholder content for the second collapse component of this multi-collapse example. ' .
-                        'This panel is hidden by default but revealed when the user activates the relevant trigger.',
+                        'Some placeholder content for the second collapse component of this multi-collapse example. '
+                        . 'This panel is hidden by default but revealed when the user activates the relevant trigger.',
                         'multiCollapseExample2',
                         togglerContent: 'Toggle second element',
                     ),

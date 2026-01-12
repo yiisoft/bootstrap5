@@ -115,7 +115,7 @@ final class CarouselItemTest extends TestCase
     public function testGetContentWithStringable(): void
     {
         $carouselItem = CarouselItem::to(
-            new class () implements Stringable {
+            new class implements Stringable {
                 public function __toString(): string
                 {
                     return 'First slide';

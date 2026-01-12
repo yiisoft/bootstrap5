@@ -52,8 +52,7 @@ final class DropdownItem
         private array $attributes,
         private array $itemAttributes,
         private string $headerTag,
-    ) {
-    }
+    ) {}
 
     /**
      * Creates a button-type dropdown item.

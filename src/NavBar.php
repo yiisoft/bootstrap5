@@ -11,6 +11,7 @@ use Yiisoft\Html\Html;
 use Yiisoft\Html\Tag\Button;
 use Yiisoft\Html\Tag\Span;
 use Yiisoft\Widget\Widget;
+use Yiisoft\Widget\Menu;
 
 use function array_key_exists;
 
@@ -18,7 +19,7 @@ use function array_key_exists;
  * `NavBar` renders a navbar HTML component.
  *
  * Any content enclosed between the {@see begin()} and {@see end()} calls of NavBar is treated as the content of the
- * navbar. You may use widgets such as {@see Nav} or {@see \Yiisoft\Widget\Menu} to build up such content. For example,
+ * navbar. You may use widgets such as {@see Nav} or {@see Menu} to build up such content. For example,
  *
  * ```php
  * <?= NavBar::widget()

@@ -52,8 +52,7 @@ final class Toggler
         private bool $encode,
         private bool $togglerMultiple,
         private string $ariaControls,
-    ) {
-    }
+    ) {}
 
     public static function for(
         string $content = '',
@@ -106,7 +105,7 @@ final class Toggler
     public function content(string|Stringable $content): self
     {
         $new = clone $this;
-        $new->content = (string)$content;
+        $new->content = (string) $content;
 
         return $new;
     }

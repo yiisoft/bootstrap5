@@ -18,6 +18,8 @@ use Yiisoft\Bootstrap5\Utility\TogglerType;
 use Yiisoft\Html\Tag\Div;
 use Yiisoft\Html\Tag\Span;
 
+use const PHP_EOL;
+
 /**
  * Tests for `Button` widget
  */
@@ -711,7 +713,7 @@ final class ButtonTest extends TestCase
      * @see https://getbootstrap.com/docs/5.3/components/buttons/#outline-buttons
      */
     #[DataProviderExternal(ButtonProvider::class, 'variant')]
-    public function testVariant(ButtonVariant|null $buttonVariant, string $expected): void
+    public function testVariant(?ButtonVariant $buttonVariant, string $expected): void
     {
         $variant = $buttonVariant->value ?? 'button';
 

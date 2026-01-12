@@ -422,7 +422,7 @@ final class Breadcrumbs extends Widget
      *
      * @psalm-return non-empty-string|null The generated ID.
      */
-    private function getId(): string|null
+    private function getId(): ?string
     {
         return match ($this->listId) {
             true => $this->listAttributes['id'] ?? Html::generateId(self::LIST_NAME . '-'),

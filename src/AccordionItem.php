@@ -37,8 +37,7 @@ final class AccordionItem
         private bool $encodeHeader,
         private string $header,
         private bool|string $id,
-    ) {
-    }
+    ) {}
 
     /**
      * Creates a new {@see AccordionItem} instance.
@@ -59,7 +58,7 @@ final class AccordionItem
         bool|string $id = true,
         bool $encodeHeader = true,
         bool $encodeBody = true,
-        bool $active = false
+        bool $active = false,
     ): self {
         return new self($active, $body, $encodeBody, $encodeHeader, $header, $id);
     }

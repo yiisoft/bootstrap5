@@ -36,3 +36,7 @@ phpunit.phar
 /node_modules
 /package-lock.json
 .phpunit.result.cache
+
+# PHP CS Fixer
+/.php-cs-fixer.cache
+/.php-cs-fixer.php

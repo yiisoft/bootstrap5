@@ -518,7 +518,7 @@ final class ButtonToolbarTest extends TestCase
                                         'aria-label' => 'Input group example',
                                         'aria-describedby' => 'btnGroupAddon',
                                         'placeholder' => 'Input group example',
-                                    ]
+                                    ],
                                 )
                                 ->class('form-control'),
                             "\n",

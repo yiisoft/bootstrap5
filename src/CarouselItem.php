@@ -45,16 +45,15 @@ final class CarouselItem
     private function __construct(
         private bool $active,
         private array $attributes,
-        private int|null $autoPlayingInterval,
-        private string|null $caption,
+        private ?int $autoPlayingInterval,
+        private ?string $caption,
         private array $captionAttributes,
-        private string|null $captionPlaceholder,
+        private ?string $captionPlaceholder,
         private array $captionPlaceholderAttributes,
         private string|Stringable $content,
         private bool $encodeCaption,
         private bool $encodeCaptionPlaceholder,
-    ) {
-    }
+    ) {}
 
     /**
      * Creates a new {@see CarouselItem} instance.
@@ -74,9 +73,9 @@ final class CarouselItem
      */
     public static function to(
         string|Stringable $content = '',
-        string|null $caption = null,
-        string|null $captionPlaceholder = null,
-        int|null $autoPlayingInterval = null,
+        ?string $caption = null,
+        ?string $captionPlaceholder = null,
+        ?int $autoPlayingInterval = null,
         bool $active = false,
         bool $encodeCaption = true,
         bool $encodeCaptionPlaceholder = true,
@@ -265,7 +264,7 @@ final class CarouselItem
     /**
      * @return int|null Returns the autoplaying interval for the carousel item.
      */
-    public function getAutoPlayingInterval(): int|null
+    public function getAutoPlayingInterval(): ?int
     {
         return $this->autoPlayingInterval;
     }
@@ -273,7 +272,7 @@ final class CarouselItem
     /**
      * @return string|null Returns the caption content for the carousel item.
      */
-    public function getCaption(): string|null
+    public function getCaption(): ?string
     {
         return $this->encodeCaption ? Html::encode($this->caption) : $this->caption;
     }
@@ -289,7 +288,7 @@ final class CarouselItem
     /**
      * @return string|null Returns the caption placeholder content for the carousel item.
      */
-    public function getCaptionPlaceholder(): string|null
+    public function getCaptionPlaceholder(): ?string
     {
         return $this->encodeCaptionPlaceholder ? Html::encode($this->captionPlaceholder) : $this->captionPlaceholder;
     }

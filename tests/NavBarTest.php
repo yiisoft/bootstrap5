@@ -328,7 +328,7 @@ final class NavBarTest extends TestCase
                 NavBar::widget()->brandText('NavBar')
                     ->brandAttributes(['class' => 'test-class'])
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -409,7 +409,7 @@ final class NavBarTest extends TestCase
                     )
                     ->brandUrl('#')
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -441,11 +441,11 @@ final class NavBarTest extends TestCase
                         ->alt('bootstrap')
                         ->height(24)
                         ->src('/docs/5.3/assets/brand/bootstrap-logo.svg')
-                        ->width(30)
+                        ->width(30),
                 )
                 ->brandUrl('#')
                 ->id('navbar')
-                ->begin()
+                ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -484,7 +484,7 @@ final class NavBarTest extends TestCase
                     ->brandText('NavBar')
                     ->brandUrl('#')
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -527,7 +527,7 @@ final class NavBarTest extends TestCase
                     ->addClass('test-class')
                     ->class('custom-class', 'another-class', BackgroundColor::PRIMARY)
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -558,7 +558,7 @@ final class NavBarTest extends TestCase
                     ->containerAttributes(['class' => 'container'])
                     ->brandText('NavBar')
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -586,7 +586,7 @@ final class NavBarTest extends TestCase
                     ->brandText('NavBar')
                     ->innerContainerAttributes(['class' => 'container-md'])
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -614,7 +614,7 @@ final class NavBarTest extends TestCase
                     ->brandText('NavBar')
                     ->expand(NavBarExpand::SM)
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -642,7 +642,7 @@ final class NavBarTest extends TestCase
                     ->brandText('NavBar')
                     ->expand(NavBarExpand::MD)
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -670,7 +670,7 @@ final class NavBarTest extends TestCase
                     ->brandText('NavBar')
                     ->expand(NavBarExpand::LG)
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -698,7 +698,7 @@ final class NavBarTest extends TestCase
                     ->brandText('NavBar')
                     ->expand(NavBarExpand::XL)
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -726,7 +726,7 @@ final class NavBarTest extends TestCase
                     ->brandText('NavBar')
                     ->expand(NavBarExpand::XXL)
                     ->id('navbar')
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -842,7 +842,7 @@ final class NavBarTest extends TestCase
                 ->brandText('NavBar')
                 ->id('navbar')
                 ->placement(NavBarPlacement::FIXED_BOTTOM)
-                ->begin()
+                ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -870,7 +870,7 @@ final class NavBarTest extends TestCase
                     ->brandText('NavBar')
                     ->id('navbar')
                     ->placement(NavBarPlacement::FIXED_TOP)
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -898,7 +898,7 @@ final class NavBarTest extends TestCase
                     ->brandText('NavBar')
                     ->id('navbar')
                     ->placement(NavBarPlacement::STICKY_BOTTOM)
-                    ->begin()
+                    ->begin(),
             ) . NavBar::end(),
         );
     }
@@ -923,7 +923,7 @@ final class NavBarTest extends TestCase
                     ->brandText('NavBar')
                     ->id('navbar')
                     ->placement(NavBarPlacement::STICKY_TOP)
-                    ->begin()
+                    ->begin(),
             ),
         );
     }
@@ -1003,8 +1003,8 @@ final class NavBarTest extends TestCase
                 ->brandText('NavBar')
                 ->brandUrl('#')
                 ->id('navbarSupportedContent')
-                ->begin() .
-                Nav::widget()
+                ->begin()
+                . Nav::widget()
                     ->currentPath('/home')
                     ->items(
                         NavLink::to('Home', '/home'),
@@ -1020,8 +1020,8 @@ final class NavBarTest extends TestCase
                         NavLink::to('Disabled', '#', disabled: true),
                     )
                     ->styles(NavStyle::NAVBAR)
-                    ->render() .
-            NavBar::end(),
+                    ->render()
+            . NavBar::end(),
         );
     }
 
