@@ -17,6 +17,7 @@
       <directory>./src</directory>
     </include>
     <exclude>
+      <directory>./src/assets</directory>
       <directory>./tests</directory>
       <directory>./vendor</directory>
     </exclude>
