@@ -15,7 +15,8 @@ on:
       - 'infection.json.dist'
       - 'psalm.xml'
 
-  push: *ignore-paths
+  push:
+    <<: *ignore-paths
     branches: ['master']
 
 concurrency:
