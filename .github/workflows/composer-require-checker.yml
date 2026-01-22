@@ -16,6 +16,7 @@ on:
       - 'psalm.xml'
 
   push: *ignore-paths
+    branches: ['master']
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
