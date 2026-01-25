@@ -16,7 +16,7 @@
         "chat": "https://t.me/yii3en"
     },
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
+        "php": "8.1 - 8.5",
         "yiisoft/html": "^3.0",
         "yiisoft/widget": "^2.0"
     },
@@ -61,8 +61,10 @@
         }
     ],
     "scripts": {
+        "check-dependencies": "./vendor/bin/composer-require-checker check",
         "mutation": "vendor/bin/roave-infection-static-analysis-plugin --threads=2 --min-msi=100 --min-covered-msi=100 --ignore-msi-with-no-mutations --only-covered",
-        "test": "phpunit --testdox --no-interaction",
+        "static": "vendor/bin/psalm",
+        "test": "phpunit --testdox",
         "test-watch": "phpunit-watcher watch"
     }
 }

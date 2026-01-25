@@ -1,5 +1,10 @@
+name: build
+
+permissions:
+  contents: read
+
 on:
-  pull_request:
+  pull_request: &ignore-paths
     paths-ignore:
       - 'docs/**'
       - 'README.md'
@@ -10,20 +15,18 @@ on:
       - 'psalm.xml'
 
   push:
+    <<: *ignore-paths
     branches: ['master']
-    paths-ignore:
-      - 'docs/**'
-      - 'README.md'
-      - 'CHANGELOG.md'
-      - '.gitignore'
-      - '.gitattributes'
-      - 'infection.json.dist'
-      - 'psalm.xml'
 
-name: build
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   phpunit:
     uses: yiisoft/actions/.github/workflows/phpunit.yml@master
     secrets:
       codecovToken: ${{ secrets.CODECOV_TOKEN }}
+    with:
+      php: >-
+        ['8.1', '8.2', '8.3', '8.4', '8.5']

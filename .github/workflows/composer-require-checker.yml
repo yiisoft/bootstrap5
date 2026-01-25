@@ -1,5 +1,10 @@
+name: Composer require checker
+
+permissions:
+  contents: read
+
 on:
-  pull_request:
+  pull_request: &ignore-paths
     paths-ignore:
       - 'docs/**'
       - 'README.md'
@@ -7,23 +12,19 @@ on:
       - '.gitignore'
       - '.gitattributes'
       - 'infection.json.dist'
-      - 'phpunit.xml.dist'
       - 'psalm.xml'
 
   push:
+    <<: *ignore-paths
     branches: ['master']
-    paths-ignore:
-      - 'docs/**'
-      - 'README.md'
-      - 'CHANGELOG.md'
-      - '.gitignore'
-      - '.gitattributes'
-      - 'infection.json.dist'
-      - 'phpunit.xml.dist'
-      - 'psalm.xml'
 
-name: Composer require checker
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   composer-require-checker:
     uses: yiisoft/actions/.github/workflows/composer-require-checker.yml@master
+  with:
+    php: >-
+      ['8.1', '8.2', '8.3', '8.4', '8.5']

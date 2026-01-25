@@ -1,27 +1,32 @@
+name: mutation test
+
+permissions:
+  contents: read
+
 on:
-  pull_request:
+  pull_request: &ignore-paths
     paths-ignore:
       - 'docs/**'
       - 'README.md'
       - 'CHANGELOG.md'
       - '.gitignore'
       - '.gitattributes'
+      - 'infection.json.dist'
       - 'psalm.xml'
 
   push:
+    <<: *ignore-paths
     branches: ['master']
-    paths-ignore:
-      - 'docs/**'
-      - 'README.md'
-      - 'CHANGELOG.md'
-      - '.gitignore'
-      - '.gitattributes'
-      - 'psalm.xml'
 
-name: mutation test
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   mutation:
     uses: yiisoft/actions/.github/workflows/roave-infection.yml@master
     secrets:
       STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
+    with:
+      php: >-
+        ['8.5']

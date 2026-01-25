@@ -6,6 +6,7 @@
 - Bug #288: Add support for custom togglerClasses in `Dropdown` widget, and `addDropdownClass()` method (@terabytesoftw)
 - Enh #291: Add `navId()` method to `NavBar` widget (@terabytesoftw)
 - Enh #294: Explicitly import classes and functions in "use" section (@mspirkov)
+- Enh #296: Add PHP 8.5 support (@terabytesoftw)
 
 ## 1.0.0 April 13, 2025
 
