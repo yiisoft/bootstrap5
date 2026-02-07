@@ -9,6 +9,7 @@
 - Enh #296: Add PHP 8.5 support (@terabytesoftw)
 - Enh #297: Remove unnecessary files from Composer package (@mspirkov)
 - Enh #298: Update Bootstrap from 5.0.0-beta to 5.3.8 (@rossaddison)
+
 ## 1.0.0 April 13, 2025
 
 - Initial release
