@@ -70,7 +70,7 @@ final class Button extends Widget
      * ```php
      * Button::link('Button', '/path/to/page');
      * ```
- */
+     */
     public static function link(
         string|Stringable $label = '',
         ?string $url = null,
@@ -78,7 +78,7 @@ final class Button extends Widget
         array $config = [],
         ?string $theme = null,
     ): self {
-        return self::widget($constructorArguments, $config, $theme)->label($label)->type(ButtonType::LINK)->url($url);
+        return self::widget($constructorArguments, $config, $theme)->label($label)->type(ButtonType::LINK)->variant(ButtonVariant::LINK)->url($url);
     }
 
     /**
