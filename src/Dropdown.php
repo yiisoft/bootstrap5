@@ -103,6 +103,8 @@ final class Dropdown extends Widget
 
     private ?ButtonVariant $togglerVariant = ButtonVariant::SECONDARY;
 
+    private bool $visible = true;
+
     /**
      * Adds a sets of attributes.
      *
@@ -713,6 +715,34 @@ final class Dropdown extends Widget
     }
 
     /**
+     * Sets the visibility of the dropdown.
+     *
+     * @param bool $enabled Whether the dropdown is visible.
+     *
+     * @return self A new instance with the specified visibility.
+     *
+     * Example usage:
+     * ```php
+     * $dropdown->visible(false);
+     * ```
+     */
+    public function visible(bool $enabled): self
+    {
+        $new = clone $this;
+        $new->visible = $enabled;
+
+        return $new;
+    }
+
+    /**
+     * @return bool Whether the dropdown is visible.
+     */
+    public function isVisible(): bool
+    {
+        return $this->visible;
+    }
+
+    /**
      * Run the widget.
      *
      * @return string The HTML representation of the element.
@@ -723,7 +753,7 @@ final class Dropdown extends Widget
         $classes = $attributes['class'] ?? null;
         $containerClasses = $this->containerClasses;
 
-        if ($this->items === []) {
+        if ($this->items === [] || !$this->visible) {
             return '';
         }
 
@@ -938,7 +968,9 @@ final class Dropdown extends Widget
         $items = [];
 
         foreach ($this->items as $item) {
-            $items[] = $this->renderItem($item);
+            if ($item->isVisible()) {
+                $items[] = $this->renderItem($item);
+            }
         }
 
         $ulTag = Ul::tag()

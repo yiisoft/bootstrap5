@@ -52,6 +52,7 @@ final class DropdownItem
         private array $attributes,
         private array $itemAttributes,
         private string $headerTag,
+        private bool $visible = true,
     ) {}
 
     /**
@@ -60,6 +61,7 @@ final class DropdownItem
      * @param string|Stringable $content The button content.
      * @param array $attributes The HTML attributes for the `<li>` tag.
      * @param array $itemAttributes The HTML attributes for the `<button>` tag.
+     * @param bool $visible Whether the item is visible.
      *
      * @throws InvalidArgumentException When item is set as both active and disabled.
      *
@@ -74,6 +76,7 @@ final class DropdownItem
         string|Stringable $content = '',
         array $attributes = [],
         array $itemAttributes = [],
+        bool $visible = true,
     ): self {
         return new self(
             DropdownItemType::BUTTON,
@@ -84,6 +87,7 @@ final class DropdownItem
             $attributes,
             $itemAttributes,
             'h6',
+            $visible,
         );
     }
 
@@ -92,6 +96,7 @@ final class DropdownItem
      *
      * @param array $attributes The HTML attributes for the `<li>` tag.
      * @param array $itemAttributes The HTML attributes for the `<hr>` tag.
+     * @param bool $visible Whether the item is visible.
      *
      * @return self A new instance with the specified configuration.
      *
@@ -100,7 +105,7 @@ final class DropdownItem
      * DropdownItem::divider();
      * ```
      */
-    public static function divider(array $attributes = [], array $itemAttributes = []): self
+    public static function divider(array $attributes = [], array $itemAttributes = [], bool $visible = true): self
     {
         return new self(
             DropdownItemType::DIVIDER,
@@ -111,6 +116,7 @@ final class DropdownItem
             $attributes,
             $itemAttributes,
             'h6',
+            $visible,
         );
     }
 
@@ -121,6 +127,7 @@ final class DropdownItem
      * @param string $headerTag The HTML tag to use (defaults to `h6`).
      * @param array $attributes The HTML attributes for the `<li>` tag.
      * @param array $itemAttributes The HTML attributes for the `<h6>` tag.
+     * @param bool $visible Whether the item is visible.
      *
      * @throws InvalidArgumentException When header tag is empty.
      *
@@ -136,6 +143,7 @@ final class DropdownItem
         string $headerTag = 'h6',
         array $attributes = [],
         array $itemAttributes = [],
+        bool $visible = true,
     ): self {
         if ($headerTag === '') {
             throw new InvalidArgumentException('The header tag cannot be empty.');
@@ -150,6 +158,7 @@ final class DropdownItem
             $attributes,
             $itemAttributes,
             $headerTag,
+            $visible,
         );
     }
 
@@ -162,6 +171,7 @@ final class DropdownItem
      * @param bool $disabled Whether the link is disabled.
      * @param array $attributes The HTML attributes for the `<li>` tag.
      * @param array $itemAttributes The HTML attributes for the `<a>` tag.
+     * @param bool $visible Whether the item is visible.
      *
      * @throws InvalidArgumentException When item is set as both active and disabled.
      *
@@ -179,6 +189,7 @@ final class DropdownItem
         bool $disabled = false,
         array $attributes = [],
         array $itemAttributes = [],
+        bool $visible = true,
     ): self {
         if ($active && $disabled) {
             throw new InvalidArgumentException('The dropdown item cannot be active and disabled at the same time.');
@@ -193,6 +204,7 @@ final class DropdownItem
             $attributes,
             $itemAttributes,
             'h6',
+            $visible,
         );
     }
 
@@ -201,6 +213,7 @@ final class DropdownItem
      *
      * @param string|Stringable $content The list content.
      * @param array $attributes The HTML attributes for the `<li>` tag.
+     * @param bool $visible Whether the item is visible.
      *
      * @return self A new instance with the specified configuration.
      *
@@ -209,7 +222,7 @@ final class DropdownItem
      * DropdownItem::listContent('Simple list item');
      * ```
      */
-    public static function listContent(string|Stringable $content = '', array $attributes = []): self
+    public static function listContent(string|Stringable $content = '', array $attributes = [], bool $visible = true): self
     {
         return new self(
             DropdownItemType::CUSTOM_CONTENT,
@@ -220,6 +233,7 @@ final class DropdownItem
             $attributes,
             [],
             'h6',
+            $visible,
         );
     }
 
@@ -229,6 +243,7 @@ final class DropdownItem
      * @param string|Stringable $content The text content.
      * @param array $attributes The HTML attributes for the `<li>` tag.
      * @param array $itemAttributes The HTML attributes for the `<span>` tag.
+     * @param bool $visible Whether the item is visible.
      *
      * @return self A new instance with the specified configuration.
      *
@@ -241,6 +256,7 @@ final class DropdownItem
         string|Stringable $content = '',
         array $attributes = [],
         array $itemAttributes = [],
+        bool $visible = true,
     ): self {
         return new self(
             DropdownItemType::TEXT,
@@ -251,6 +267,7 @@ final class DropdownItem
             $attributes,
             $itemAttributes,
             'h6',
+            $visible,
         );
     }
 
@@ -454,5 +471,28 @@ final class DropdownItem
         $new->url = $url;
 
         return $new;
+    }
+
+    /**
+     * Sets the visibility of the dropdown item.
+     *
+     * @param bool $enabled Whether the dropdown item is visible.
+     *
+     * @return self A new instance with the specified visibility.
+     */
+    public function visible(bool $enabled): self
+    {
+        $new = clone $this;
+        $new->visible = $enabled;
+
+        return $new;
+    }
+
+    /**
+     * @return bool Whether the item is visible.
+     */
+    public function isVisible(): bool
+    {
+        return $this->visible;
     }
 }

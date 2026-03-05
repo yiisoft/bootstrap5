@@ -1803,6 +1803,94 @@ final class DropdownTest extends TestCase
         );
     }
 
+    public function testVisibleFalseRendersEmpty(): void
+    {
+        $this->assertSame(
+            '',
+            Dropdown::widget()
+                ->items(
+                    DropdownItem::link('Action', '#'),
+                    DropdownItem::link('Another action', '#'),
+                )
+                ->visible(false)
+                ->render(),
+        );
+    }
+
+    public function testVisibleTrueRendersNormally(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            </ul>
+            </div>
+            HTML,
+            Dropdown::widget()
+                ->items(
+                    DropdownItem::link('Action', '#'),
+                    DropdownItem::link('Another action', '#'),
+                )
+                ->visible(true)
+                ->render(),
+        );
+    }
+
+    public function testDropdownItemVisibleFalseIsSkipped(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#">Visible item</a>
+            </li>
+            </ul>
+            </div>
+            HTML,
+            Dropdown::widget()
+                ->items(
+                    DropdownItem::link('Action', '#'),
+                    DropdownItem::link('Hidden item', '#', visible: false),
+                    DropdownItem::link('Visible item', '#'),
+                )
+                ->render(),
+        );
+    }
+
+    public function testDropdownItemVisibleFalseViaMethod(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="#">Action</a>
+            </li>
+            </ul>
+            </div>
+            HTML,
+            Dropdown::widget()
+                ->items(
+                    DropdownItem::link('Action', '#'),
+                    DropdownItem::link('Hidden item', '#')->visible(false),
+                )
+                ->render(),
+        );
+    }
+
     public function testThrowExceptionForDropdownItemWithHeaderAndTagEmptyValue(): void
     {
         $this->expectException(InvalidArgumentException::class);
