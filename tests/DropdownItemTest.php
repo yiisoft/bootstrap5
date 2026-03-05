@@ -68,6 +68,7 @@ final class DropdownItemTest extends TestCase
         $this->assertNotSame($dropdownItem, $dropdownItem->itemAttributes([]));
         $this->assertNotSame($dropdownItem, $dropdownItem->type(DropdownItemType::BUTTON));
         $this->assertNotSame($dropdownItem, $dropdownItem->url(''));
+        $this->assertNotSame($dropdownItem, $dropdownItem->visible(false));
     }
 
     public function testLink(): void
@@ -107,5 +108,34 @@ final class DropdownItemTest extends TestCase
         $this->assertSame([], $text->getAttributes());
         $this->assertSame([], $text->getItemAttributes());
         $this->assertSame('h6', $text->getHeaderTag());
+    }
+
+    public function testVisibleDefaultIsTrue(): void
+    {
+        $this->assertTrue(DropdownItem::button('content')->isVisible());
+        $this->assertTrue(DropdownItem::divider()->isVisible());
+        $this->assertTrue(DropdownItem::header('content')->isVisible());
+        $this->assertTrue(DropdownItem::link('content')->isVisible());
+        $this->assertTrue(DropdownItem::listContent('content')->isVisible());
+        $this->assertTrue(DropdownItem::text('content')->isVisible());
+    }
+
+    public function testVisibleFalseViaConstructor(): void
+    {
+        $this->assertFalse(DropdownItem::button('content', visible: false)->isVisible());
+        $this->assertFalse(DropdownItem::divider(visible: false)->isVisible());
+        $this->assertFalse(DropdownItem::header('content', visible: false)->isVisible());
+        $this->assertFalse(DropdownItem::link('content', visible: false)->isVisible());
+        $this->assertFalse(DropdownItem::listContent('content', visible: false)->isVisible());
+        $this->assertFalse(DropdownItem::text('content', visible: false)->isVisible());
+    }
+
+    public function testVisibleMethod(): void
+    {
+        $item = DropdownItem::link('content');
+
+        $this->assertTrue($item->isVisible());
+        $this->assertFalse($item->visible(false)->isVisible());
+        $this->assertTrue($item->visible(false)->visible(true)->isVisible());
     }
 }

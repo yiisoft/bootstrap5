@@ -10,6 +10,7 @@
 - Enh #297: Remove unnecessary files from Composer package (@mspirkov)
 - Enh #298: Update Bootstrap from 5.0.0-beta to 5.3.8 (@rossaddison)
 - Bug #299: Link buttons get `btn-secondary` class instead of `btn-link` class (@jdanhutch)
+- Enh #290: Add `visible` to `Dropdown` and `DropdownItem` (@samdark)
 
 ## 1.0.0 April 13, 2025
 
