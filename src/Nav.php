@@ -645,7 +645,9 @@ final class Nav extends Widget
 
         foreach ($this->items as $item) {
             if ($item instanceof Dropdown) {
-                $items[] = $this->renderItemsDropdown($item);
+                if ($item->isVisible()) {
+                    $items[] = $this->renderItemsDropdown($item);
+                }
             } elseif ($item->isVisible()) {
                 $items[] = $this->renderNavItem($item);
             }
