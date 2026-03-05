@@ -22,6 +22,120 @@ use Yiisoft\Bootstrap5\Utility\BackgroundColor;
 #[Group('nav')]
 final class NavTest extends TestCase
 {
+    public function testActivateParents(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul class="nav">
+            <li class="nav-item">
+            <a class="nav-link" href="/test">Active</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="/test/link/action">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item active" href="/test/link/another-action" aria-current="true">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="/test/link/something-else">Something else here</a>
+            </li>
+            <li>
+            <hr class="dropdown-divider">
+            </li>
+            <li>
+            <a class="dropdown-item" href="/test/link/separated-link">Separated link</a>
+            </li>
+            </ul>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/test/link">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->activateParents(true)
+                ->currentPath('/test/link/another-action')
+                ->items(
+                    NavLink::to('Active', '/test'),
+                    Dropdown::widget()
+                        ->items(
+                            DropdownItem::link('Action', '/test/link/action'),
+                            DropdownItem::link('Another action', '/test/link/another-action'),
+                            DropdownItem::link('Something else here', '/test/link/something-else'),
+                            DropdownItem::divider(),
+                            DropdownItem::link('Separated link', '/test/link/separated-link'),
+                        )
+                        ->togglerContent('Dropdown'),
+                    NavLink::to('Link', '/test/link'),
+                    NavLink::to('Disabled', '/test/disabled', disabled: true),
+                )
+                ->render(),
+        );
+    }
+
+    public function testActivateParentsWithFalseValue(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <ul class="nav">
+            <li class="nav-item">
+            <a class="nav-link" href="/test">Active</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+            <li>
+            <a class="dropdown-item" href="/test/link/action">Action</a>
+            </li>
+            <li>
+            <a class="dropdown-item active" href="/test/link/another-action" aria-current="true">Another action</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="/test/link/something-else">Something else here</a>
+            </li>
+            <li>
+            <hr class="dropdown-divider">
+            </li>
+            <li>
+            <a class="dropdown-item" href="/test/link/separated-link">Separated link</a>
+            </li>
+            </ul>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/test/link">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">Disabled</a>
+            </li>
+            </ul>
+            HTML,
+            Nav::widget()
+                ->activateParents(false)
+                ->currentPath('/test/link/another-action')
+                ->items(
+                    NavLink::to('Active', '/test'),
+                    Dropdown::widget()
+                        ->items(
+                            DropdownItem::link('Action', '/test/link/action'),
+                            DropdownItem::link('Another action', '/test/link/another-action'),
+                            DropdownItem::link('Something else here', '/test/link/something-else'),
+                            DropdownItem::divider(),
+                            DropdownItem::link('Separated link', '/test/link/separated-link'),
+                        )
+                        ->togglerContent('Dropdown'),
+                    NavLink::to('Link', '/test/link'),
+                    NavLink::to('Disabled', '/test/disabled', disabled: true),
+                )
+                ->render(),
+        );
+    }
+
     public function testAddAttributes(): void
     {
         Assert::equalsWithoutLE(
@@ -841,6 +955,7 @@ final class NavTest extends TestCase
         $navWidget = Nav::widget();
 
         $this->assertNotSame($navWidget, $navWidget->activateItems(false));
+        $this->assertNotSame($navWidget, $navWidget->activateParents(true));
         $this->assertNotSame($navWidget, $navWidget->addAttributes([]));
         $this->assertNotSame($navWidget, $navWidget->addClass(''));
         $this->assertNotSame($navWidget, $navWidget->addCssStyle(''));
