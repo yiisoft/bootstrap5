@@ -62,6 +62,8 @@ final class Nav extends Widget
 
     private bool $activateItems = true;
 
+    private bool $activateParents = false;
+
     private array $attributes = [];
 
     private array $cssClasses = [];
@@ -99,6 +101,29 @@ final class Nav extends Widget
     {
         $new = clone $this;
         $new->activateItems = $enabled;
+
+        return $new;
+    }
+
+    /**
+     * Whether to activate the parent dropdown item when one of its child items is active.
+     *
+     * When set to `true`, if a dropdown item's URL matches {@see currentPath}, the dropdown toggle (parent) will also
+     * receive the `active` CSS class.
+     *
+     * @param bool $enabled Whether to activate parent items. Defaults to `false`.
+     *
+     * @return self A new instance with the specified activate parents value.
+     *
+     * Example usage:
+     * ```php
+     * $nav->activateParents(true);
+     * ```
+     */
+    public function activateParents(bool $enabled): self
+    {
+        $new = clone $this;
+        $new->activateParents = $enabled;
 
         return $new;
     }
@@ -592,6 +617,24 @@ final class Nav extends Widget
     }
 
     /**
+     * Checks whether any item in the dropdown is active.
+     *
+     * @param Dropdown $dropdown The dropdown to check.
+     *
+     * @return bool Whether any item in the dropdown is active.
+     */
+    private function hasActiveDropdownItem(Dropdown $dropdown): bool
+    {
+        foreach ($dropdown->getItems() as $item) {
+            if ($item->isActive()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Renders the items for the nav component.
      *
      * @return array The rendered items.
@@ -621,6 +664,11 @@ final class Nav extends Widget
     private function renderItemsDropdown(Dropdown $items): Li
     {
         $dropDownItems = $this->isDropdownActive($items);
+        $togglerClasses = ['nav-link', 'dropdown-toggle'];
+
+        if ($this->activateParents && $this->hasActiveDropdownItem($dropDownItems)) {
+            $togglerClasses[] = self::NAV_LINK_ACTIVE_CLASS;
+        }
 
         return Li::tag()
             ->addClass(...$this->dropdownCssClasses, ...$dropDownItems->getCssClasses())
@@ -629,7 +677,7 @@ final class Nav extends Widget
                 $dropDownItems
                     ->container(false)
                     ->togglerAsLink()
-                    ->togglerClass('nav-link', 'dropdown-toggle')
+                    ->togglerClass(...$togglerClasses)
                     ->render(),
                 "\n",
             )
