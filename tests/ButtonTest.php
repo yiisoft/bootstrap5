@@ -565,21 +565,21 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-secondary" href="#" data-bs-toggle="button" role="button">Toggle link</a>
+            <a class="btn btn-link" href="#" data-bs-toggle="button" role="button">Toggle link</a>
             HTML,
             Button::link('Toggle link', '#')->id(false)->toggle()->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-secondary active" href="#" data-bs-toggle="button" aria-pressed="true" role="button">Active toggle link</a>
+            <a class="btn btn-link active" href="#" data-bs-toggle="button" aria-pressed="true" role="button">Active toggle link</a>
             HTML,
             Button::link('Active toggle link', '#')->active()->id(false)->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-secondary disabled" href="#" data-bs-toggle="button" aria-disabled="true" role="button">Disabled toggle link</a>
+            <a class="btn btn-link disabled" href="#" data-bs-toggle="button" aria-disabled="true" role="button">Disabled toggle link</a>
             HTML,
             Button::link('Disabled toggle link', '#')->disabled()->id(false)->toggle()->render(),
         );
