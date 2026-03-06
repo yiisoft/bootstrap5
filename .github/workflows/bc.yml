@@ -27,4 +27,3 @@ jobs:
         ['8.5']
       required-packages: >-
         ['assets', 'files']
-
