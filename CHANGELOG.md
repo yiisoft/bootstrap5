@@ -1,5 +1,9 @@
 # Yii Framework bootstrap5 extension Change Log
 
+## 1.1.1 under development
+
+- no changes in this release.
+
 ## 1.1.0 March 06, 2026
 
 - Enh #286: Add `Nav::activateParents()` that makes parent dropdown active when one of its child items is active (@samdark)
