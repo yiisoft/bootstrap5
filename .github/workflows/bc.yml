@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   roave_bc_check:
-    uses: yiisoft/actions/.github/workflows/bc.yml@master
+    uses: yiisoft/actions/.github/workflows/bc.yml@detect-latest-version
     with:
       os: >-
         ['ubuntu-latest']
