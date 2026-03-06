@@ -25,5 +25,3 @@ jobs:
         ['ubuntu-latest']
       php: >-
         ['8.5']
-      required-packages: >-
-        ['assets', 'files']
