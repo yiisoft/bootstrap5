@@ -479,7 +479,7 @@ final class Button extends Widget
      * It accepts an integer as a value, with different results depending on the integer's value:
      *
      * - A negative value (usually `tabindex="-1"`) means that the element is not reachable via sequential keyboard
-     *   navigation, but could be focused with Javascript or visually. It's mostly useful to create accessible widgets
+     *   navigation, but could be focused with JavaScript or visually. It's mostly useful to create accessible widgets
      *   with JavaScript.
      * - `tabindex="0"` means that the element should be focusable in sequential keyboard navigation, but its order is
      *   defined by the document's source order.
