@@ -28,7 +28,7 @@ final class DropdownTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="dropdown" data-test="test">
+            <div data-test="test" class="dropdown">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
@@ -117,7 +117,7 @@ final class DropdownTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="dropdown" style="color: red;">
+            <div style="color: red;" class="dropdown">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
@@ -137,7 +137,7 @@ final class DropdownTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="dropdown" style="color: red; font-weight: bold;">
+            <div style="color: red; font-weight: bold;" class="dropdown">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
@@ -168,7 +168,7 @@ final class DropdownTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="dropdown" style="color: red;">
+            <div style="color: red;" class="dropdown">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
@@ -188,7 +188,7 @@ final class DropdownTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="dropdown" style="color: red;">
+            <div style="color: red;" class="dropdown">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
@@ -212,7 +212,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-id="123" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <button type="button" data-id="123" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -301,7 +301,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle" style="color: red;" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <button type="button" style="color: red;" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -321,7 +321,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle" style="color: red; font-weight: bold;" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <button type="button" style="color: red; font-weight: bold;" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -352,7 +352,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle" style="color: red;" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <button type="button" style="color: red;" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -372,7 +372,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle" style="color: red;" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <button type="button" style="color: red;" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -829,7 +829,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-auto-close="true" data-bs-toggle="dropdown" aria-expanded="false">Default dropdown</button>
+            <button type="button" data-bs-auto-close="true" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Default dropdown</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Menu Item</a>
@@ -863,7 +863,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-auto-close="inside" data-bs-toggle="dropdown" aria-expanded="false">Clickable inside</button>
+            <button type="button" data-bs-auto-close="inside" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Clickable inside</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Menu Item</a>
@@ -897,7 +897,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-auto-close="false" data-bs-toggle="dropdown" aria-expanded="false">Manual close</button>
+            <button type="button" data-bs-auto-close="false" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Manual close</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Menu Item</a>
@@ -931,7 +931,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">Clickable outside</button>
+            <button type="button" data-bs-auto-close="outside" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Clickable outside</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Menu Item</a>
@@ -1315,7 +1315,7 @@ final class DropdownTest extends TestCase
             <a class="dropdown-item" href="#">Regular link</a>
             </li>
             <li>
-            <a class="dropdown-item active" href="#" aria-current="true">Active link</a>
+            <a class="dropdown-item active" aria-current="true" href="#">Active link</a>
             </li>
             <li>
             <a class="dropdown-item" href="#">Another link</a>
@@ -1341,7 +1341,7 @@ final class DropdownTest extends TestCase
             <a class="dropdown-item" href="#">Regular link</a>
             </li>
             <li>
-            <a class="dropdown-item active" href="#" aria-current="true">Active link</a>
+            <a class="dropdown-item active" aria-current="true" href="#">Active link</a>
             </li>
             <li>
             <a class="dropdown-item" href="#">Another link</a>
@@ -1373,7 +1373,7 @@ final class DropdownTest extends TestCase
             <a class="dropdown-item" href="#">Regular link</a>
             </li>
             <li>
-            <a class="dropdown-item disabled" href="#" aria-disabled="true">Disabled link</a>
+            <a class="dropdown-item disabled" aria-disabled="true" href="#">Disabled link</a>
             </li>
             <li>
             <a class="dropdown-item" href="#">Another link</a>
@@ -1399,7 +1399,7 @@ final class DropdownTest extends TestCase
             <a class="dropdown-item" href="#">Regular link</a>
             </li>
             <li>
-            <a class="dropdown-item disabled" href="#" aria-disabled="true">Disabled link</a>
+            <a class="dropdown-item disabled" aria-disabled="true" href="#">Disabled link</a>
             </li>
             <li>
             <a class="dropdown-item" href="#">Another link</a>
@@ -1525,7 +1525,7 @@ final class DropdownTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1601,7 +1601,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
+            <a class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown link</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1635,7 +1635,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <a class="btn dropdown-toggle btn-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
+            <a class="btn dropdown-toggle btn-custom" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown link</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1671,7 +1671,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <a class="btn btn-danger dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
+            <a class="btn btn-danger dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown link</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1706,7 +1706,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <a class="btn btn-outline-danger dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
+            <a class="btn btn-outline-danger dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown link</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1740,9 +1740,9 @@ final class DropdownTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="dropdown" data-bs-theme="light">
+            <div data-bs-theme="light" class="dropdown">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownLight">Light dropdown</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownLight">
+            <ul aria-labelledby="dropdownLight" class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
             </li>
@@ -1775,9 +1775,9 @@ final class DropdownTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="dropdown" data-bs-theme="dark">
+            <div data-bs-theme="dark" class="dropdown">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownDark">Dark dropdown</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownDark">
+            <ul aria-labelledby="dropdownDark" class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
             </li>
@@ -1936,7 +1936,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown custom button</button>
+            <button data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-primary dropdown-toggle">Dropdown custom button</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1979,7 +1979,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-offset="10,20" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <button type="button" data-bs-offset="10,20" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -2012,7 +2012,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" data-bs-offset="10,20" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</a>
+            <a data-bs-offset="10,20" class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown button</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -2044,7 +2044,7 @@ final class DropdownTest extends TestCase
             <<<HTML
             <div class="btn-group">
             <button type="button" class="btn btn-secondary">Danger</button>
-            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-reference="parent" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" data-bs-reference="parent" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
             <span class="visually-hidden">Toggle dropdown</span>
             </button>
             <ul class="dropdown-menu">
@@ -2088,7 +2088,7 @@ final class DropdownTest extends TestCase
             <<<HTML
             <div class="dropdown">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="test-id">Dropdown button</button>
-            <ul class="dropdown-menu" aria-labelledby="test-id">
+            <ul aria-labelledby="test-id" class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
             </li>
@@ -2118,7 +2118,7 @@ final class DropdownTest extends TestCase
             <<<HTML
             <div class="dropdown">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="test-id">Dropdown button</button>
-            <ul class="dropdown-menu" aria-labelledby="test-id">
+            <ul aria-labelledby="test-id" class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
             </li>
@@ -2305,8 +2305,8 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="btn-group">
-            <a class="btn btn-danger" role="button">Danger</a>
-            <a class="btn btn-danger dropdown-toggle dropdown-toggle-split" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a role="button" class="btn btn-danger">Danger</a>
+            <a class="btn btn-danger dropdown-toggle dropdown-toggle-split" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
             <span class="visually-hidden">Toggle dropdown</span>
             </a>
             <ul class="dropdown-menu">
@@ -2350,8 +2350,8 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="btn-group">
-            <a class="btn btn-danger btn-lg" role="button">Danger</a>
-            <a class="btn btn-danger btn-lg dropdown-toggle dropdown-toggle-split" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a role="button" class="btn btn-danger btn-lg">Danger</a>
+            <a class="btn btn-danger btn-lg dropdown-toggle dropdown-toggle-split" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
             <span class="visually-hidden">Toggle dropdown</span>
             </a>
             <ul class="dropdown-menu">
@@ -2396,8 +2396,8 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="btn-group">
-            <a class="btn btn-danger btn-sm" role="button">Danger</a>
-            <a class="btn btn-danger btn-sm dropdown-toggle dropdown-toggle-split" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a role="button" class="btn btn-danger btn-sm">Danger</a>
+            <a class="btn btn-danger btn-sm dropdown-toggle dropdown-toggle-split" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
             <span class="visually-hidden">Toggle dropdown</span>
             </a>
             <ul class="dropdown-menu">

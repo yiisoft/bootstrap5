@@ -26,18 +26,18 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide" data-test="123">
+            <div data-test="123" class="carousel slide" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -59,18 +59,18 @@ final class CarouselTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide test-class bg-primary">
+            <div class="carousel slide test-class bg-primary" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -80,18 +80,18 @@ final class CarouselTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide test-class bg-primary test-class-1 test-class-2">
+            <div class="carousel slide test-class bg-primary test-class-1 test-class-2" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -109,18 +109,18 @@ final class CarouselTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide" style="color: red;">
+            <div style="color: red;" class="carousel slide" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -130,18 +130,18 @@ final class CarouselTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide" style="color: red; font-weight: bold;">
+            <div style="color: red; font-weight: bold;" class="carousel slide" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -159,18 +159,18 @@ final class CarouselTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide" style="color: red;">
+            <div style="color: red;" class="carousel slide" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -180,18 +180,18 @@ final class CarouselTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide" style="color: red;">
+            <div style="color: red;" class="carousel slide" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -204,18 +204,18 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide test-class">
+            <div class="carousel slide test-class" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -235,24 +235,24 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div data-bs-ride="carousel" class="carousel slide" id="carouselExampleAutoplaying">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -276,24 +276,24 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div data-bs-ride="carousel" class="carousel slide" id="carouselExampleInterval">
             <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -317,24 +317,24 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+            <div data-bs-ride="true" class="carousel slide" id="carouselExampleRide">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -358,16 +358,16 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div data-bs-ride="carousel" class="carousel slide" id="carouselExampleSlidesOnly">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
             </div>
@@ -389,36 +389,36 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleCaptionsCustomTagName" class="carousel slide">
+            <div class="carousel slide" id="carouselExampleCaptionsCustomTagName">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             <div class="carousel-caption d-none d-md-block">
             <h5 class="bg-primary text-center">First slide</h5>
             <p class="bg-success">Some representative placeholder content for the first slide.</p>
             </div>
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             <div class="carousel-caption d-none d-md-block">
             <h5 class="bg-success text-center">Second slide</h5>
             <p class="bg-danger">Some representative placeholder content for the second slide.</p>
             </div>
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             <div class="carousel-caption d-none d-md-block">
             <h5 class="bg-danger text-center">Third slide</h5>
             <p class="bg-warning">Some representative placeholder content for the third slide.</p>
             </div>
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleCaptionsCustomTagName" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleCaptionsCustomTagName" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleCaptionsCustomTagName" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleCaptionsCustomTagName" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -456,36 +456,36 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleCaptionsCustomTagName" class="carousel slide">
+            <div class="carousel slide" id="carouselExampleCaptionsCustomTagName">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             <div class="carousel-caption d-none d-md-block">
             <h2>First slide</h2>
             <span>Some representative placeholder content for the first slide.</span>
             </div>
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             <div class="carousel-caption d-none d-md-block">
             <h2>Second slide</h2>
             <span>Some representative placeholder content for the second slide.</span>
             </div>
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             <div class="carousel-caption d-none d-md-block">
             <h2>Third slide</h2>
             <span>Some representative placeholder content for the third slide.</span>
             </div>
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleCaptionsCustomTagName" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleCaptionsCustomTagName" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleCaptionsCustomTagName" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleCaptionsCustomTagName" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -562,36 +562,36 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel slide" id="carouselExampleCaptions">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             <div class="carousel-caption d-none d-md-block">
             <h5>First slide</h5>
             <p>Some representative placeholder content for the first slide.</p>
             </div>
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             <div class="carousel-caption d-none d-md-block">
             <h5>Second slide</h5>
             <p>Some representative placeholder content for the second slide.</p>
             </div>
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             <div class="carousel-caption d-none d-md-block">
             <h5>Third slide</h5>
             <p>Some representative placeholder content for the third slide.</p>
             </div>
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -623,18 +623,18 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide custom-class another-class bg-primary">
+            <div class="carousel slide custom-class another-class bg-primary" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -652,18 +652,18 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide">
+            <div class="carousel slide" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Предыдущий</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Следующий</span>
             </button>
             </div>
@@ -684,24 +684,24 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel slide carousel-fade" id="carouselExampleFade">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -725,24 +725,24 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+            <div data-bs-touch="false" class="carousel slide" id="carouselExampleControlsNoTouching">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -763,24 +763,24 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test-id" class="carousel slide">
+            <div class="carousel slide" id="test-id">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#test-id" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#test-id" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#test-id" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#test-id" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -803,15 +803,15 @@ final class CarouselTest extends TestCase
             <div id="test-id" class="carousel slide">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#test-id" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#test-id" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#test-id" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#test-id" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -854,24 +854,24 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide">
+            <div class="carousel slide" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -896,24 +896,24 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExample" class="carousel slide">
+            <div class="carousel slide" id="carouselExample">
             <div class="carousel-inner">
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -947,7 +947,7 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleOnlyText" class="carousel slide">
+            <div class="carousel slide" id="carouselExampleOnlyText">
             <div class="carousel-inner">
             <div class="carousel-item active">
             <div class="bg-primary text-white p-5 text-center">
@@ -968,12 +968,12 @@ final class CarouselTest extends TestCase
             </div>
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleOnlyText" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleOnlyText" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleOnlyText" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleOnlyText" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -1014,7 +1014,7 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleOnlyText" class="carousel slide">
+            <div class="carousel slide" id="carouselExampleOnlyText">
             <div class="carousel-inner">
             <div class="carousel-item active">
             <div class="bg-primary text-white p-5 text-center">
@@ -1035,12 +1035,12 @@ final class CarouselTest extends TestCase
             </div>
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleOnlyText" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleOnlyText" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleOnlyText" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleOnlyText" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -1093,29 +1093,29 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel slide" id="carouselExampleIndicators">
             <div class="carousel-indicators">
-            <button type="button" class="active" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1" class="active"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>
@@ -1139,29 +1139,29 @@ final class CarouselTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-theme="dark">
+            <div data-bs-theme="dark" class="carousel slide" id="carouselExampleIndicators">
             <div class="carousel-indicators">
-            <button type="button" class="active" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1" class="active"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="image-1.jpg" alt="First slide">
+            <img alt="First slide" src="image-1.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-2.jpg" alt="Second slide">
+            <img alt="Second slide" src="image-2.jpg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="image-3.jpg" alt="Third slide">
+            <img alt="Third slide" src="image-3.jpg" class="d-block w-100">
             </div>
             </div>
-            <button type="button" class="carousel-control-prev" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" class="carousel-control-prev">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
             </button>
-            <button type="button" class="carousel-control-next" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" class="carousel-control-next">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
             </button>
             </div>

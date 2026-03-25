@@ -30,7 +30,7 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" data-id="123"></button>
+            <button type="button" data-id="123" class="btn btn-secondary"></button>
             HTML,
             Button::widget()->addAttributes(['data-id' => '123'])->id(false)->render(),
         );
@@ -61,14 +61,14 @@ final class ButtonTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" style="color: red;"></button>
+            <button type="button" style="color: red;" class="btn btn-secondary"></button>
             HTML,
             $buttonWidget->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" style="color: red; font-weight: bold;"></button>
+            <button type="button" style="color: red; font-weight: bold;" class="btn btn-secondary"></button>
             HTML,
             $buttonWidget->addCssStyle('font-weight: bold;')->render(),
         );
@@ -80,14 +80,14 @@ final class ButtonTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" style="color: red;"></button>
+            <button type="button" style="color: red;" class="btn btn-secondary"></button>
             HTML,
             $buttonWidget->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" style="color: red;"></button>
+            <button type="button" style="color: red;" class="btn btn-secondary"></button>
             HTML,
             $buttonWidget->addCssStyle('color: blue;', false)->render(),
         );
@@ -97,7 +97,7 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" aria-expanded="true"></button>
+            <button type="button" aria-expanded="true" class="btn btn-secondary"></button>
             HTML,
             Button::widget()->ariaExpanded()->id(false)->render(),
         );
@@ -107,7 +107,7 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" aria-expanded="false"></button>
+            <button type="button" aria-expanded="false" class="btn btn-secondary"></button>
             HTML,
             Button::widget()->ariaExpanded(false)->id(false)->render(),
         );
@@ -117,7 +117,7 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" data-id="123"></button>
+            <button type="button" data-id="123" class="btn btn-secondary"></button>
             HTML,
             Button::widget()->attribute('data-id', '123')->id(false)->render(),
         );
@@ -220,7 +220,7 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" id="test" class="btn btn-secondary"></button>
+            <button type="button" class="btn btn-secondary" id="test"></button>
             HTML,
             Button::widget()->id('test')->render(),
         );
@@ -250,7 +250,7 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" id="test" class="btn btn-secondary"></button>
+            <button type="button" class="btn btn-secondary" id="test"></button>
             HTML,
             Button::widget()->attributes(['id' => 'test'])->render(),
         );
@@ -440,14 +440,14 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-primary" href="#" role="button">Label</a>
+            <a href="#" class="btn btn-primary" role="button">Label</a>
             HTML,
             Button::link('Label', '#')->id(false)->variant(ButtonVariant::PRIMARY)->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-primary" href="/test" role="button">Label</a>
+            <a href="/test" class="btn btn-primary" role="button">Label</a>
             HTML,
             Button::link('Label', '/test')->id(false)->variant(ButtonVariant::PRIMARY)->render(),
         );
@@ -460,14 +460,14 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <input type="reset" class="btn btn-primary" value="Reset">
+            <input type="reset" value="Reset" class="btn btn-primary">
             HTML,
             Button::resetInput()->id(false)->variant(ButtonVariant::PRIMARY)->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <input type="reset" class="btn btn-primary" value="Clear">
+            <input type="reset" value="Clear" class="btn btn-primary">
             HTML,
             Button::resetInput('Clear')->id(false)->variant(ButtonVariant::PRIMARY)->render(),
         );
@@ -480,14 +480,14 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <input type="submit" class="btn btn-primary" value="Submit">
+            <input type="submit" value="Submit" class="btn btn-primary">
             HTML,
             Button::submitInput()->id(false)->variant(ButtonVariant::PRIMARY)->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <input type="submit" class="btn btn-primary" value="Send">
+            <input type="submit" value="Send" class="btn btn-primary">
             HTML,
             Button::submitInput('Send')->id(false)->variant(ButtonVariant::PRIMARY)->render(),
         );
@@ -500,21 +500,21 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" data-bs-toggle="button">Toggle button</button>
+            <button type="button" data-bs-toggle="button" class="btn btn-secondary">Toggle button</button>
             HTML,
             Button::widget()->toggle()->id(false)->label('Toggle button')->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+            <button type="button" data-bs-toggle="button" aria-pressed="true" class="btn btn-secondary active">Active toggle button</button>
             HTML,
             Button::widget()->active()->label('Active toggle button')->id(false)->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" disabled data-bs-toggle="button">Disabled toggle button</button>
+            <button type="button" data-bs-toggle="button" class="btn btn-secondary" disabled>Disabled toggle button</button>
             HTML,
             Button::widget()->disabled()->id(false)->label('Disabled toggle button')->toggle()->render(),
         );
@@ -527,14 +527,14 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
+            <button type="button" data-bs-toggle="button" class="btn btn-primary">Toggle button</button>
             HTML,
             Button::widget()->toggle()->id(false)->label('Toggle button')->variant(ButtonVariant::PRIMARY)->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
+            <button type="button" data-bs-toggle="button" aria-pressed="true" class="btn btn-primary active">Active toggle button</button>
             HTML,
             Button::widget()
                 ->active()
@@ -546,7 +546,7 @@ final class ButtonTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle button</button>
+            <button type="button" data-bs-toggle="button" class="btn btn-primary" disabled>Disabled toggle button</button>
             HTML,
             Button::widget()
                 ->disabled()
@@ -565,21 +565,21 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-link" href="#" data-bs-toggle="button" role="button">Toggle link</a>
+            <a href="#" data-bs-toggle="button" class="btn btn-link" role="button">Toggle link</a>
             HTML,
             Button::link('Toggle link', '#')->id(false)->toggle()->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-link active" href="#" data-bs-toggle="button" aria-pressed="true" role="button">Active toggle link</a>
+            <a href="#" data-bs-toggle="button" aria-pressed="true" class="btn btn-link active" role="button">Active toggle link</a>
             HTML,
             Button::link('Active toggle link', '#')->active()->id(false)->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-link disabled" href="#" data-bs-toggle="button" aria-disabled="true" role="button">Disabled toggle link</a>
+            <a href="#" data-bs-toggle="button" class="btn btn-link disabled" aria-disabled="true" role="button">Disabled toggle link</a>
             HTML,
             Button::link('Disabled toggle link', '#')->disabled()->id(false)->toggle()->render(),
         );
@@ -592,21 +592,21 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-primary" href="#" data-bs-toggle="button" role="button">Toggle link</a>
+            <a href="#" data-bs-toggle="button" class="btn btn-primary" role="button">Toggle link</a>
             HTML,
             Button::link('Toggle link', '#')->id(false)->toggle()->variant(ButtonVariant::PRIMARY)->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-primary active" href="#" data-bs-toggle="button" aria-pressed="true" role="button">Active toggle link</a>
+            <a href="#" data-bs-toggle="button" aria-pressed="true" class="btn btn-primary active" role="button">Active toggle link</a>
             HTML,
             Button::link('Active toggle link', '#')->active()->id(false)->variant(ButtonVariant::PRIMARY)->render(),
         );
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-primary disabled" href="#" data-bs-toggle="button" aria-disabled="true" role="button">Disabled toggle link</a>
+            <a href="#" data-bs-toggle="button" class="btn btn-primary disabled" aria-disabled="true" role="button">Disabled toggle link</a>
             HTML,
             Button::link('Disabled toggle link', '#')
                 ->disabled()
@@ -660,7 +660,7 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <a class="btn btn-primary" href="/test" role="button">Label</a>
+            <a href="/test" class="btn btn-primary" role="button">Label</a>
             HTML,
             Button::widget()
                 ->id(false)
@@ -679,7 +679,7 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <input type="reset" class="btn btn-primary" value="Clear">
+            <input type="reset" value="Clear" class="btn btn-primary">
             HTML,
             Button::widget()
                 ->id(false)
@@ -697,7 +697,7 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <input type="submit" class="btn btn-primary" value="Send">
+            <input type="submit" value="Send" class="btn btn-primary">
             HTML,
             Button::widget()
                 ->id(false)
