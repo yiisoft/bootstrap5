@@ -33,12 +33,12 @@ final class NavBarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav class="navbar navbar-expand-lg" data-id="123">
+            <nav data-id="123" class="navbar navbar-expand-lg">
             <div class="container-fluid">
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -58,7 +58,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -73,7 +73,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -88,12 +88,12 @@ final class NavBarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav class="navbar navbar-expand-lg" style="color: red;">
+            <nav style="color: red;" class="navbar navbar-expand-lg">
             <div class="container-fluid">
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -103,12 +103,12 @@ final class NavBarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav class="navbar navbar-expand-lg" style="color: red; font-weight: bold;">
+            <nav style="color: red; font-weight: bold;" class="navbar navbar-expand-lg">
             <div class="container-fluid">
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -123,12 +123,12 @@ final class NavBarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav class="navbar navbar-expand-lg" style="color: red;">
+            <nav style="color: red;" class="navbar navbar-expand-lg">
             <div class="container-fluid">
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -138,12 +138,12 @@ final class NavBarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav class="navbar navbar-expand-lg" style="color: red;">
+            <nav style="color: red;" class="navbar navbar-expand-lg">
             <div class="container-fluid">
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -158,10 +158,10 @@ final class NavBarTest extends TestCase
             <<<HTML
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-            <button type="button" class="navbar-toggler" data-id="123" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" data-id="123" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             HTML,
             trim(NavBar::widget()->addTogglerAttribute('data-id', '123')->id('navbar')->begin()),
         );
@@ -178,7 +178,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler test-class bg-primary" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             HTML,
             trim($navbar->begin()),
         );
@@ -190,7 +190,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler test-class bg-primary test-class-1 test-class-2" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             HTML,
             trim($navbar->addTogglerClass('test-class-1', 'test-class-2')->begin()),
         );
@@ -204,10 +204,10 @@ final class NavBarTest extends TestCase
             <<<HTML
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-            <button type="button" class="navbar-toggler" style="color: red;" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" style="color: red;" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             HTML,
             trim($navbar->begin()),
         );
@@ -216,10 +216,10 @@ final class NavBarTest extends TestCase
             <<<HTML
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-            <button type="button" class="navbar-toggler" style="color: red; font-weight: bold;" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" style="color: red; font-weight: bold;" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             HTML,
             trim($navbar->addTogglerCssStyle('font-weight: bold;')->begin()),
         );
@@ -233,10 +233,10 @@ final class NavBarTest extends TestCase
             <<<HTML
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-            <button type="button" class="navbar-toggler" style="color: red;" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" style="color: red;" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             HTML,
             trim($navbar->begin()),
         );
@@ -245,10 +245,10 @@ final class NavBarTest extends TestCase
             <<<HTML
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-            <button type="button" class="navbar-toggler" style="color: red;" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" style="color: red;" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             HTML,
             trim($navbar->addTogglerCssStyle('color: blue;', false)->begin()),
         );
@@ -258,12 +258,12 @@ final class NavBarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav class="navbar navbar-expand-lg" data-id="123">
+            <nav data-id="123" class="navbar navbar-expand-lg">
             <div class="container-fluid">
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -281,7 +281,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -300,7 +300,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -319,7 +319,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -346,7 +346,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -364,11 +364,11 @@ final class NavBarTest extends TestCase
             <<<HTML
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">NavBar</a>
+            <a href="#" class="navbar-brand">NavBar</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -386,13 +386,13 @@ final class NavBarTest extends TestCase
             <<<HTML
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" width="30" height="24" alt="bootstrap">
+            <a href="#" class="navbar-brand">
+            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="bootstrap" width="30" height="24">
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -423,13 +423,13 @@ final class NavBarTest extends TestCase
             <<<HTML
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" width="30" height="24" alt="bootstrap">
+            <a href="#" class="navbar-brand">
+            <img alt="bootstrap" height="24" src="/docs/5.3/assets/brand/bootstrap-logo.svg" width="30">
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -459,14 +459,14 @@ final class NavBarTest extends TestCase
             <<<HTML
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" width="30" height="24" alt="bootstrap">
+            <a href="#" class="navbar-brand">
+            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="bootstrap" width="30" height="24">
             NavBar
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -499,7 +499,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -517,7 +517,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -546,7 +546,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -576,7 +576,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -604,7 +604,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -632,7 +632,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -660,7 +660,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -688,7 +688,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -716,7 +716,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -740,7 +740,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#test-id" aria-controls="test-id" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="test-id" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="test-id">
             </div>
             </div>
             </nav>
@@ -788,12 +788,12 @@ final class NavBarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav id="main-nav" class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg" id="main-nav">
             <div class="container-fluid">
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -810,7 +810,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -832,7 +832,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -860,7 +860,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -888,7 +888,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -916,7 +916,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             HTML,
             trim(
                 NavBar::widget()
@@ -943,13 +943,13 @@ final class NavBarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <nav data-bs-theme="dark" class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">NavBar</a>
+            <a href="#" class="navbar-brand">NavBar</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             HTML,
             trim($navbar),
         );
@@ -961,20 +961,20 @@ final class NavBarTest extends TestCase
             <<<HTML
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">NavBar</a>
+            <a href="#" class="navbar-brand">NavBar</a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link active" href="/home" aria-current="page">Home</a>
+            <a href="/home" class="nav-link active" aria-current="page">Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/link">Link</a>
+            <a href="/link" class="nav-link">Link</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="/sub/action">Action</a>
@@ -991,7 +991,7 @@ final class NavBarTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             </div>
@@ -1040,7 +1040,7 @@ final class NavBarTest extends TestCase
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
             <button>Custom toggler</button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>
@@ -1058,7 +1058,7 @@ final class NavBarTest extends TestCase
             <button type="button" class="navbar-toggler btn-lg" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             HTML,
             trim(NavBar::widget()->id('navbar')->togglerAttributes(['class' => 'btn-lg'])->begin()),
         );
@@ -1071,7 +1071,7 @@ final class NavBarTest extends TestCase
             <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
             <button type="button">Custom toggler</button>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar">
             </div>
             </div>
             </nav>

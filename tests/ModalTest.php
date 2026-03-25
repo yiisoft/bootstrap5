@@ -23,7 +23,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" data-id="123" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div data-id="123" aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -48,7 +48,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal test-class bg-primary fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal test-class bg-primary fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -68,7 +68,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal test-class bg-primary fade test-class-1 test-class-2" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal test-class bg-primary fade test-class-1 test-class-2" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -93,7 +93,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" style="color: red;" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div style="color: red;" aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -113,7 +113,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" style="color: red; font-weight: bold;" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div style="color: red; font-weight: bold;" aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -138,7 +138,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" style="color: red;" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div style="color: red;" aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -158,7 +158,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" style="color: red;" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div style="color: red;" aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -181,7 +181,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" data-id="123" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div data-id="123" aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -204,7 +204,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade test-class" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade test-class" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -227,7 +227,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -251,13 +251,13 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" data-id="123">
+            <div data-id="123" class="modal-body">
             Body content
             </div>
             <div class="modal-footer">
@@ -279,7 +279,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal custom-class another-class bg-primary fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal custom-class another-class bg-primary fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -307,7 +307,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -330,7 +330,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -353,9 +353,9 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
-            <div class="modal-content" data-id="123">
+            <div data-id="123" class="modal-content">
             <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -376,8 +376,8 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
-            <div class="modal-dialog" data-id="123">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
+            <div data-id="123" class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -399,7 +399,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -423,7 +423,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -431,7 +431,7 @@ final class ModalTest extends TestCase
             </div>
             <div class="modal-body">
             </div>
-            <div class="modal-footer" data-id="123">
+            <div data-id="123" class="modal-footer">
             </div>
             </div>
             </div>
@@ -449,11 +449,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="modalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -494,11 +494,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog modal-fullscreen-sm-down">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="modalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -539,11 +539,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog modal-fullscreen-md-down">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="modalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -584,11 +584,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog modal-fullscreen-lg-down">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="modalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -629,11 +629,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog modal-fullscreen-xl-down">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="modalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -674,11 +674,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog modal-fullscreen-xxl-down">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="modalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -716,10 +716,10 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
-            <div class="modal-header" data-id="123">
+            <div data-id="123" class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -739,7 +739,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#test-id">Launch modal</button>
-            <div id="test-id" class="modal fade" aria-labelledby="test-idLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="test-idLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="test-id">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -792,11 +792,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch demo modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="modalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -836,11 +836,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#smallModal">Small modal</button>
-            <div id="smallModal" class="modal fade" aria-labelledby="smallModalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="smallModalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="smallModal">
             <div class="modal-dialog modal-sm">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="smallModalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="smallModalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -881,11 +881,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#largeModal">Large modal</button>
-            <div id="largeModal" class="modal fade" aria-labelledby="largeModalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="largeModalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="largeModal">
             <div class="modal-dialog modal-lg">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="largeModalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="largeModalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -926,11 +926,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#extraLargeModal">Extra large modal</button>
-            <div id="extraLargeModal" class="modal fade" aria-labelledby="extraLargeModalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="extraLargeModalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="extraLargeModal">
             <div class="modal-dialog modal-xl">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="extraLargeModalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="extraLargeModalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -971,11 +971,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="modalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -1037,11 +1037,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#model">Launch modal</button>
-            <div id="model" class="modal fade" aria-labelledby="modelLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modelLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="model">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modelLabel" class="modal-title">Title content</H5>
+            <H5 class="modal-title" id="modelLabel">Title content</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -1061,11 +1061,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-            <H1 id="modalLabel" class="modal-title" data-id="123">Title content</H1>
+            <H1 data-id="123" class="modal-title" id="modalLabel">Title content</H1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -1085,7 +1085,7 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -1120,11 +1120,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Launch demo modal</button>
-            <div id="exampleModal" class="modal fade" aria-labelledby="exampleModalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="exampleModal">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-            <H1 id="exampleModalLabel" class="modal-title fs-5">Modal title</H1>
+            <H1 class="modal-title fs-5" id="exampleModalLabel">Modal title</H1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -1164,11 +1164,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Launch demo modal</button>
-            <div id="staticBackdrop" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true" tabindex="-1">
+            <div data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="staticBackdrop">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-            <H1 id="staticBackdropLabel" class="modal-title fs-5">Modal title</H1>
+            <H1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</H1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -1208,11 +1208,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="modalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -1253,11 +1253,11 @@ final class ModalTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Launch modal</button>
-            <div id="modal" class="modal fade" aria-labelledby="modalLabel" aria-hidden="true" tabindex="-1">
+            <div aria-labelledby="modalLabel" aria-hidden="true" class="modal fade" tabindex="-1" id="modal">
             <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
             <div class="modal-content">
             <div class="modal-header">
-            <H5 id="modalLabel" class="modal-title">Modal title</H5>
+            <H5 class="modal-title" id="modalLabel">Modal title</H5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
