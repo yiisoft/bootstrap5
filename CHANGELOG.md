@@ -2,7 +2,7 @@
 
 ## 1.1.1 under development
 
-- no changes in this release.
+- Enh #305: Add `tabIndex()` method to `Button` widget (@Mister-42)
 
 ## 1.1.0 March 06, 2026
 

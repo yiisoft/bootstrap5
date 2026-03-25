@@ -726,4 +726,18 @@ final class ButtonTest extends TestCase
                 ->render(),
         );
     }
+
+    public function testTabIndex(): void
+    {
+        Assert::equalsWithoutLE(
+            <<<HTML
+            <button type="button" class="btn btn-secondary" tabindex="42">Send</button>
+            HTML,
+            Button::widget()
+                ->id(false)
+                ->label('Send')
+                ->tabIndex(42)
+                ->render(),
+        );
+    }
 }
