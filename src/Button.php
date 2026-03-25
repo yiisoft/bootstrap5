@@ -506,7 +506,7 @@ final class Button extends Widget
     {
         $new = clone $this;
         $new->tag = match ($type) {
-            ButtonType::LINK => A::tag(),
+            ButtonType::LINK => (new A()),
             ButtonType::RESET => ButtonTag::reset(''),
             ButtonType::RESET_INPUT => Input::resetButton(),
             ButtonType::SUBMIT => ButtonTag::submit(''),
@@ -562,7 +562,7 @@ final class Button extends Widget
     {
         $attributes = $this->attributes;
         $classes = $attributes['class'] ?? null;
-        $tag = $this->tag ?? ButtonTag::tag()->button('');
+        $tag = $this->tag ?? (new ButtonTag())->button('');
 
         unset($attributes['class'], $attributes['id']);
 

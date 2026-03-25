@@ -567,7 +567,7 @@ final class Alert extends Widget
 
         $content = preg_replace("/\n{2}/", "\n", $content) ?? '';
 
-        return Div::tag()->addAttributes($attributes)->content($content)->encode(false)->id($this->getId())->render();
+        return (new Div())->addAttributes($attributes)->content($content)->encode(false)->id($this->getId())->render();
     }
 
     /**

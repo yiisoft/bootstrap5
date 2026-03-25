@@ -246,7 +246,7 @@ final class ProgressStack extends Widget
             $content .= $bar->stacked()->render() . "\n";
         }
 
-        return Div::tag()
+        return (new Div())
             ->attributes($attributes)
             ->addClass(
                 self::PROGRESS_STACKED,

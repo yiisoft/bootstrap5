@@ -345,7 +345,7 @@ final class NavBar extends Widget
      * $navBar->brandImage('path/to/image.png');
      *
      * // or
-     * $navBar->brandImage(Img::tag()->src('path/to/image.png'));
+     * $navBar->brandImage((new Img())->src('path/to/image.png'));
      * ```
      */
     public function brandImage(string|Stringable $image): self
@@ -839,7 +839,7 @@ final class NavBar extends Widget
         $togglerTag = Button::button('')
             ->addAttributes($togglerAttributes)
             ->addClass(self::NAV_TOGGLE, $togglerClasses)
-            ->addContent("\n", Span::tag()->addClass(self::NAV_TOGGLE_ICON), "\n")
+            ->addContent("\n", (new Span())->addClass(self::NAV_TOGGLE_ICON), "\n")
             ->encode(false);
 
         if (array_key_exists('data-bs-toggle', $togglerAttributes) === false) {

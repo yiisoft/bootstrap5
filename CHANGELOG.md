@@ -2,7 +2,7 @@
 
 ## 1.1.1 under development
 
-- no changes in this release.
+- Enh #306: Raise `yiisoft/html` version to `^3.13 || ^4.0` (@vjik)
 
 ## 1.1.0 March 06, 2026
 

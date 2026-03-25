@@ -696,13 +696,13 @@ final class Offcanvas extends Widget
 
         Html::addCssClass($titleAttributes, [self::TITLE_CLASS]);
 
-        return Div::tag()
+        return (new Div())
             ->attributes($headerAttributes)
             ->content(
                 "\n",
                 Html::tag('h5', $this->title, $titleAttributes),
                 "\n",
-                Button::tag()
+                (new Button())
                     ->attributes(
                         [
                             'aria-label' => 'Close',
