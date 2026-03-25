@@ -29,7 +29,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" data-id="123" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -59,7 +59,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start test-class bg-primary" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -74,7 +74,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start test-class bg-primary test-class-1 test-class-2" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -98,7 +98,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" style="color: red;" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -113,7 +113,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" style="color: red; font-weight: bold;" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -137,7 +137,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" style="color: red;" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -152,7 +152,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" style="color: red;" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -170,7 +170,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" data-id="123" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label"></h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -197,7 +197,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary test-class bg-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label"></h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -212,7 +212,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary test-class bg-primary test-class-1 test-class-2" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label"></h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -235,7 +235,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" style="color: red;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label"></h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -250,7 +250,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" style="color: red; font-weight: bold;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label"></h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -273,7 +273,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" style="color: red;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label"></h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -288,7 +288,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" style="color: red;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label"></h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -306,7 +306,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" data-id="123" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label"></h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -329,7 +329,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start test-class" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -353,7 +353,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvas" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">Toggle Offcanvas</button>
             <div id="offcanvas" class="offcanvas offcanvas-start" aria-labelledby="offcanvas-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvas-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvas-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body" data-id="123">
@@ -383,7 +383,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasScrolling" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling">Enable body scrolling</button>
             <div id="offcanvasScrolling" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" aria-labelledby="offcanvasScrolling-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasScrolling-label" class="offcanvas-title">Offcanvas with body scrolling</h5>
+            <h5 class="offcanvas-title" id="offcanvasScrolling-label">Offcanvas with body scrolling</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -412,7 +412,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasWithBothOptions" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions">Enable both scrolling &amp; backdrop</button>
             <div id="offcanvasWithBothOptions" class="offcanvas offcanvas-start" data-bs-scroll="true" aria-labelledby="offcanvasWithBothOptions-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasWithBothOptions-label" class="offcanvas-title">Backdrop with scrolling</h5>
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptions-label">Backdrop with scrolling</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -439,7 +439,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start custom-class another-class bg-primary" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -464,7 +464,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start custom-class another-class bg-primary" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header" data-id="123">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -489,7 +489,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -544,7 +544,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasBottom" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">Toggle bottom offcanvas</button>
             <div id="offcanvasBottom" class="offcanvas offcanvas-bottom" aria-labelledby="offcanvasBottom-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasBottom-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasBottom-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -652,7 +652,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -857,7 +857,7 @@ final class OffcanvasTest extends TestCase
             <<<HTML
             <div id="offcanvas" class="offcanvas offcanvas-start show" aria-labelledby="offcanvas-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvas-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvas-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -913,7 +913,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Custom title</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Custom title</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -936,7 +936,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title" data-id="123">Custom title</h5>
+            <h5 data-id="123" class="offcanvas-title" id="offcanvasExample-label">Custom title</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -1034,7 +1034,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -1057,7 +1057,7 @@ final class OffcanvasTest extends TestCase
             <button type="button" class="btn btn-primary" data-id="123" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label">Offcanvas</h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -1081,7 +1081,7 @@ final class OffcanvasTest extends TestCase
             <button class="btn btn-primary">Toggle offcanvas</button>
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
+            <h5 class="offcanvas-title" id="offcanvasExample-label"></h5>
             <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">

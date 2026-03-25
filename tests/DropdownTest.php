@@ -1741,7 +1741,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown" data-bs-theme="light">
-            <button type="button" id="dropdownLight" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Light dropdown</button>
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownLight">Light dropdown</button>
             <ul class="dropdown-menu" aria-labelledby="dropdownLight">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1776,7 +1776,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown" data-bs-theme="dark">
-            <button type="button" id="dropdownDark" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dark dropdown</button>
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownDark">Dark dropdown</button>
             <ul class="dropdown-menu" aria-labelledby="dropdownDark">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -2087,7 +2087,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" id="test-id" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="test-id">Dropdown button</button>
             <ul class="dropdown-menu" aria-labelledby="test-id">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -2117,7 +2117,7 @@ final class DropdownTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="dropdown">
-            <button type="button" id="test-id" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="test-id">Dropdown button</button>
             <ul class="dropdown-menu" aria-labelledby="test-id">
             <li>
             <a class="dropdown-item" href="#">Action</a>

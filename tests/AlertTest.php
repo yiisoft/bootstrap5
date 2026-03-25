@@ -26,7 +26,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" data-id="123" role="alert">
+            <div data-id="123" role="alert" class="alert alert-secondary">
             Body
             </div>
             HTML,
