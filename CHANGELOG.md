@@ -3,7 +3,7 @@
 ## 1.1.1 under development
 
 - Enh #306: Raise `yiisoft/html` version to `^3.13 || ^4.0` (@vjik)
-- Enh #305: Add `tabIndex()` method to `Button` widget (@Mister-42)
+- New #305: Add `tabIndex()` method to `Button` widget (@Mister-42)
 
 ## 1.1.0 March 06, 2026
 
