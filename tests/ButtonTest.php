@@ -731,7 +731,7 @@ final class ButtonTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-secondary" tabindex="42">Send</button>
+            <button type="button" tabindex="42" class="btn btn-secondary">Send</button>
             HTML,
             Button::widget()
                 ->id(false)
