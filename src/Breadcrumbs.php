@@ -407,7 +407,7 @@ final class Breadcrumbs extends Widget
         }
 
 
-        return Nav::tag()
+        return (new Nav())
             ->addAttributes($attributes)
             ->addClass(...$this->cssClasses)
             ->content("\n", $this->renderList(), "\n")
@@ -493,7 +493,7 @@ final class Breadcrumbs extends Widget
             $itemsAttributes['aria-current'] = 'page';
         }
 
-        return Li::tag()
+        return (new Li())
             ->addAttributes($itemsAttributes)
             ->addClass(
                 self::ITEM_NAME,
@@ -519,7 +519,7 @@ final class Breadcrumbs extends Widget
 
         return match ($url) {
             null => $label,
-            default => A::tag()
+            default => (new A())
                 ->attributes($this->linkAttributes)
                 ->addAttributes($breadcrumbLink->getAttributes())
                 ->content($label)

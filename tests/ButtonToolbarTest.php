@@ -25,8 +25,8 @@ final class ButtonToolbarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" data-id="123" role="toolbar">
-            <div class="btn-group" role="group">
+            <div data-id="123" role="toolbar" class="btn-toolbar">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -69,8 +69,8 @@ final class ButtonToolbarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar test-class bg-primary" role="toolbar">
-            <div class="btn-group" role="group">
+            <div role="toolbar" class="btn-toolbar test-class bg-primary">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -83,8 +83,8 @@ final class ButtonToolbarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar test-class bg-primary test-class-1 test-class-2" role="toolbar">
-            <div class="btn-group" role="group">
+            <div role="toolbar" class="btn-toolbar test-class bg-primary test-class-1 test-class-2">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -114,8 +114,8 @@ final class ButtonToolbarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" style="color: red;" role="toolbar">
-            <div class="btn-group" role="group">
+            <div style="color: red;" role="toolbar" class="btn-toolbar">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -128,8 +128,8 @@ final class ButtonToolbarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" style="color: red; font-weight: bold;" role="toolbar">
-            <div class="btn-group" role="group">
+            <div style="color: red; font-weight: bold;" role="toolbar" class="btn-toolbar">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -159,8 +159,8 @@ final class ButtonToolbarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" style="color: red;" role="toolbar">
-            <div class="btn-group" role="group">
+            <div style="color: red;" role="toolbar" class="btn-toolbar">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -173,8 +173,8 @@ final class ButtonToolbarTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" style="color: red;" role="toolbar">
-            <div class="btn-group" role="group">
+            <div style="color: red;" role="toolbar" class="btn-toolbar">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -190,8 +190,8 @@ final class ButtonToolbarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" aria-label="Toolbar with button groups" role="toolbar">
-            <div class="btn-group" role="group">
+            <div aria-label="Toolbar with button groups" role="toolbar" class="btn-toolbar">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -220,8 +220,8 @@ final class ButtonToolbarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" data-id="123" role="toolbar">
-            <div class="btn-group" role="group">
+            <div data-id="123" role="toolbar" class="btn-toolbar">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -250,8 +250,8 @@ final class ButtonToolbarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar custom-class another-class bg-primary" role="toolbar">
-            <div class="btn-group" role="group">
+            <div role="toolbar" class="btn-toolbar custom-class another-class bg-primary">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -281,8 +281,8 @@ final class ButtonToolbarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test-id" class="btn-toolbar" role="toolbar">
-            <div class="btn-group" role="group">
+            <div role="toolbar" class="btn-toolbar" id="test-id">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -310,8 +310,8 @@ final class ButtonToolbarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" role="toolbar">
-            <div class="btn-group" role="group">
+            <div role="toolbar" class="btn-toolbar">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -339,8 +339,8 @@ final class ButtonToolbarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" role="toolbar">
-            <div class="btn-group" role="group">
+            <div role="toolbar" class="btn-toolbar">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -368,8 +368,8 @@ final class ButtonToolbarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test-id" class="btn-toolbar" role="toolbar">
-            <div class="btn-group" role="group">
+            <div role="toolbar" class="btn-toolbar" id="test-id">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
@@ -417,19 +417,19 @@ final class ButtonToolbarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" aria-label="Toolbar with button groups" role="toolbar">
-            <div class="btn-group me-2" aria-label="First group" role="group">
+            <div aria-label="Toolbar with button groups" role="toolbar" class="btn-toolbar">
+            <div aria-label="First group" role="group" class="btn-group me-2">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
             <button type="button" class="btn btn-primary">4</button>
             </div>
-            <div class="btn-group me-2" aria-label="Second group" role="group">
+            <div aria-label="Second group" role="group" class="btn-group me-2">
             <button type="button" class="btn btn-secondary">5</button>
             <button type="button" class="btn btn-secondary">6</button>
             <button type="button" class="btn btn-secondary">7</button>
             </div>
-            <div class="btn-group" aria-label="Third group" role="group">
+            <div aria-label="Third group" role="group" class="btn-group">
             <button type="button" class="btn btn-info">8</button>
             </div>
             </div>
@@ -480,16 +480,16 @@ final class ButtonToolbarTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-toolbar" aria-label="Toolbar with button groups" role="toolbar">
-            <div class="btn-group me-2" aria-label="First group" role="group">
+            <div aria-label="Toolbar with button groups" role="toolbar" class="btn-toolbar">
+            <div aria-label="First group" role="group" class="btn-group me-2">
             <button type="button" class="btn btn-primary">1</button>
             <button type="button" class="btn btn-primary">2</button>
             <button type="button" class="btn btn-primary">3</button>
             <button type="button" class="btn btn-primary">4</button>
             </div>
             <div class="input-group">
-            <div id="btnGroupAddon" class="input-group-text">@</div>
-            <input class="form-control" aria-label="Input group example" aria-describedby="btnGroupAddon" placeholder="Input group example">
+            <div class="input-group-text" id="btnGroupAddon">@</div>
+            <input aria-label="Input group example" aria-describedby="btnGroupAddon" placeholder="Input group example" class="form-control">
             </div>
             </div>
             HTML,

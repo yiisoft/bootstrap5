@@ -452,7 +452,7 @@ final class Progress extends Widget
             $attributes['style'] = 'width: ' . $this->percent . '%';
         }
 
-        return Div::tag()
+        return (new Div())
             ->attributes($attributes)
             ->addClass(
                 self::NAME,
@@ -505,7 +505,7 @@ final class Progress extends Widget
             $barAttributes['style'] = 'width: ' . $this->percent . '%';
         }
 
-        $renderBar = Div::tag()
+        $renderBar = (new Div())
             ->attributes($barAttributes)
             ->addClass(self::PROGRESS_BAR, ...$this->barClasses)
             ->addClass($barClasses)

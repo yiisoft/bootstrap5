@@ -21,8 +21,8 @@ final class ProgressStackTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="progress-stacked" data-id="123">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div data-id="123" class="progress-stacked">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -45,7 +45,7 @@ final class ProgressStackTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="progress-stacked test-class bg-primary">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -56,7 +56,7 @@ final class ProgressStackTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="progress-stacked test-class bg-primary test-class-1 test-class-2">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -74,8 +74,8 @@ final class ProgressStackTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="progress-stacked" style="color: red;">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="color: red;" class="progress-stacked">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -85,8 +85,8 @@ final class ProgressStackTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="progress-stacked" style="color: red; font-weight: bold;">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="color: red; font-weight: bold;" class="progress-stacked">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -104,8 +104,8 @@ final class ProgressStackTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="progress-stacked" style="color: red;">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="color: red;" class="progress-stacked">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -115,8 +115,8 @@ final class ProgressStackTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="progress-stacked" style="color: red;">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="color: red;" class="progress-stacked">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -129,8 +129,8 @@ final class ProgressStackTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="progress-stacked" data-id="123">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div data-id="123" class="progress-stacked">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -148,7 +148,7 @@ final class ProgressStackTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="progress-stacked test-class">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -166,7 +166,7 @@ final class ProgressStackTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="progress-stacked custom-class another-class bg-primary">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -184,8 +184,8 @@ final class ProgressStackTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test-id" class="progress-stacked">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-stacked" id="test-id">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -199,7 +199,7 @@ final class ProgressStackTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="progress-stacked">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -213,7 +213,7 @@ final class ProgressStackTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="progress-stacked">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -227,7 +227,7 @@ final class ProgressStackTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div id="test-id" class="progress-stacked">
-            <div class="progress" style="width: 0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div style="width: 0%" class="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar"></div>
             </div>
             </div>
@@ -258,13 +258,13 @@ final class ProgressStackTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div class="progress-stacked">
-            <div id="segment-one" class="progress" aria-label="Segment one" style="width: 15%" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+            <div aria-label="Segment one" style="width: 15%" class="progress" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" id="segment-one">
             <div class="progress-bar"></div>
             </div>
-            <div id="segment-two" class="progress" aria-label="Segment two" style="width: 30%" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+            <div aria-label="Segment two" style="width: 30%" class="progress" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" id="segment-two">
             <div class="progress-bar bg-success"></div>
             </div>
-            <div id="segment-three" class="progress" aria-label="Segment three" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+            <div aria-label="Segment three" style="width: 20%" class="progress" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" id="segment-three">
             <div class="progress-bar bg-info"></div>
             </div>
             </div>

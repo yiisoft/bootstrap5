@@ -23,13 +23,13 @@ use function is_string;
  *
  * ```php
  * <?= Modal::widget()
- *         ->body(P::tag()->content('Modal body text goes here.'))
+ *         ->body((new P())->content('Modal body text goes here.'))
  *         ->footer(
- *             Button::tag()
+ *             (new Button())
  *                 ->addClass('btn btn-secondary')
  *                 ->attribute('data-bs-dismiss', 'modal')
  *                 ->content('Close'),
- *             Button::tag()
+ *             (new Button())
  *                 ->addClass('btn btn-primary')
  *                 ->content('Save changes'),
  *         )
@@ -595,7 +595,7 @@ final class Modal extends Widget
             throw new InvalidArgumentException('Set the trigger button before rendering the modal.');
         }
 
-        $modal = Div::tag()
+        $modal = (new Div())
             ->addAttributes($attributes)
             ->addClass(
                 self::NAME,
@@ -639,7 +639,7 @@ final class Modal extends Widget
 
         unset($bodyAttributes['class']);
 
-        return Div::tag()
+        return (new Div())
             ->addAttributes($bodyAttributes)
             ->addClass(
                 self::MODAL_BODY,
@@ -662,7 +662,7 @@ final class Modal extends Widget
 
         Html::addCssClass($contentAttributes, [self::MODAL_CONTENT, $contentClasses]);
 
-        return Div::tag()
+        return (new Div())
             ->addAttributes($contentAttributes)
             ->addClass(
                 self::MODAL_CONTENT,
@@ -688,7 +688,7 @@ final class Modal extends Widget
 
         unset($dialogAttributes['class']);
 
-        return Div::tag()
+        return (new Div())
             ->addAttributes($dialogAttributes)
             ->addClass(
                 self::MODAL_DIALOG,
@@ -712,7 +712,7 @@ final class Modal extends Widget
 
         unset($headerAttributes['class']);
 
-        return Div::tag()
+        return (new Div())
             ->addAttributes($headerAttributes)
             ->addClass(
                 self::MODAL_HEADER,
@@ -735,7 +735,7 @@ final class Modal extends Widget
 
         unset($footerAttributes['class']);
 
-        return Div::tag()
+        return (new Div())
             ->addAttributes($footerAttributes)
             ->addClass(
                 self::MODAL_FOOTER,

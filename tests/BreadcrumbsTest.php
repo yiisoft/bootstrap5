@@ -26,7 +26,7 @@ final class BreadcrumbsTest extends TestCase
             <nav aria-label="Basic example of breadcrumbs">
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
+            <li aria-current="page" class="breadcrumb-item active"><a href="#">Library</a></li>
             <li class="breadcrumb-item"><a href="#">Data</a></li>
             </ol>
             </nav>
@@ -66,7 +66,7 @@ final class BreadcrumbsTest extends TestCase
             <nav data-id="123" aria-label="Basic example of breadcrumbs">
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
+            <li aria-current="page" class="breadcrumb-item active"><a href="#">Library</a></li>
             <li class="breadcrumb-item"><a href="#">Data</a></li>
             </ol>
             </nav>
@@ -98,10 +98,10 @@ final class BreadcrumbsTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav class="test-class bg-primary" aria-label="Basic example of breadcrumbs">
+            <nav aria-label="Basic example of breadcrumbs" class="test-class bg-primary">
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
+            <li aria-current="page" class="breadcrumb-item active"><a href="#">Library</a></li>
             <li class="breadcrumb-item"><a href="#">Data</a></li>
             </ol>
             </nav>
@@ -111,10 +111,10 @@ final class BreadcrumbsTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav class="test-class bg-primary test-class-1 test-class-2" aria-label="Basic example of breadcrumbs">
+            <nav aria-label="Basic example of breadcrumbs" class="test-class bg-primary test-class-1 test-class-2">
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
+            <li aria-current="page" class="breadcrumb-item active"><a href="#">Library</a></li>
             <li class="breadcrumb-item"><a href="#">Data</a></li>
             </ol>
             </nav>
@@ -140,7 +140,7 @@ final class BreadcrumbsTest extends TestCase
             <nav style="color: red;" aria-label="Basic example of breadcrumbs">
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
+            <li aria-current="page" class="breadcrumb-item active"><a href="#">Library</a></li>
             <li class="breadcrumb-item"><a href="#">Data</a></li>
             </ol>
             </nav>
@@ -153,7 +153,7 @@ final class BreadcrumbsTest extends TestCase
             <nav style="color: red; font-weight: bold;" aria-label="Basic example of breadcrumbs">
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
+            <li aria-current="page" class="breadcrumb-item active"><a href="#">Library</a></li>
             <li class="breadcrumb-item"><a href="#">Data</a></li>
             </ol>
             </nav>
@@ -179,7 +179,7 @@ final class BreadcrumbsTest extends TestCase
             <nav style="color: red;" aria-label="Basic example of breadcrumbs">
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
+            <li aria-current="page" class="breadcrumb-item active"><a href="#">Library</a></li>
             <li class="breadcrumb-item"><a href="#">Data</a></li>
             </ol>
             </nav>
@@ -192,7 +192,7 @@ final class BreadcrumbsTest extends TestCase
             <nav style="color: red;" aria-label="Basic example of breadcrumbs">
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">Library</a></li>
+            <li aria-current="page" class="breadcrumb-item active"><a href="#">Library</a></li>
             <li class="breadcrumb-item"><a href="#">Data</a></li>
             </ol>
             </nav>
@@ -209,7 +209,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -233,7 +233,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -257,7 +257,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -277,11 +277,11 @@ final class BreadcrumbsTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <nav class="custom-class another-class bg-primary" aria-label="breadcrumb">
+            <nav aria-label="breadcrumb" class="custom-class another-class bg-primary">
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -306,7 +306,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">&lt;b&gt;Data&lt;/b&gt;</li>
+            <li aria-current="page" class="breadcrumb-item active">&lt;b&gt;Data&lt;/b&gt;</li>
             </ol>
             </nav>
             HTML,
@@ -329,7 +329,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><b>Data</b></li>
+            <li aria-current="page" class="breadcrumb-item active"><b>Data</b></li>
             </ol>
             </nav>
             HTML,
@@ -355,7 +355,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -407,7 +407,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item test-active-class" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item test-active-class">Data</li>
             </ol>
             </nav>
             HTML,
@@ -431,7 +431,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item test-item-class"><a href="/">Home</a></li>
             <li class="breadcrumb-item test-item-class"><a href="#">Library</a></li>
-            <li class="breadcrumb-item test-item-class active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item test-item-class active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -455,7 +455,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a class="test-link-class" href="/">Home</a></li>
             <li class="breadcrumb-item"><a class="test-link-class" href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -477,9 +477,9 @@ final class BreadcrumbsTest extends TestCase
             <<<HTML
             <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="test-link-class" href="/" data-test="test">Home</a></li>
+            <li class="breadcrumb-item"><a class="test-link-class" data-test="test" href="/">Home</a></li>
             <li class="breadcrumb-item"><a class="test-link-class" href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -503,7 +503,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb test-list-class">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -524,10 +524,10 @@ final class BreadcrumbsTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <nav aria-label="breadcrumb">
-            <ol id="test-id" class="breadcrumb">
+            <ol class="breadcrumb" id="test-id">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -550,7 +550,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -573,7 +573,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -593,10 +593,10 @@ final class BreadcrumbsTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <nav aria-label="breadcrumb">
-            <ol id="test-id" class="breadcrumb">
+            <ol class="breadcrumb" id="test-id">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,
@@ -619,7 +619,7 @@ final class BreadcrumbsTest extends TestCase
             <footer class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </footer>
             </nav>
             HTML,
@@ -666,7 +666,7 @@ final class BreadcrumbsTest extends TestCase
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li aria-current="page" class="breadcrumb-item active">Data</li>
             </ol>
             </nav>
             HTML,

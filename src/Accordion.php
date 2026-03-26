@@ -520,7 +520,7 @@ final class Accordion extends Widget
 
         $id = $this->getId();
 
-        return Div::tag()
+        return (new Div())
             ->addAttributes($attributes)
             ->addClass(self::NAME, $classes, ...$this->cssClasses)
             ->addContent("\n", $this->renderItems($id), "\n")
@@ -569,14 +569,14 @@ final class Accordion extends Widget
 
         unset($bodyAttributes['class'], $collapseAttributes['class']);
 
-        return Div::tag()
+        return (new Div())
             ->attribute('data-bs-parent', $this->alwaysOpen ? null : '#' . $parentId)
             ->addAttributes($collapseAttributes)
             ->addClass(self::CLASS_COLLAPSE, $accordionItem->isActive() ? 'show' : null, $classesCollapseAttributes)
             ->id($collapseId)
             ->addContent(
                 "\n",
-                Div::tag()
+                (new Div())
                     ->addAttributes($bodyAttributes)
                     ->addClass(self::CLASS_BODY, $classesBodyAttributes)
                     ->addContent("\n", $accordionItem->getBody(), "\n")
@@ -658,7 +658,7 @@ final class Accordion extends Widget
         /** @psalm-var non-empty-string $collapseId */
         $collapseId = $accordionItem->getId();
 
-        return Div::tag()->addClass(self::CLASS_ITEM)
+        return (new Div())->addClass(self::CLASS_ITEM)
             ->addContent(
                 "\n",
                 $this->renderHeader($accordionItem, $collapseId),

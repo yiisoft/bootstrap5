@@ -357,12 +357,12 @@ final class Collapse extends Widget
 
         foreach ($this->items as $item) {
             if ($item->getContent() !== '') {
-                $collapseDiv = Div::tag()
+                $collapseDiv = (new Div())
                     ->addClass(self::NAME, ...$this->cssClasses)
                     ->addAttributes($this->attributes)
                     ->addContent(
                         "\n",
-                        Div::tag()
+                        (new Div())
                             ->addAttributes($this->cardBodyAttributes)
                             ->addClass(self::CARD, self::CARD_BODY)
                             ->addContent(
@@ -378,7 +378,7 @@ final class Collapse extends Widget
                     $collapseDiv = $collapseDiv->addClass(self::COLLAPSE_MULTIPLE);
 
                     if ($item->getTogglerMultiple() === false) {
-                        $collapse[] = Div::tag()->addClass('col')->addContent("\n", $collapseDiv, "\n");
+                        $collapse[] = (new Div())->addClass('col')->addContent("\n", $collapseDiv, "\n");
                     }
                 } else {
                     $collapse[] = $collapseDiv;
@@ -403,7 +403,7 @@ final class Collapse extends Widget
         $collapseContent = implode("\n", $collapse);
 
         return $this->container
-            ? Div::tag()
+            ? (new Div())
                 ->addAttributes($this->containerAttributes)
                 ->addContent("\n", $collapseContent, "\n")
                 ->encode(false)

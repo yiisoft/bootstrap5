@@ -27,10 +27,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" data-id="123" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div data-id="123" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -57,10 +57,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start test-class bg-primary" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start test-class bg-primary" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -72,10 +72,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start test-class bg-primary test-class-1 test-class-2" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start test-class bg-primary test-class-1 test-class-2" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -96,10 +96,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" style="color: red;" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div style="color: red;" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -111,10 +111,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" style="color: red; font-weight: bold;" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div style="color: red; font-weight: bold;" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -135,10 +135,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" style="color: red;" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div style="color: red;" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -150,10 +150,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" style="color: red;" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div style="color: red;" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -167,11 +167,11 @@ final class OffcanvasTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-primary" data-id="123" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <button type="button" data-id="123" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -195,10 +195,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary test-class bg-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -210,10 +210,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary test-class bg-primary test-class-1 test-class-2" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -232,11 +232,11 @@ final class OffcanvasTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-primary" style="color: red;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <button type="button" style="color: red;" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -247,11 +247,11 @@ final class OffcanvasTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-primary" style="color: red; font-weight: bold;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <button type="button" style="color: red; font-weight: bold;" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -270,11 +270,11 @@ final class OffcanvasTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-primary" style="color: red;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <button type="button" style="color: red;" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -285,11 +285,11 @@ final class OffcanvasTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-primary" style="color: red;" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <button type="button" style="color: red;" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -304,10 +304,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggler</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" data-id="123" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div data-id="123" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -327,10 +327,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start test-class" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start test-class" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -351,12 +351,12 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvas" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">Toggle Offcanvas</button>
-            <div id="offcanvas" class="offcanvas offcanvas-start" aria-labelledby="offcanvas-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvas-label" id="offcanvas" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvas-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
-            <div class="offcanvas-body" data-id="123">
+            <div data-id="123" class="offcanvas-body">
             Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
             </div>
             </div>
@@ -381,10 +381,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasScrolling" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling">Enable body scrolling</button>
-            <div id="offcanvasScrolling" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" aria-labelledby="offcanvasScrolling-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" aria-labelledby="offcanvasScrolling-label" id="offcanvasScrolling" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasScrolling-label" class="offcanvas-title">Offcanvas with body scrolling</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <p>Try scrolling the rest of the page to see this option in action.</p>
@@ -410,10 +410,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasWithBothOptions" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions">Enable both scrolling &amp; backdrop</button>
-            <div id="offcanvasWithBothOptions" class="offcanvas offcanvas-start" data-bs-scroll="true" aria-labelledby="offcanvasWithBothOptions-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" aria-labelledby="offcanvasWithBothOptions-label" id="offcanvasWithBothOptions" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasWithBothOptions-label" class="offcanvas-title">Backdrop with scrolling</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <p>Try scrolling the rest of the page to see this option in action.</p>
@@ -437,10 +437,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start custom-class another-class bg-primary" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start custom-class another-class bg-primary" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -462,10 +462,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start custom-class another-class bg-primary" aria-labelledby="offcanvasExample-label" tabindex="-1">
-            <div class="offcanvas-header" data-id="123">
+            <div class="offcanvas offcanvas-start custom-class another-class bg-primary" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
+            <div data-id="123" class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -490,7 +490,7 @@ final class OffcanvasTest extends TestCase
             <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -542,10 +542,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasBottom" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">Toggle bottom offcanvas</button>
-            <div id="offcanvasBottom" class="offcanvas offcanvas-bottom" aria-labelledby="offcanvasBottom-label" tabindex="-1">
+            <div class="offcanvas offcanvas-bottom" aria-labelledby="offcanvasBottom-label" id="offcanvasBottom" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasBottom-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -569,10 +569,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasEnd" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd">Toggle end offcanvas</button>
-            <div id="offcanvasEnd" class="offcanvas offcanvas-end" aria-labelledby="offcanvasEnd-label" tabindex="-1">
+            <div class="offcanvas offcanvas-end" aria-labelledby="offcanvasEnd-label" id="offcanvasEnd" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasEnd-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -596,10 +596,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasStart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasStart">Toggle start offcanvas</button>
-            <div id="offcanvasStart" class="offcanvas offcanvas-start" aria-labelledby="offcanvasStart-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasStart-label" id="offcanvasStart" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasStart-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -623,10 +623,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasTop" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">Toggle top offcanvas</button>
-            <div id="offcanvasTop" class="offcanvas offcanvas-top" aria-labelledby="offcanvasTop-label" tabindex="-1">
+            <div class="offcanvas offcanvas-top" aria-labelledby="offcanvasTop-label" id="offcanvasTop" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasTop-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -650,10 +650,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <div>
@@ -706,10 +706,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasResponsive" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive">Toggle offcanvas on small devices</button>
-            <div id="offcanvasResponsive" class="offcanvas-sm offcanvas-end" aria-labelledby="offcanvasResponsive-label" tabindex="-1">
+            <div class="offcanvas-sm offcanvas-end" aria-labelledby="offcanvasResponsive-label" id="offcanvasResponsive" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasResponsive-label" class="offcanvas-title">Offcanvas on small devices</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <p>On small devices this will take up the entire screen.</p>
@@ -736,10 +736,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasResponsive" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive">Toggle offcanvas on medium devices</button>
-            <div id="offcanvasResponsive" class="offcanvas-md offcanvas-end" aria-labelledby="offcanvasResponsive-label" tabindex="-1">
+            <div class="offcanvas-md offcanvas-end" aria-labelledby="offcanvasResponsive-label" id="offcanvasResponsive" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasResponsive-label" class="offcanvas-title">Offcanvas on medium devices</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <p>On medium devices this will take up the entire screen.</p>
@@ -766,10 +766,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasResponsive" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive">Toggle offcanvas on large devices</button>
-            <div id="offcanvasResponsive" class="offcanvas-lg offcanvas-end" aria-labelledby="offcanvasResponsive-label" tabindex="-1">
+            <div class="offcanvas-lg offcanvas-end" aria-labelledby="offcanvasResponsive-label" id="offcanvasResponsive" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasResponsive-label" class="offcanvas-title">Offcanvas on large devices</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <p>On large devices this will take up the entire screen.</p>
@@ -796,10 +796,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasResponsive" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive">Toggle offcanvas on extra large devices</button>
-            <div id="offcanvasResponsive" class="offcanvas-xl offcanvas-end" aria-labelledby="offcanvasResponsive-label" tabindex="-1">
+            <div class="offcanvas-xl offcanvas-end" aria-labelledby="offcanvasResponsive-label" id="offcanvasResponsive" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasResponsive-label" class="offcanvas-title">Offcanvas on extra large devices</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <p>On extra large devices this will take up the entire screen.</p>
@@ -826,10 +826,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasResponsive" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive">Toggle offcanvas on extra extra large devices</button>
-            <div id="offcanvasResponsive" class="offcanvas-xxl offcanvas-end" aria-labelledby="offcanvasResponsive-label" tabindex="-1">
+            <div class="offcanvas-xxl offcanvas-end" aria-labelledby="offcanvasResponsive-label" id="offcanvasResponsive" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasResponsive-label" class="offcanvas-title">Offcanvas on extra extra large devices</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <p>On extra extra large devices this will take up the entire screen.</p>
@@ -855,10 +855,10 @@ final class OffcanvasTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="offcanvas" class="offcanvas offcanvas-start show" aria-labelledby="offcanvas-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start show" aria-labelledby="offcanvas-label" id="offcanvas" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvas-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
@@ -885,10 +885,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="staticBackdrop" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop">Toggle static offcanvas</button>
-            <div id="staticBackdrop" class="offcanvas offcanvas-start" data-bs-backdrop="static" aria-labelledby="staticBackdrop-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" aria-labelledby="staticBackdrop-label" id="staticBackdrop" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="staticBackdrop-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <div>I will not close if you click outside of me.</div>
@@ -911,10 +911,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Custom title</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -934,10 +934,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Button with data-bs-target</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
-            <h5 id="offcanvasExample-label" class="offcanvas-title" data-id="123">Custom title</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <h5 data-id="123" id="offcanvasExample-label" class="offcanvas-title">Custom title</h5>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -961,10 +961,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasDark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark">Toggle dark offcanvas</button>
-            <div id="offcanvasDark" class="offcanvas offcanvas-start" data-bs-theme="dark" aria-labelledby="offcanvasDark-label" tabindex="-1">
+            <div data-bs-theme="dark" class="offcanvas offcanvas-start" aria-labelledby="offcanvasDark-label" id="offcanvasDark" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasDark-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <div>Dark offcanvas content.</div>
@@ -990,10 +990,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasLight" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLight">Toggle light offcanvas</button>
-            <div id="offcanvasLight" class="offcanvas offcanvas-start" data-bs-theme="light" aria-labelledby="offcanvasLight-label" tabindex="-1">
+            <div data-bs-theme="light" class="offcanvas offcanvas-start" aria-labelledby="offcanvasLight-label" id="offcanvasLight" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasLight-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             <div>Light offcanvas content.</div>
@@ -1032,10 +1032,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button type="button" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -1054,11 +1054,11 @@ final class OffcanvasTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" class="btn btn-primary" data-id="123" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <button type="button" data-id="123" class="btn btn-primary" aria-controls="offcanvasExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title">Offcanvas</h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>
@@ -1079,10 +1079,10 @@ final class OffcanvasTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <button class="btn btn-primary">Toggle offcanvas</button>
-            <div id="offcanvasExample" class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" tabindex="-1">
+            <div class="offcanvas offcanvas-start" aria-labelledby="offcanvasExample-label" id="offcanvasExample" tabindex="-1">
             <div class="offcanvas-header">
             <h5 id="offcanvasExample-label" class="offcanvas-title"></h5>
-            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
             </div>
             <div class="offcanvas-body">
             </div>

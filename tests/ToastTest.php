@@ -27,7 +27,7 @@ final class ToastTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="toast" data-id="123" role="alert" aria-live="assertive" aria-atomic="true">
+            <div data-id="123" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-body">
             Hello, world! This is a toast message.
             </div>
@@ -77,7 +77,7 @@ final class ToastTest extends TestCase
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
             <strong class="me-auto">Bootstrap</strong>
-            <button type="button" class="btn-close" data-id="123" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button data-id="123" class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -106,7 +106,7 @@ final class ToastTest extends TestCase
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
             <strong class="me-auto">Bootstrap</strong>
-            <button type="button" class="test-class bg-primary btn-close test-class bg-primary" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="test-class bg-primary btn-close test-class bg-primary" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -121,7 +121,7 @@ final class ToastTest extends TestCase
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
             <strong class="me-auto">Bootstrap</strong>
-            <button type="button" class="test-class bg-primary test-class-1 test-class-2 btn-close test-class bg-primary test-class-1 test-class-2" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="test-class bg-primary test-class-1 test-class-2 btn-close test-class bg-primary test-class-1 test-class-2" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -145,7 +145,7 @@ final class ToastTest extends TestCase
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
             <strong class="me-auto">Bootstrap</strong>
-            <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button style="color: red;" class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -160,7 +160,7 @@ final class ToastTest extends TestCase
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
             <strong class="me-auto">Bootstrap</strong>
-            <button type="button" class="btn-close" style="color: red; font-weight: bold;" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button style="color: red; font-weight: bold;" class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -184,7 +184,7 @@ final class ToastTest extends TestCase
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
             <strong class="me-auto">Bootstrap</strong>
-            <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button style="color: red;" class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -199,7 +199,7 @@ final class ToastTest extends TestCase
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
             <strong class="me-auto">Bootstrap</strong>
-            <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button style="color: red;" class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -216,7 +216,7 @@ final class ToastTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="toast" style="color: red;" role="alert" aria-live="assertive" aria-atomic="true">
+            <div style="color: red;" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-body">
             Hello, world! This is a toast message.
             </div>
@@ -227,7 +227,7 @@ final class ToastTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="toast" style="color: red; font-weight: bold;" role="alert" aria-live="assertive" aria-atomic="true">
+            <div style="color: red; font-weight: bold;" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-body">
             Hello, world! This is a toast message.
             </div>
@@ -243,7 +243,7 @@ final class ToastTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="toast" style="color: red;" role="alert" aria-live="assertive" aria-atomic="true">
+            <div style="color: red;" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-body">
             Hello, world! This is a toast message.
             </div>
@@ -254,7 +254,7 @@ final class ToastTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="toast" style="color: red;" role="alert" aria-live="assertive" aria-atomic="true">
+            <div style="color: red;" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-body">
             Hello, world! This is a toast message.
             </div>
@@ -268,7 +268,7 @@ final class ToastTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="toast" data-id="123" role="alert" aria-live="assertive" aria-atomic="true">
+            <div data-id="123" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-body">
             Hello, world! This is a toast message.
             </div>
@@ -309,10 +309,10 @@ final class ToastTest extends TestCase
             <<<HTML
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -400,10 +400,10 @@ final class ToastTest extends TestCase
             <<<HTML
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">Close</button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close">Close</button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -427,7 +427,7 @@ final class ToastTest extends TestCase
             <<<HTML
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small>11 mins ago</small>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">Close</button>
@@ -460,10 +460,10 @@ final class ToastTest extends TestCase
             <div class="toast-container position-fixed bottom-0 end-0 p-3">
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -521,10 +521,10 @@ final class ToastTest extends TestCase
             <<<HTML
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header test-class">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -546,7 +546,7 @@ final class ToastTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test-id" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="test-id">
             <div class="toast-body">
             Hello, world! This is a toast message.
             </div>
@@ -604,10 +604,10 @@ final class ToastTest extends TestCase
             <<<HTML
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img src="https://example.com/150" alt="Bootstrap5" class="rounded me-2">
             <strong class="me-auto">Bootstrap</strong>
             <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -658,12 +658,12 @@ final class ToastTest extends TestCase
             <<<HTML
             <button type="button" id="liveToastBtn" class="btn btn-primary">Show live toast</button>
             <div class="toast-container position-fixed bottom-0 end-0 p-3">
-            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="liveToast">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -693,10 +693,10 @@ final class ToastTest extends TestCase
             <<<HTML
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small class="text-muted bg-primary">11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -719,10 +719,10 @@ final class ToastTest extends TestCase
             <<<HTML
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small class="text-muted">11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -745,10 +745,10 @@ final class ToastTest extends TestCase
             <<<HTML
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto bg-primary">Tailwind</strong>
             <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -771,10 +771,10 @@ final class ToastTest extends TestCase
             <<<HTML
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Tailwind</strong>
             <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -800,10 +800,10 @@ final class ToastTest extends TestCase
             <<<HTML
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small class="text-body-secondary">11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -826,12 +826,12 @@ final class ToastTest extends TestCase
             <<<HTML
             <button type="button" id="liveToastBtn" class="btn btn-primary">Show notification</button>
             <div class="toast-container position-fixed bottom-0 end-0 p-3">
-            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="liveToast">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.
@@ -854,14 +854,14 @@ final class ToastTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <button type="button" id="liveToastBtn" class="btn btn-danger">Show notification</button>
+            <button type="button" class="btn btn-danger" id="liveToastBtn">Show notification</button>
             <div class="toast-container position-fixed bottom-0 end-0 p-3">
-            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="liveToast">
             <div class="toast-header">
-            <img class="rounded me-2" src="https://example.com/150" alt="Bootstrap5">
+            <img class="rounded me-2" alt="Bootstrap5" src="https://example.com/150">
             <strong class="me-auto">Bootstrap</strong>
             <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button class="btn-close" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
             Hello, world! This is a toast message.

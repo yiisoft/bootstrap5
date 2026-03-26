@@ -299,7 +299,7 @@ final class ButtonGroup extends Widget
             return '';
         }
 
-        return Div::tag()
+        return (new Div())
             ->attributes($attributes)
             ->attribute('role', 'group')
             ->addClass(

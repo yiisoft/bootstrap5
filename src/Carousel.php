@@ -26,9 +26,9 @@ use function implode;
  * <?= Carousel::widget()
  *         ->id('carouselExample')
  *         ->items(
- *             CarouselItem::to(Img::tag()->alt('First slide')->src('image-1.jpg'), active: true),
- *             CarouselItem::to(Img::tag()->alt('Second slide')->src('image-2.jpg')),
- *             CarouselItem::to(Img::tag()->alt('Third slide')->src('image-3.jpg')),
+ *             CarouselItem::to((new Img())->alt('First slide')->src('image-1.jpg'), active: true),
+ *             CarouselItem::to((new Img())->alt('Second slide')->src('image-2.jpg')),
+ *             CarouselItem::to((new Img())->alt('Third slide')->src('image-3.jpg')),
  *         )
  * ?>
  * ```
@@ -409,9 +409,9 @@ final class Carousel extends Widget
      * Example usage:
      * ```php
      * $carousel->items(
-     *     CarouselItem::to(Img::tag()->alt('First slide')->src('image-1.jpg'), active: true),
-     *     CarouselItem::to(Img::tag()->alt('Second slide')->src('image-2.jpg')),
-     *     CarouselItem::to(Img::tag()->alt('Third slide')->src('image-3.jpg')),
+     *     CarouselItem::to((new Img())->alt('First slide')->src('image-1.jpg'), active: true),
+     *     CarouselItem::to((new Img())->alt('Second slide')->src('image-2.jpg')),
+     *     CarouselItem::to((new Img())->alt('Third slide')->src('image-3.jpg')),
      * );
      */
     public function items(CarouselItem ...$items): self
@@ -498,7 +498,7 @@ final class Carousel extends Widget
 
         Html::addCssClass($attributes, [self::NAME, self::CLASS_SLIDE, $classes, ...$this->cssClasses]);
 
-        return Div::tag()
+        return (new Div())
             ->attributes($attributes)
             ->addContent(
                 "\n",
@@ -549,12 +549,12 @@ final class Carousel extends Widget
             ->addClass(self::CLASS_CAROUSEL_CONTROL_NEXT)
             ->addContent(
                 "\n",
-                Span::tag()
+                (new Span())
                     ->addAttributes(['aria-hidden' => 'true'])
                     ->addClass(self::CLASS_CAROUSEL_CONTROL_NEXT_ICON)
                     ->render(),
                 "\n",
-                Span::tag()->addClass('visually-hidden')->addContent($this->controlNextLabel)->render(),
+                (new Span())->addClass('visually-hidden')->addContent($this->controlNextLabel)->render(),
                 "\n",
             )
             ->encode(false)
@@ -580,12 +580,12 @@ final class Carousel extends Widget
             ->addClass(self::CLASS_CAROUSEL_CONTROL_PREV)
             ->addContent(
                 "\n",
-                Span::tag()
+                (new Span())
                     ->addAttributes(['aria-hidden' => 'true'])
                     ->addClass(self::CLASS_CAROUSEL_CONTROL_PREV_ICON)
                     ->render(),
                 "\n",
-                Span::tag()->addClass('visually-hidden')->addContent($this->controlPreviousLabel)->render(),
+                (new Span())->addClass('visually-hidden')->addContent($this->controlPreviousLabel)->render(),
                 "\n",
             )
             ->encode(false)
@@ -643,7 +643,7 @@ final class Carousel extends Widget
                 );
             }
 
-            $captionContainerTag = Div::tag()
+            $captionContainerTag = (new Div())
                 ->addClass(self::CLASS_CAROUSEL_CAPTION)
                 ->addContent(
                     "\n",
@@ -658,7 +658,7 @@ final class Carousel extends Widget
                 ) . "\n";
         }
 
-        return Div::tag()
+        return (new Div())
             ->addClass(
                 self::CLASS_CAROUSEL_ITEM,
                 $carouselItem->isActive() || $active ? 'active' : null,
@@ -704,7 +704,7 @@ final class Carousel extends Widget
         }
 
         if ($this->showIndicators) {
-            $renderIndicators = Div::tag()
+            $renderIndicators = (new Div())
                 ->addClass(self::CLASS_CAROUSEL_INDICATORS)
                 ->addContent("\n" . implode("\n", $indicators) . "\n")
                 ->encode(false)
@@ -712,7 +712,7 @@ final class Carousel extends Widget
         }
 
         return $renderIndicators
-            . Div::tag()
+            . (new Div())
                 ->addClass(self::CLASS_CAROUSEL_INNER)
                 ->addContent("\n" . implode("\n", $items) . "\n")
                 ->encode(false)

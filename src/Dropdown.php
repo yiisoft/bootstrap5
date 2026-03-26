@@ -492,7 +492,7 @@ final class Dropdown extends Widget
      * Example usage:
      * ```php
      * $dropdown->toggler(
-     *     Button::tag()
+     *     (new Button())
      *         ->addAttributes(
      *             [
      *                 'data-bs-toggle' => 'dropdown',
@@ -773,7 +773,7 @@ final class Dropdown extends Widget
         $renderItems = $this->renderItems($togglerId);
 
         return match ($this->container) {
-            true => Div::tag()
+            true => (new Div())
                 ->addAttributes($attributes)
                 ->addClass(...$containerClasses)
                 ->addClass($classes)
@@ -835,7 +835,7 @@ final class Dropdown extends Widget
      */
     private function renderItemButton(DropdownItem $item): Li
     {
-        return Li::tag()
+        return (new Li())
             ->addAttributes($item->getAttributes())
             ->addContent(
                 "\n",
@@ -856,11 +856,11 @@ final class Dropdown extends Widget
      */
     private function renderItemDivider(DropdownItem $item): Li
     {
-        return Li::tag()
+        return (new Li())
             ->addAttributes($item->getAttributes())
             ->addContent(
                 "\n",
-                Hr::tag()->addAttributes($item->getItemAttributes())->addClass(self::DROPDOWN_ITEM_DIVIDER_CLASS),
+                (new Hr())->addAttributes($item->getItemAttributes())->addClass(self::DROPDOWN_ITEM_DIVIDER_CLASS),
                 "\n",
             );
     }
@@ -874,7 +874,7 @@ final class Dropdown extends Widget
      */
     private function renderItemHeader(DropdownItem $item): Li
     {
-        return Li::tag()
+        return (new Li())
             ->addAttributes($item->getAttributes())
             ->addContent(
                 "\n",
@@ -908,11 +908,11 @@ final class Dropdown extends Widget
             $itemAttributes['aria-disabled'] = 'true';
         }
 
-        return Li::tag()
+        return (new Li())
             ->addAttributes($item->getAttributes())
             ->addContent(
                 "\n",
-                A::tag()->addAttributes($itemAttributes)->content($item->getContent())->url($item->getUrl()),
+                (new A())->addAttributes($itemAttributes)->content($item->getContent())->url($item->getUrl()),
                 "\n",
             );
     }
@@ -926,7 +926,7 @@ final class Dropdown extends Widget
      */
     private function renderListContentItem(DropdownItem $item): Li
     {
-        return Li::tag()
+        return (new Li())
             ->addAttributes($item->getAttributes())
             ->addContent("\n", $item->getContent(), "\n")
             ->encode(false);
@@ -941,11 +941,11 @@ final class Dropdown extends Widget
      */
     private function renderItemText(DropdownItem $item): Li
     {
-        return Li::tag()
+        return (new Li())
             ->addAttributes($item->getAttributes())
             ->addContent(
                 "\n",
-                Span::tag()
+                (new Span())
                     ->addAttributes($item->getItemAttributes())
                     ->addClass(self::DROPDOWN_ITEM_TEXT_CLASS)
                     ->content($item->getContent())
@@ -973,7 +973,7 @@ final class Dropdown extends Widget
             }
         }
 
-        $ulTag = Ul::tag()
+        $ulTag = (new Ul())
             ->addAttributes(['aria-labelledby' => $togglerId])
             ->addClass(self::DROPDOWN_LIST_CLASS, ...$this->alignmentClasses)
             ->items(...$items);
@@ -998,7 +998,7 @@ final class Dropdown extends Widget
 
         $togglerContent = match ($this->togglerSplit) {
             true => "\n"
-                . Span::tag()
+                . (new Span())
                     ->addContent($this->togglerContent)
                     ->addClass(self::DROPDOWN_TOGGLER_SPAN_CLASS)
                     ->render()
@@ -1051,7 +1051,7 @@ final class Dropdown extends Widget
      */
     private function renderTogglerLink(array $togglerAttributes, string $togglerContent): string
     {
-        return A::tag()
+        return (new A())
             ->addAttributes($togglerAttributes)
             ->attribute('role', 'button')
             ->attribute('data-bs-toggle', 'dropdown')
@@ -1070,7 +1070,7 @@ final class Dropdown extends Widget
     private function renderTogglerSplit(): string
     {
         if ($this->togglerLink) {
-            return A::tag()
+            return (new A())
                 ->addAttributes(['role' => 'button'])
                 ->addClass(
                     self::DROPDOWN_TOGGLER_BUTTON_CLASS,

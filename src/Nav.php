@@ -486,7 +486,7 @@ final class Nav extends Widget
         }
 
         $html = $this->tag === ''
-            ? Ul::tag()->addAttributes($attributes)->id($id)->items(...$this->renderItems())->render()
+            ? (new Ul())->addAttributes($attributes)->id($id)->items(...$this->renderItems())->render()
             : Html::tag($this->tag)
                 ->addAttributes($attributes)
                 ->addContent("\n", implode("\n", $this->createLinks()), "\n")
@@ -506,7 +506,7 @@ final class Nav extends Widget
     private function createLink(NavLink $item): A|Button
     {
         $attributes = $item->getUrlAttributes();
-        $tag = A::tag()->href($item->getUrl());
+        $tag = (new A())->href($item->getUrl());
 
         Html::addCssClass($attributes, [self::NAV_LINK_CLASS]);
 
@@ -524,7 +524,7 @@ final class Nav extends Widget
         }
 
         if ($item->hasContent()) {
-            $tag = Button::tag()->type('button');
+            $tag = (new Button())->type('button');
             $paneId = $item->getId();
 
             $attributes['id'] = $paneId;
@@ -672,7 +672,7 @@ final class Nav extends Widget
             $togglerClasses[] = self::NAV_LINK_ACTIVE_CLASS;
         }
 
-        return Li::tag()
+        return (new Li())
             ->addClass(...$this->dropdownCssClasses, ...$dropDownItems->getCssClasses())
             ->addContent(
                 "\n",
@@ -703,7 +703,7 @@ final class Nav extends Widget
             $attributes['role'] = 'presentation';
         }
 
-        return Li::tag()->addAttributes($attributes)->addContent("\n", $this->createLink($item), "\n");
+        return (new Li())->addAttributes($attributes)->addContent("\n", $this->createLink($item), "\n");
     }
 
     /**
@@ -730,7 +730,7 @@ final class Nav extends Widget
         Html::addCssClass($paneAttributes, ['widget' => 'tab-content']);
 
         return "\n"
-            . Div::tag()
+            . (new Div())
                 ->addAttributes($paneAttributes)
                 ->content("\n" . implode("\n", $panes) . "\n")
                 ->encode(false)
@@ -764,7 +764,7 @@ final class Nav extends Widget
             );
         }
 
-        return Div::tag()
+        return (new Div())
             ->attributes($paneAttributes)
             ->addAttributes(
                 [

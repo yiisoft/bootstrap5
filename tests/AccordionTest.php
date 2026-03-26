@@ -22,14 +22,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion" data-id="123">
+            <div data-id="123" class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -58,14 +58,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion test-class bg-primary">
+            <div class="accordion test-class bg-primary" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -78,14 +78,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion test-class bg-primary test-class-1 test-class-2">
+            <div class="accordion test-class bg-primary test-class-1 test-class-2" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -106,14 +106,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion" style="color: red;">
+            <div style="color: red;" class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -126,14 +126,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion" style="color: red; font-weight: bold;">
+            <div style="color: red; font-weight: bold;" class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -154,14 +154,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion" style="color: red;">
+            <div style="color: red;" class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -174,14 +174,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion" style="color: red;">
+            <div style="color: red;" class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -197,14 +197,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
-            <button type="button" class="accordion-button collapsed" data-id="123" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            <button type="button" data-id="123" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -231,14 +231,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed test-class bg-primary" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -251,14 +251,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed test-class bg-primary test-class-1 test-class-2" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -279,14 +279,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
-            <button type="button" class="accordion-button collapsed" style="color: red;" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            <button type="button" style="color: red;" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -299,14 +299,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
-            <button type="button" class="accordion-button collapsed" style="color: red; font-weight: bold;" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            <button type="button" style="color: red; font-weight: bold;" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -327,14 +327,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
-            <button type="button" class="accordion-button collapsed" style="color: red;" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            <button type="button" style="color: red;" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -347,14 +347,14 @@ final class AccordionTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
-            <button type="button" class="accordion-button collapsed" style="color: red;" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            <button type="button" style="color: red;" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -370,14 +370,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion" data-id="123">
+            <div data-id="123" class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -399,14 +399,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion test-class">
+            <div class="accordion test-class" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -431,14 +431,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="true" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse show">
+            <div class="accordion-collapse collapse show" id="accordion-1">
             <div class="accordion-body">
             <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -450,7 +450,7 @@ final class AccordionTest extends TestCase
             Accordion Item #2
             </button>
             </h2>
-            <div id="accordion-2" class="accordion-collapse collapse">
+            <div class="accordion-collapse collapse" id="accordion-2">
             <div class="accordion-body">
             <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -462,7 +462,7 @@ final class AccordionTest extends TestCase
             Accordion Item #3
             </button>
             </h2>
-            <div id="accordion-3" class="accordion-collapse collapse">
+            <div class="accordion-collapse collapse" id="accordion-3">
             <div class="accordion-body">
             <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -514,14 +514,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body test-class">
             This is the first item's accordion body.
             </div>
@@ -543,14 +543,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion custom-class another-class bg-primary">
+            <div class="accordion custom-class another-class bg-primary" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -573,14 +573,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse test-class" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse test-class" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -605,14 +605,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion accordion-flush">
+            <div class="accordion accordion-flush" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -624,7 +624,7 @@ final class AccordionTest extends TestCase
             Accordion Item #2
             </button>
             </h2>
-            <div id="accordion-2" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-2">
             <div class="accordion-body">
             <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -636,7 +636,7 @@ final class AccordionTest extends TestCase
             Accordion Item #3
             </button>
             </h2>
-            <div id="accordion-3" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-3">
             <div class="accordion-body">
             <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -690,14 +690,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="true" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse show" id="accordion-1">
             <div class="accordion-body">
             <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -709,7 +709,7 @@ final class AccordionTest extends TestCase
             Accordion Item #2
             </button>
             </h2>
-            <div id="accordion-2" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-2">
             <div class="accordion-body">
             <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -721,7 +721,7 @@ final class AccordionTest extends TestCase
             Accordion Item #3
             </button>
             </h2>
-            <div id="accordion-3" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-3">
             <div class="accordion-body">
             <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -773,14 +773,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header test-class">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -802,14 +802,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h3 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h3>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -831,14 +831,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test-id" class="accordion">
+            <div class="accordion" id="test-id">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#test-id">
+            <div data-bs-parent="#test-id" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -866,7 +866,7 @@ final class AccordionTest extends TestCase
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#test-id">
+            <div data-bs-parent="#test-id" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -912,14 +912,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -931,7 +931,7 @@ final class AccordionTest extends TestCase
             Accordion Item #2
             </button>
             </h2>
-            <div id="accordion-2" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse show" id="accordion-2">
             <div class="accordion-body">
             This is the second item's accordion body.
             </div>
@@ -962,14 +962,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="true" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse show" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -981,7 +981,7 @@ final class AccordionTest extends TestCase
             Accordion Item #2
             </button>
             </h2>
-            <div id="accordion-2" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse show" id="accordion-2">
             <div class="accordion-body">
             This is the second item's accordion body.
             </div>
@@ -1013,14 +1013,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             &lt;strong&gt;Accordion Item #1&lt;/strong&gt;
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             &lt;strong&gt;This is the first item's accordion body.&lt;/strong&gt;
             </div>
@@ -1045,14 +1045,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             <strong>Accordion Item #1</strong>
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             <strong>This is the first item's accordion body.</strong>
             </div>
@@ -1082,14 +1082,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="true" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse show" id="accordion-1">
             <div class="accordion-body">
             <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -1101,7 +1101,7 @@ final class AccordionTest extends TestCase
             Accordion Item #2
             </button>
             </h2>
-            <div id="accordion-2" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-2">
             <div class="accordion-body">
             <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -1113,7 +1113,7 @@ final class AccordionTest extends TestCase
             Accordion Item #3
             </button>
             </h2>
-            <div id="accordion-3" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-3">
             <div class="accordion-body">
             <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.  These classes control the overall appearance, as well as the showing and hiding via CSS transitions.  You can modify any of this with custom CSS or overriding our default variables.  It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
@@ -1221,14 +1221,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed btn-lg" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -1250,14 +1250,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
-            <button type="button" class="accordion-button collapsed" aria-controls="custom-value" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false">
+            <button type="button" aria-controls="custom-value" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -1279,14 +1279,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -1308,14 +1308,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
-            <button type="button" class="accordion-button collapsed" aria-expanded="custom-value" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-controls="accordion-1">
+            <button type="button" aria-expanded="custom-value" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -1337,14 +1337,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -1366,14 +1366,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
-            <button type="button" class="accordion-button collapsed" data-bs-target="custom-value" data-bs-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">
+            <button type="button" data-bs-target="custom-value" class="accordion-button collapsed" data-bs-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -1395,14 +1395,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -1424,14 +1424,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
-            <button type="button" class="accordion-button collapsed" data-bs-toggle="custom-value" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
+            <button type="button" data-bs-toggle="custom-value" class="accordion-button collapsed" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -1453,14 +1453,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <button type="button" class="accordion-button collapsed" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </button>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>
@@ -1482,14 +1482,14 @@ final class AccordionTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="accordion">
+            <div class="accordion" id="accordion">
             <div class="accordion-item">
             <h2 class="accordion-header">
             <my-custom-tag class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-1" aria-expanded="false" aria-controls="accordion-1">
             Accordion Item #1
             </my-custom-tag>
             </h2>
-            <div id="accordion-1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+            <div data-bs-parent="#accordion" class="accordion-collapse collapse" id="accordion-1">
             <div class="accordion-body">
             This is the first item's accordion body.
             </div>

@@ -25,7 +25,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" data-id="123" role="group">
+            <div data-id="123" role="group" class="btn-group">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -53,7 +53,7 @@ final class ButtonGroupTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group test-class bg-primary" role="group">
+            <div role="group" class="btn-group test-class bg-primary">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -63,7 +63,7 @@ final class ButtonGroupTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group test-class bg-primary test-class-1 test-class-2" role="group">
+            <div role="group" class="btn-group test-class bg-primary test-class-1 test-class-2">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -84,7 +84,7 @@ final class ButtonGroupTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" style="color: red;" role="group">
+            <div style="color: red;" role="group" class="btn-group">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -94,7 +94,7 @@ final class ButtonGroupTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" style="color: red; font-weight: bold;" role="group">
+            <div style="color: red; font-weight: bold;" role="group" class="btn-group">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -115,7 +115,7 @@ final class ButtonGroupTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" style="color: red;" role="group">
+            <div style="color: red;" role="group" class="btn-group">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -125,7 +125,7 @@ final class ButtonGroupTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" style="color: red;" role="group">
+            <div style="color: red;" role="group" class="btn-group">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -138,7 +138,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" data-id="123" role="group">
+            <div data-id="123" role="group" class="btn-group">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -158,7 +158,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group test-class" role="group">
+            <div role="group" class="btn-group test-class">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -181,10 +181,10 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test" class="btn-group" aria-label="Basic checkbox toggle button group" role="group">
-            <input type="checkbox" id="btncheck1" class="btn-check" autocomplete="off"> <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
-            <input type="checkbox" id="btncheck2" class="btn-check" autocomplete="off"> <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
-            <input type="checkbox" id="btncheck3" class="btn-check" autocomplete="off"> <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+            <div aria-label="Basic checkbox toggle button group" role="group" class="btn-group" id="test">
+            <input autocomplete="off" class="btn-check" id="btncheck1" type="checkbox"> <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+            <input autocomplete="off" class="btn-check" id="btncheck2" type="checkbox"> <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+            <input autocomplete="off" class="btn-check" id="btncheck3" type="checkbox"> <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
             </div>
             HTML,
             ButtonGroup::widget()
@@ -218,10 +218,10 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test" class="btn-group" aria-label="Basic radio toggle button group" role="group">
-            <input type="radio" id="btnradio1" class="btn-check" autocomplete="off"> <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
-            <input type="radio" id="btnradio2" class="btn-check" autocomplete="off"> <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
-            <input type="radio" id="btnradio3" class="btn-check" autocomplete="off"> <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+            <div aria-label="Basic radio toggle button group" role="group" class="btn-group" id="test">
+            <input autocomplete="off" class="btn-check" id="btnradio1" type="radio"> <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+            <input autocomplete="off" class="btn-check" id="btnradio2" type="radio"> <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+            <input autocomplete="off" class="btn-check" id="btnradio3" type="radio"> <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
             </div>
             HTML,
             ButtonGroup::widget()
@@ -252,7 +252,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group custom-class another-class bg-primary" role="group">
+            <div role="group" class="btn-group custom-class another-class bg-primary">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -273,7 +273,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test" class="btn-group" role="group">
+            <div role="group" class="btn-group" id="test">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -292,7 +292,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" role="group">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -311,7 +311,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" role="group">
+            <div role="group" class="btn-group">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -330,7 +330,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test-id" class="btn-group" role="group">
+            <div role="group" class="btn-group" id="test-id">
             <button type="button" class="btn btn-secondary">Button B</button>
             <button type="button" class="btn btn-primary">Button A</button>
             </div>
@@ -369,7 +369,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group btn-lg" aria-label="Large button group" role="group">
+            <div aria-label="Large button group" role="group" class="btn-group btn-lg">
             <button type="button" class="btn btn-outline-dark">Left</button>
             <button type="button" class="btn btn-outline-dark">Middle</button>
             <button type="button" class="btn btn-outline-dark">Right</button>
@@ -395,7 +395,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" aria-label="Normal button group" role="group">
+            <div aria-label="Normal button group" role="group" class="btn-group">
             <button type="button" class="btn btn-outline-light">Left</button>
             <button type="button" class="btn btn-outline-light">Middle</button>
             <button type="button" class="btn btn-outline-light">Right</button>
@@ -421,7 +421,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group btn-lg" aria-label="Basic example" role="group">
+            <div aria-label="Basic example" role="group" class="btn-group btn-lg">
             <button type="button" class="btn btn-primary">Left</button>
             <button type="button" class="btn btn-primary">Middle</button>
             <button type="button" class="btn btn-primary">Right</button>
@@ -452,7 +452,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" aria-label="Basic mixed styles example" role="group">
+            <div aria-label="Basic mixed styles example" role="group" class="btn-group">
             <button type="button" class="btn btn-danger">Left</button>
             <button type="button" class="btn btn-warning">Middle</button>
             <button type="button" class="btn btn-success">Right</button>
@@ -477,7 +477,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group" aria-label="Basic outlined styles example" role="group">
+            <div aria-label="Basic outlined styles example" role="group" class="btn-group">
             <button type="button" class="btn btn-outline-primary">Left</button>
             <button type="button" class="btn btn-outline-secondary">Middle</button>
             <button type="button" class="btn btn-outline-success">Right</button>
@@ -502,7 +502,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group btn-sm" aria-label="Small button group" role="group">
+            <div aria-label="Small button group" role="group" class="btn-group btn-sm">
             <button type="button" class="btn btn-outline-dark">Left</button>
             <button type="button" class="btn btn-outline-dark">Middle</button>
             <button type="button" class="btn btn-outline-dark">Right</button>
@@ -528,7 +528,7 @@ final class ButtonGroupTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="btn-group btn-group-vertical" aria-label="Vertical button group" role="group">
+            <div aria-label="Vertical button group" role="group" class="btn-group btn-group-vertical">
             <button type="button" class="btn btn-dark">Top</button>
             <button type="button" class="btn btn-dark">Middle</button>
             <button type="button" class="btn btn-dark">Bottom</button>

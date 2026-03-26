@@ -26,7 +26,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" data-id="123" role="alert">
+            <div data-id="123" role="alert" class="alert alert-secondary">
             Body
             </div>
             HTML,
@@ -40,7 +40,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary test-class bg-primary" role="alert">
+            <div role="alert" class="alert alert-secondary test-class bg-primary">
             Body
             </div>
             HTML,
@@ -49,7 +49,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary test-class bg-primary test-class-1 test-class-2" role="alert">
+            <div role="alert" class="alert alert-secondary test-class bg-primary test-class-1 test-class-2">
             Body
             </div>
             HTML,
@@ -61,7 +61,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible" id="accordion">
             Body
             <button type="button" class="btn-close" data-id="123" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -85,7 +85,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible" id="accordion">
             Body
             <button type="button" class="btn-close test-class bg-primary" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -95,7 +95,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible" id="accordion">
             Body
             <button type="button" class="btn-close test-class bg-primary test-class-1 test-class-2" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -114,7 +114,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible" id="accordion">
             Body
             <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -124,7 +124,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible" id="accordion">
             Body
             <button type="button" class="btn-close" style="color: red; font-weight: bold;" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -143,7 +143,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible" id="accordion">
             Body
             <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -153,7 +153,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="accordion" class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible" id="accordion">
             Body
             <button type="button" class="btn-close" style="color: red;" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -168,7 +168,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" style="color: red;" role="alert">
+            <div style="color: red;" role="alert" class="alert alert-secondary">
             Body
             </div>
             HTML,
@@ -177,7 +177,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" style="color: red; font-weight: bold;" role="alert">
+            <div style="color: red; font-weight: bold;" role="alert" class="alert alert-secondary">
             Body
             </div>
             HTML,
@@ -191,7 +191,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" style="color: red;" role="alert">
+            <div style="color: red;" role="alert" class="alert alert-secondary">
             Body
             </div>
             HTML,
@@ -200,7 +200,7 @@ final class AlertTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" style="color: red;" role="alert">
+            <div style="color: red;" role="alert" class="alert alert-secondary">
             Body
             </div>
             HTML,
@@ -212,7 +212,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" data-id="123" role="alert">
+            <div data-id="123" role="alert" class="alert alert-secondary">
             Body
             </div>
             HTML,
@@ -224,7 +224,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary test-class" role="alert">
+            <div role="alert" class="alert alert-secondary test-class">
             Body
             </div>
             HTML,
@@ -236,7 +236,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" role="alert">
+            <div role="alert" class="alert alert-secondary">
             <body>
             </div>
             HTML,
@@ -248,7 +248,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" role="alert">
+            <div role="alert" class="alert alert-secondary">
             &lt;body&gt;
             </div>
             HTML,
@@ -260,7 +260,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary custom-class another-class bg-primary" role="alert">
+            <div role="alert" class="alert alert-secondary custom-class another-class bg-primary">
             Body
             </div>
             HTML,
@@ -280,7 +280,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible fade show">
             <strong>Holy guacamole!</strong> You should check in on some of those fields below.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -298,7 +298,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible">
             Body
             <button type="button" class="btn-close btn-lg" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
@@ -316,7 +316,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible">
             Body
             <button type="button" class="btn-close" aria-label="Close alert" data-bs-dismiss="alert"></button>
             </div>
@@ -334,7 +334,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible">
             Body
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
@@ -352,7 +352,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible">
             Body
             <button type="button" class="btn-close" data-bs-dismiss="my-component" aria-label="Close"></button>
             </div>
@@ -370,7 +370,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible">
             Body
             <button type="button" class="btn-close" aria-label="Close"></button>
             </div>
@@ -388,7 +388,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible">
             Body
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">Close</button>
             </div>
@@ -406,7 +406,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible">
             Body
             <my-custom-tag class="btn-close" data-bs-dismiss="alert" aria-label="Close"></my-custom-tag>
             </div>
@@ -419,7 +419,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" role="alert">
+            <div role="alert" class="alert alert-secondary">
             <h5 class="header-class alert-heading">Alert header</h5>
             Body
             </div>
@@ -438,7 +438,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" role="alert">
+            <div role="alert" class="alert alert-secondary">
             <h5 class="header-class alert-heading"><header></h5>
             Body
             </div>
@@ -457,7 +457,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" role="alert">
+            <div role="alert" class="alert alert-secondary">
             <h5 class="header-class alert-heading">&lt;header&gt;</h5>
             Body
             </div>
@@ -476,7 +476,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test-id" class="alert alert-secondary" role="alert">
+            <div role="alert" class="alert alert-secondary" id="test-id">
             Body
             </div>
             HTML,
@@ -488,7 +488,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" role="alert">
+            <div role="alert" class="alert alert-secondary">
             Body
             </div>
             HTML,
@@ -500,7 +500,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary" role="alert">
+            <div role="alert" class="alert alert-secondary">
             Body
             </div>
             HTML,
@@ -512,7 +512,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div id="test-id" class="alert alert-secondary" role="alert">
+            <div role="alert" class="alert alert-secondary" id="test-id">
             Body
             </div>
             HTML,
@@ -555,7 +555,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-warning" role="alert">
+            <div role="alert" class="alert alert-warning">
             A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
             </div>
             HTML,
@@ -578,7 +578,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary d-flex align-items-center" role="alert">
+            <div role="alert" class="alert alert-secondary d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
             <div>An example alert with an icon</div>
             </div>
@@ -601,7 +601,7 @@ final class AlertTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <div class="alert alert-secondary alert-dismissible" role="alert">
+            <div role="alert" class="alert alert-secondary alert-dismissible">
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             Body
             </div>

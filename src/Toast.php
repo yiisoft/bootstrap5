@@ -294,7 +294,7 @@ final class Toast extends Widget
     {
         $new = clone $this;
         $new->body = is_string($content)
-            ? Div::tag()
+            ? (new Div())
                 ->addAttributes($attributes)
                 ->addClass(
                     self::TOAST_BODY,
@@ -482,7 +482,7 @@ final class Toast extends Widget
     {
         $new = clone $this;
         $new->image = is_string($content)
-            ? Img::tag()->addAttributes($attributes)->alt($alt)->src($content)->render()
+            ? (new Img())->addAttributes($attributes)->alt($alt)->src($content)->render()
             : (string) $content;
 
         return $new;
@@ -517,7 +517,7 @@ final class Toast extends Widget
     {
         $new = clone $this;
         $new->time = is_string($content)
-            ? Small::tag()->addAttributes($attributes)->addClass(...$class)->content($content)->render()
+            ? (new Small())->addAttributes($attributes)->addClass(...$class)->content($content)->render()
             : (string) $content;
 
         return $new;
@@ -552,7 +552,7 @@ final class Toast extends Widget
     {
         $new = clone $this;
         $new->title = is_string($content)
-            ? Strong::tag()
+            ? (new Strong())
                 ->addAttributes($attributes)
                 ->addClass(
                     self::TOAST_TITLE_HEADER,
@@ -606,7 +606,7 @@ final class Toast extends Widget
         }
 
         return match ($this->container) {
-            true => $this->triggerButton . Div::tag()
+            true => $this->triggerButton . (new Div())
                 ->addClass(self::TOAST_CONTAINER)
                 ->content(
                     "\n",
@@ -645,7 +645,7 @@ final class Toast extends Widget
         $closeButtonAttributes = $this->closeButtonAttributes;
         $closeButtonClasses = $closeButtonAttributes['class'] ?? null;
 
-        $closeButtonTag = Button::tag()
+        $closeButtonTag = (new Button())
             ->addAttributes($closeButtonAttributes)
             ->addClass(self::CLASS_CLOSE_BUTTON, $closeButtonClasses)
             ->content($this->closeButton)
@@ -691,7 +691,7 @@ final class Toast extends Widget
             return '';
         }
 
-        return Div::tag()
+        return (new Div())
             ->addAttributes($headerAttributes)
             ->addClass(
                 self::TOAST_HEADER,
@@ -728,7 +728,7 @@ final class Toast extends Widget
 
         $content = preg_replace("/\n{2}/", "\n", $content) ?? '';
 
-        return Div::tag()
+        return (new Div())
             ->addAttributes($attributes)
             ->addClass(
                 self::NAME,

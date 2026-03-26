@@ -20,10 +20,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="collapse" data-id="123">
+            <div class="collapse" data-id="123" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -46,10 +46,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="collapse test-class bg-primary">
+            <div class="collapse test-class bg-primary" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -62,10 +62,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="collapse test-class bg-primary test-class-1 test-class-2">
+            <div class="collapse test-class bg-primary test-class-1 test-class-2" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -85,10 +85,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="collapse" style="color: red;">
+            <div class="collapse" style="color: red;" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -101,10 +101,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="collapse" style="color: red; font-weight: bold;">
+            <div class="collapse" style="color: red; font-weight: bold;" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -124,10 +124,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="collapse" style="color: red;">
+            <div class="collapse" style="color: red;" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -140,10 +140,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="collapse" style="color: red;">
+            <div class="collapse" style="color: red;" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -159,10 +159,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="collapse" data-id="123">
+            <div class="collapse" data-id="123" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -181,10 +181,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="test-class">
+            <div class="test-class" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -203,10 +203,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="collapse custom-class another-class bg-primary">
+            <div class="collapse custom-class another-class bg-primary" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -226,10 +226,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div style="min-height: 120px;">
-            <div id="collapseExample" class="collapse">
+            <div class="collapse" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -248,9 +248,9 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
-            <div id="collapseExample" class="collapse">
+            <div class="collapse" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -271,12 +271,12 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p class="d-inline-flex gap-1">
-            <a class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Link with href</a>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-bs-target</button>
+            <a data-bs-toggle="collapse" data-bs-target="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary">Link with href</a>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary">Button with data-bs-target</button>
             </p>
             <div>
             <div class="col">
-            <div id="collapseExample" class="collapse multi-collapse">
+            <div class="collapse multi-collapse" id="collapseExample">
             <div class="card card-body">
             Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
             </div>
@@ -311,11 +311,11 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Toggle width collapse</button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary">Toggle width collapse</button>
             </p>
             <div style="min-height: 120px;">
-            <div id="collapseExample" class="collapse collapse-horizontal">
-            <div class="card card-body" style="width: 300px;">
+            <div class="collapse collapse-horizontal" id="collapseExample">
+            <div style="width: 300px;" class="card card-body">
             This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
             </div>
             </div>
@@ -361,20 +361,20 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p>
-            <a class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+            <a data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" class="btn btn-primary">Toggle first element</a>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" class="btn btn-primary">Toggle second element</button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2" class="btn btn-primary">Toggle both elements</button>
             </p>
             <div class="row">
             <div class="col">
-            <div id="multiCollapseExample1" class="collapse multi-collapse">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
             <div class="card card-body">
             Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
             </div>
             </div>
             </div>
             <div class="col">
-            <div id="multiCollapseExample2" class="collapse multi-collapse">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
             <div class="card card-body">
             Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
             </div>
@@ -437,10 +437,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <p class="d-inline-flex gap-1">
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </p>
             <div>
-            <div id="collapseExample" class="collapse">
+            <div class="collapse" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>
@@ -459,10 +459,10 @@ final class CollapseTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary"></button>
             </div>
             <div>
-            <div id="collapseExample" class="collapse">
+            <div class="collapse" id="collapseExample">
             <div class="card card-body">
             Collapsible
             </div>

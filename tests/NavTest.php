@@ -28,16 +28,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link" href="/test">Active</a>
+            <a href="/test" class="nav-link">Active</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="/test/link/action">Action</a>
             </li>
             <li>
-            <a class="dropdown-item active" href="/test/link/another-action" aria-current="true">Another action</a>
+            <a class="dropdown-item active" aria-current="true" href="/test/link/another-action">Another action</a>
             </li>
             <li>
             <a class="dropdown-item" href="/test/link/something-else">Something else here</a>
@@ -51,10 +51,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/test/link">Link</a>
+            <a href="/test/link" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">Disabled</a>
+            <a href="/test/disabled" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -85,10 +85,10 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="/test" aria-current="page">Active</a>
+            <a href="/test" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="/test/link/action">Action</a>
@@ -108,10 +108,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/test/link">Link</a>
+            <a href="/test/link" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">Disabled</a>
+            <a href="/test/disabled" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -142,16 +142,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link" href="/test">Active</a>
+            <a href="/test" class="nav-link">Active</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="/test/link/action">Action</a>
             </li>
             <li>
-            <a class="dropdown-item active" href="/test/link/another-action" aria-current="true">Another action</a>
+            <a class="dropdown-item active" aria-current="true" href="/test/link/another-action">Another action</a>
             </li>
             <li>
             <a class="dropdown-item" href="/test/link/something-else">Something else here</a>
@@ -165,10 +165,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/test/link">Link</a>
+            <a href="/test/link" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">Disabled</a>
+            <a href="/test/disabled" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -197,18 +197,18 @@ final class NavTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul class="nav" data-test="test">
+            <ul data-test="test" class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -239,16 +239,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav test-class bg-primary">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -259,16 +259,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav test-class bg-primary test-class-1 test-class-2">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -289,18 +289,18 @@ final class NavTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul class="nav" style="color: red;">
+            <ul style="color: red;" class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -309,18 +309,18 @@ final class NavTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul class="nav" style="color: red; font-weight: bold;">
+            <ul style="color: red; font-weight: bold;" class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -341,18 +341,18 @@ final class NavTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul class="nav" style="color: red;">
+            <ul style="color: red;" class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -361,18 +361,18 @@ final class NavTest extends TestCase
 
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul class="nav" style="color: red;">
+            <ul style="color: red;" class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -384,9 +384,9 @@ final class NavTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul class="nav" data-id="123">
+            <ul data-id="123" class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             </ul>
             HTML,
@@ -401,9 +401,9 @@ final class NavTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul class="nav" data-test="test">
+            <ul data-test="test" class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             </ul>
             HTML,
@@ -423,16 +423,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -455,10 +455,10 @@ final class NavTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <nav class="nav">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </nav>
             HTML,
             Nav::widget()
@@ -479,16 +479,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav custom-class another-class bg-primary">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -511,16 +511,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link" href="/test">Active</a>
+            <a href="/test" class="nav-link">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link active" href="/test/link" aria-current="page">Link</a>
+            <a href="/test/link" class="nav-link active" aria-current="page">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/test/link/another-link">Link</a>
+            <a href="/test/link/another-link" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">Disabled</a>
+            <a href="/test/disabled" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -542,16 +542,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link" href="/test">Active</a>
+            <a href="/test" class="nav-link">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/test/link">Link</a>
+            <a href="/test/link" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/test/link/another-link">Link</a>
+            <a href="/test/link/another-link" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">Disabled</a>
+            <a href="/test/disabled" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -574,16 +574,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link" href="/test">Active</a>
+            <a href="/test" class="nav-link">Active</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="/test/link/action">Action</a>
             </li>
             <li>
-            <a class="dropdown-item active" href="/test/link/another-action" aria-current="true">Another action</a>
+            <a class="dropdown-item active" aria-current="true" href="/test/link/another-action">Another action</a>
             </li>
             <li>
             <a class="dropdown-item" href="/test/link/something-else">Something else here</a>
@@ -597,10 +597,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/test/link">Link</a>
+            <a href="/test/link" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">Disabled</a>
+            <a href="/test/disabled" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -630,10 +630,10 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link" href="/test">Active</a>
+            <a href="/test" class="nav-link">Active</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="/test/link/action">Action</a>
@@ -653,10 +653,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/test/link">Link</a>
+            <a href="/test/link" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">Disabled</a>
+            <a href="/test/disabled" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -687,16 +687,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link" href="/test">Active</a>
+            <a href="/test" class="nav-link">Active</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="/test/link/action">Action</a>
             </li>
             <li>
-            <a class="dropdown-item active" href="/test/link/another-action" aria-current="true">Another action</a>
+            <a class="dropdown-item active" aria-current="true" href="/test/link/another-action">Another action</a>
             </li>
             <li>
             <a class="dropdown-item" href="/test/link/something-else">Something else here</a>
@@ -710,10 +710,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/test/link">Link</a>
+            <a href="/test/link" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">Disabled</a>
+            <a href="/test/disabled" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -742,10 +742,10 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link" href="/test">&lt;b&gt;Active&lt;/b&gt;</a>
+            <a href="/test" class="nav-link">&lt;b&gt;Active&lt;/b&gt;</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true">&lt;b&gt;Disabled&lt;b&gt;</a>
+            <a href="/test/disabled" class="nav-link disabled" aria-disabled="true">&lt;b&gt;Disabled&lt;b&gt;</a>
             </li>
             </ul>
             HTML,
@@ -764,10 +764,10 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link" href="/test"><b>Active</b></a>
+            <a href="/test" class="nav-link"><b>Active</b></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="/test/disabled" aria-disabled="true"><b>Disabled<b></a>
+            <a href="/test/disabled" class="nav-link disabled" aria-disabled="true"><b>Disabled<b></a>
             </li>
             </ul>
             HTML,
@@ -789,16 +789,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-pills nav-justified">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Much longer nav link</a>
+            <a href="#" class="nav-link">Much longer nav link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -823,16 +823,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav justify-content-center">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -857,16 +857,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav justify-content-end">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -886,18 +886,18 @@ final class NavTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul id="test-id" class="nav">
+            <ul class="nav" id="test-id">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -919,16 +919,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -950,16 +950,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -979,18 +979,18 @@ final class NavTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul id="test-id" class="nav">
+            <ul class="nav" id="test-id">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1031,8 +1031,8 @@ final class NavTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <ul class="nav">
-            <li class="nav-item" data-test="test">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <li data-test="test" class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             </ul>
             HTML,
@@ -1048,7 +1048,7 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" data-test="test" aria-current="page">Active</a>
+            <a href="#" data-test="test" class="nav-link active" aria-current="page">Active</a>
             </li>
             </ul>
             HTML,
@@ -1064,7 +1064,7 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             </ul>
             HTML,
@@ -1086,16 +1086,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-pills">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1120,10 +1120,10 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-pills">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1143,10 +1143,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1179,16 +1179,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Much longer nav link</a>
+            <a href="#" class="nav-link">Much longer nav link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1213,16 +1213,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-pills nav-justified">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Much longer nav link</a>
+            <a href="#" class="nav-link">Much longer nav link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1245,25 +1245,25 @@ final class NavTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul id="pills-tab" class="nav nav-pills mb-3" role="tablist">
+            <ul class="nav nav-pills mb-3" role="tablist" id="pills-tab">
             <li class="nav-item" role="presentation">
-            <button type="button" id="pills-home-tab" class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-home-tab-pane" role="tab" aria-controls="pills-home-tab-pane" aria-selected="true">Home</button>
+            <button type="button" class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home-tab-pane" role="tab" aria-controls="pills-home-tab-pane" aria-selected="true">Home</button>
             </li>
             <li class="nav-item" role="presentation">
-            <button type="button" id="pills-profile-tab" class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-profile-tab-pane" role="tab" aria-controls="pills-profile-tab-pane" aria-selected="false">Profile</button>
+            <button type="button" class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile-tab-pane" role="tab" aria-controls="pills-profile-tab-pane" aria-selected="false">Profile</button>
             </li>
             <li class="nav-item" role="presentation">
-            <button type="button" id="pills-contact-tab" class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-contact-tab-pane" role="tab" aria-controls="pills-contact-tab-pane" aria-selected="false">Contact</button>
+            <button type="button" class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact-tab-pane" role="tab" aria-controls="pills-contact-tab-pane" aria-selected="false">Contact</button>
             </li>
             <li class="nav-item" role="presentation">
-            <button type="button" id="pills-disabled-tab" class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-disabled-tab-pane" role="tab" aria-controls="pills-disabled-tab-pane" aria-selected="false">Disabled</button>
+            <button type="button" class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled-tab-pane" role="tab" aria-controls="pills-disabled-tab-pane" aria-selected="false">Disabled</button>
             </li>
             </ul>
             <div class="tab-content">
-            <div id="pills-home-tab-pane" class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">This is some placeholder content the Home tab's associated content.</div>
-            <div id="pills-profile-tab-pane" class="tab-pane fade" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">This is some placeholder content the Profile tab's associated content.</div>
-            <div id="pills-contact-tab-pane" class="tab-pane fade" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">This is some placeholder content the Contact tab's associated content.</div>
-            <div id="pills-disabled-tab-pane" class="tab-pane fade" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">This is some placeholder content the Disabled tab's associated content.</div>
+            <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0" id="pills-home-tab-pane">This is some placeholder content the Home tab's associated content.</div>
+            <div class="tab-pane fade" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0" id="pills-profile-tab-pane">This is some placeholder content the Profile tab's associated content.</div>
+            <div class="tab-pane fade" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0" id="pills-contact-tab-pane">This is some placeholder content the Contact tab's associated content.</div>
+            <div class="tab-pane fade" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0" id="pills-disabled-tab-pane">This is some placeholder content the Disabled tab's associated content.</div>
             </div>
             HTML,
             Nav::widget()
@@ -1306,16 +1306,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1345,15 +1345,15 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item" role="presentation">
-            <button type="button" id="test1" class="nav-link active" data-bs-toggle="tab" data-bs-target="#test1-pane" role="tab" aria-controls="test1-pane" aria-selected="true">title1</button>
+            <button type="button" class="nav-link active" id="test1" data-bs-toggle="tab" data-bs-target="#test1-pane" role="tab" aria-controls="test1-pane" aria-selected="true">title1</button>
             </li>
             <li class="nav-item" role="presentation">
-            <button type="button" id="test2" class="nav-link" data-bs-toggle="tab" data-bs-target="#test2-pane" role="tab" aria-controls="test2-pane" aria-selected="false">title2</button>
+            <button type="button" class="nav-link" id="test2" data-bs-toggle="tab" data-bs-target="#test2-pane" role="tab" aria-controls="test2-pane" aria-selected="false">title2</button>
             </li>
             </ul>
             <div class="tab-content">
-            <div id="test1-pane" class="tab-pane fade show active" role="tabpanel" aria-labelledby="test1" tabindex="0"><p>Some HTML</p></div>
-            <div id="test2-pane" class="tab-pane fade" role="tabpanel" aria-labelledby="test2" tabindex="0"><p>Some HTML</p></div>
+            <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="test1" tabindex="0" id="test1-pane"><p>Some HTML</p></div>
+            <div class="tab-pane fade" role="tabpanel" aria-labelledby="test2" tabindex="0" id="test2-pane"><p>Some HTML</p></div>
             </div>
             HTML,
             Nav::widget()
@@ -1372,10 +1372,10 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item" role="presentation">
-            <button type="button" id="test1" class="nav-link active" data-bs-toggle="tab" data-bs-target="#test1-pane" role="tab" aria-controls="test1-pane" aria-selected="true">title1</button>
+            <button type="button" class="nav-link active" id="test1" data-bs-toggle="tab" data-bs-target="#test1-pane" role="tab" aria-controls="test1-pane" aria-selected="true">title1</button>
             </li>
             <li class="nav-item" role="presentation">
-            <button type="button" id="test2" class="nav-link" data-bs-toggle="tab" data-bs-target="#test2-pane" role="tab" aria-controls="test2-pane" aria-selected="false">title2</button>
+            <button type="button" class="nav-link" id="test2" data-bs-toggle="tab" data-bs-target="#test2-pane" role="tab" aria-controls="test2-pane" aria-selected="false">title2</button>
             </li>
             </ul>
             <div class="tab-content">
@@ -1402,16 +1402,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-tabs">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1436,10 +1436,10 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-tabs">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1459,10 +1459,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1493,25 +1493,25 @@ final class NavTest extends TestCase
     {
         Assert::equalsWithoutLE(
             <<<HTML
-            <ul id="nav-tabs" class="nav nav-tabs" role="tablist">
+            <ul class="nav nav-tabs" role="tablist" id="nav-tabs">
             <li class="nav-item" role="presentation">
-            <button type="button" id="home-tab" class="nav-link active" data-bs-toggle="tab" data-bs-target="#home-tab-pane" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+            <button type="button" class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
             </li>
             <li class="nav-item" role="presentation">
-            <button type="button" id="profile-tab" class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+            <button type="button" class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
             </li>
             <li class="nav-item" role="presentation">
-            <button type="button" id="contact-tab" class="nav-link" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+            <button type="button" class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
             </li>
             <li class="nav-item" role="presentation">
-            <button type="button" id="disabled-tab" class="nav-link" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Disabled</button>
+            <button type="button" class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Disabled</button>
             </li>
             </ul>
             <div class="tab-content">
-            <div id="home-tab-pane" class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab" tabindex="0">This is some placeholder content the Home tab's associated content.</div>
-            <div id="profile-tab-pane" class="tab-pane fade" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">This is some placeholder content the Profile tab's associated content.</div>
-            <div id="contact-tab-pane" class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">This is some placeholder content the Contact tab's associated content.</div>
-            <div id="disabled-tab-pane" class="tab-pane fade" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">This is some placeholder content the Disabled tab's associated content.</div>
+            <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab" tabindex="0" id="home-tab-pane">This is some placeholder content the Home tab's associated content.</div>
+            <div class="tab-pane fade" role="tabpanel" aria-labelledby="profile-tab" tabindex="0" id="profile-tab-pane">This is some placeholder content the Profile tab's associated content.</div>
+            <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab" tabindex="0" id="contact-tab-pane">This is some placeholder content the Contact tab's associated content.</div>
+            <div class="tab-pane fade" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0" id="disabled-tab-pane">This is some placeholder content the Disabled tab's associated content.</div>
             </div>
             HTML,
             Nav::widget()
@@ -1561,16 +1561,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-underline">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1595,16 +1595,16 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav flex-column">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1628,10 +1628,10 @@ final class NavTest extends TestCase
         Assert::equalsWithoutLE(
             <<<HTML
             <nav class="nav nav-pills flex-column flex-sm-row">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
-            <a class="nav-link active" href="#" aria-current="page">Longer nav link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Longer nav link</a>
+            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </nav>
             HTML,
             Nav::widget()
@@ -1654,10 +1654,10 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-tabs">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle test-class" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle test-class" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1677,10 +1677,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1711,10 +1711,10 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-tabs">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item dropdown test-class">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1734,10 +1734,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
@@ -1768,10 +1768,10 @@ final class NavTest extends TestCase
             <<<HTML
             <ul class="nav nav-tabs">
             <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Active</a>
+            <a href="#" class="nav-link active" aria-current="page">Active</a>
             </li>
             <li class="nav-item dropdown test-class">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
             <ul class="dropdown-menu">
             <li>
             <a class="dropdown-item" href="#">Action</a>
@@ -1791,10 +1791,10 @@ final class NavTest extends TestCase
             </ul>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a href="#" class="nav-link">Link</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
+            <a href="#" class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
             </ul>
             HTML,
