@@ -407,7 +407,7 @@ final class Dropdown extends Widget
      *
      * Example usage:
      * ```php
-     * $dropdown->direction(DropdownDirection::DOWN());
+     * $dropdown->direction(DropdownDirection::DROPUP);
      * ```
      */
     public function direction(DropdownDirection $direction): self
