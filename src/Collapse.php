@@ -362,14 +362,9 @@ final class Collapse extends Widget
                     ->addAttributes($this->attributes)
                     ->addContent(
                         "\n",
-                        (new Div())
-                            ->addAttributes($this->cardBodyAttributes)
+                        Html::div("\n" . $item->getContent() . "\n", $this->cardBodyAttributes)
                             ->addClass(self::CARD, self::CARD_BODY)
-                            ->addContent(
-                                "\n",
-                                $item->getContent(),
-                                "\n",
-                            ),
+                            ->encode(false),
                         "\n",
                     )
                     ->id($item->getId());

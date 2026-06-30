@@ -6,6 +6,7 @@ namespace Yiisoft\Bootstrap5\Tests;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\TestWith;
 use PHPUnit\Framework\TestCase;
 use Yiisoft\Bootstrap5\Collapse;
 use Yiisoft\Bootstrap5\Tests\Support\Assert;
@@ -474,5 +475,15 @@ final class CollapseTest extends TestCase
                 ->togglerContainerTag('div')
                 ->render(),
         );
+    }
+
+    #[TestWith(['&lt;b&gt;Bold content&lt;/b&gt;', true])]
+    #[TestWith(['<b>Bold content</b>', false])]
+    public function testTogglerHtmlContent(string $expected, bool $encode): void
+    {
+        $toggler = Toggler::for('<b>Bold content</b>', 'collapseExample', encode: $encode)->togglerContent('Toggle');
+        $widget = Collapse::widget()->items($toggler);
+
+        $this->assertStringContainsString($expected, $widget->render());
     }
 }

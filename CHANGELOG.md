@@ -4,6 +4,7 @@
 
 - Enh #306: Raise `yiisoft/html` version to `^3.13 || ^4.0` (@vjik)
 - New #305: Add `tabIndex()` method to `Button` widget (@Mister-42)
+- Bug #309: Fix `Collapse` re-encoding content already managed by `Toggler` (@vjik)
 
 ## 1.1.0 March 06, 2026
 
