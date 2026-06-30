@@ -6,8 +6,8 @@ on:
       - master
       - main
     paths:
-      - '.github/**.yml'
-      - '.github/**.yaml'
+      - '.github/**/*.yml'
+      - '.github/**/*.yaml'
   pull_request:
     paths:
       - '.github/**.yml'
