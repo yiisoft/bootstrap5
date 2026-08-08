@@ -22,10 +22,10 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.92.5",
-        "maglnet/composer-require-checker": "^4.1",
         "phpunit/phpunit": "^10.5",
         "rector/rector": "^2.0",
         "roave/infection-static-analysis-plugin": "^1.35",
+        "shipmonk/composer-dependency-analyser": "^1.8",
         "spatie/phpunit-watcher": "^1.23",
         "vimeo/psalm": "^5.26.1|^6.4.1",
         "yiisoft/aliases": "^3.0",
@@ -61,7 +61,7 @@
         }
     ],
     "scripts": {
-        "check-dependencies": "./vendor/bin/composer-require-checker check",
+        "dependency-analyser": "composer-dependency-analyser",
         "mutation": "vendor/bin/roave-infection-static-analysis-plugin --threads=2 --min-msi=100 --min-covered-msi=100 --ignore-msi-with-no-mutations --only-covered",
         "static": "vendor/bin/psalm",
         "test": "phpunit --testdox",
